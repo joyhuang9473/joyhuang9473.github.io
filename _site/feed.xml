@@ -5,12 +5,12 @@
     <atom:link href="http://example.com/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://example.com/</link>
     <description>A website with blog posts and pages</description>
-    <pubDate>Tue, 17 Mar 2015 22:45:52 +0800</pubDate>
+    <pubDate>Sat, 27 Jun 2015 18:13:26 +0800</pubDate>
     
       <item>
         <title>Sample post</title>
-        <link>http://example.com/2014/11/30/sample-post.html</link>
-        <guid isPermaLink="true">http://example.com/2014/11/30/sample-post.html</guid>
+        <link>http://example.com/programming/2014/11/30/sample-post.html</link>
+        <guid isPermaLink="true">http://example.com/programming/2014/11/30/sample-post.html</guid>
         <description>&lt;p&gt;Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.&lt;/p&gt;
 
 &lt;ul&gt;
