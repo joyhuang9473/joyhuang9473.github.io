@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>Blog | YU KAI'S WEBSITE</title>
+	<meta name="description" content="A website with blog posts and pages">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://example.com/blog/page3/">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="YU KAI'S WEBSITE" href="http://example.com/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  <!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<a href="/">
+			<img class="avatar" src="/img/avatar.png" alt=""/>
+		</a>
+		
+		<h1 class="site-title">
+			<a href="/">YU KAI'S WEBSITE</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li>
+				<a class="page-link" href="/about" title="About">About</a>
+				<a class="page-link" href="/blog" title="Blog">Blog</a>
+			</li>
+			<!-- Social icons from Font Awesome, if enabled -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://github.com/rohanchandra/type-theme" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://twitter.com/twitter" title="Follow on Twitter">
+		<i class="fa fa-fw fa-twitter"></i>
+	</a>
+</li>
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+    <div class="content">
+      <div class="home">
+
+  <div class="call-out">Blog</div>
+
+  <div class="posts">
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html">
+            墨華：橫軸探索解謎遊戲
+          </a>
+        </h2>
+        <p class="meta">
+          December 28, 2014
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>偶然在網路上看到，聽說是大學生的畢業專題，感覺蠻精緻的，看到他人有如此的傑作，小弟心生慚愧啊</p>
+
+
+        <a class="button" href="/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2014/12/27/remote-desktop-for-ubuntu-1404.html">
+            遠端 Ubuntu 14.04 桌面
+          </a>
+        </h2>
+        <p class="meta">
+          December 27, 2014
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>最近因為期末專題的關係，選用了 Ubuntu 14.04 作為系統環境，而由於在下做的是跟影像辨識有關的題目，考量之後要秀出影像結果等需要，就來處理一下遠端桌面的功能，好讓我能帶著 MBP 去 demo :)</p>
+
+<p>原本想說 ubuntu 這麼多人用，應該只要稍微設定一下就能用遠端桌面了吧，沒想到弄起來還是挺麻煩的 ==</p>
+
+<p>首先還是先介紹可以正常運作的教學：</p>
+
+<p><a href="http://c-nergy.be/blog/?p=5305">Ubuntu 14.04 – How to install xrdp in Ubuntu 14.04</a></p>
+
+<p>其實主要精神就是 <strong>安裝 xrdp ，改用 Xfce4</strong> 作為桌面環境（desktop environment）</p>
+
+<p>另外還有可能碰到的問題是，每當關閉遠端連線後，下次再遠端桌面登入卻是不同的 session ，就是重新遠端後看到的卻不是上一次遠端的桌面，那解決方法就是：</p>
+
+<p><a href="http://askubuntu.com/questions/133343/how-do-i-set-up-xrdp-session-that-reuses-an-existing-session">How do I set up xrdp session that reuses an existing session?</a></p>
+
+<p>Note:</p>
+
+<blockquote>
+  <p>that only works if there’s already an existing session though. The first time in, there’s no session so it fails to connect to port 5912.</p>
+</blockquote>
+
+<p>似乎還不是一個很好的辦法，之後再找找囉。</p>
+
+<p>– clear –</p>
+
+<p>修改 /etc/xrdp/xrdp.ini</p>
+
+<pre><code>[xrdp1]
+name=sesman-vnc
+lib=libvnc.so
+username=ask
+password=ask
+ip=127.0.0.1
+port=5910 #原本的值為 -1
+</code></pre>
+
+<p>至於為甚麼不能用 ubuntu 本身的 Unity 作為桌面環境，雖然還不確定原因，但感覺是 Unity, Gnome 對 xrdp 的支援程度有關，總之試過 gnome-session 的寫法，遠端後的結果都不樂觀，都會是 <strong>灰底畫面，還可以顯示的 ‘X’ 游標</strong></p>
+
+<p>（以下寫法都不能正常運作遠端桌面功能）</p>
+
+<p>~/.xsession file :</p>
+
+<pre><code># Uncomment one of list items below, if you really want to try and test
+
+#gnome-session --session=gnome-classic
+#gnome-session --session=gnome-fallback
+#gnome-session –-session=ubuntu-2d
+</code></pre>
+
+
+        <a class="button" href="/2014/12/27/remote-desktop-for-ubuntu-1404.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2014/12/24/caffe-first-experience.html">
+            Install Caffe and ImageNet model 
+          </a>
+        </h2>
+        <p class="meta">
+          December 24, 2014
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>原本想安裝在 Windows，不過過程實在是太不順利了，最後還是依照網路上的一篇教學文，安裝在 Ubuntu 14.04 上，只差在它是用虛擬機，我是用實機安裝。</p>
+
+<p>教學文如下，
+<a href="https://github.com/BVLC/caffe/wiki/Ubuntu-14.04-VirtualBox-VM">BVLC/caffe Ubuntu 14.04 VirtualBox VM</a></p>
+
+<blockquote>
+  <p>This is a guide to setting up Caffe in a 14.04 virtual machine with CUDA 6.5 and the system Python for getting started with examples and PyCaffe.</p>
+</blockquote>
+
+<p>過程中還蠻順利的，除了</p>
+
+<ul>
+  <li>Modify python/classify.py to add the –print_results option</li>
+</ul>
+
+<p>這一步需要自己稍微修改一下 code ，那麼我就分享在 gist 上囉
+[custom classify.py in BVLC/caffe: <path_to_caffe>/python/classify.py](https://gist.github.com/Kai-Yu-Huang/6ae7ac4c496c6c4c18f9)</path_to_caffe></p>
+
+
+        <a class="button" href="/2014/12/24/caffe-first-experience.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html">
+            Someone already recreated Notch's insane new mansion in Minecraft
+          </a>
+        </h2>
+        <p class="meta">
+          December 23, 2014
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>http://www.dailydot.com/geek/notch-new-mansion-minecraft-style/?fb=dd</p>
+
+
+        <a class="button" href="/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2014/12/12/words.html">
+            呢喃
+          </a>
+        </h2>
+        <p class="meta">
+          December 12, 2014
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>不懂得如何表現溫柔的我，
+<br />
+風雨中，心碎了才懂。</p>
+
+
+        <a class="button" href="/2014/12/12/words.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  
+  <div class="pagination">
+    
+    <a href="/blog/page2" class="button" >
+      <i class="fa fa-chevron-left"></i>
+      Prev
+    </a>
+    
+    
+    <a href="/blog/page4" class="button" >
+      Next
+      <i class="fa fa-chevron-right"></i>
+    </a>
+    
+  </div>
+  
+</div>
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

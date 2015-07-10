@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>WWW | YU KAI'S WEBSITE</title>
+	<meta name="description" content="http://bojack.pixnet.net/blog/post/12983723-%E3%80%90freebsd%E3%80%91%E7%94%A8-ports-%E5%AE%89%E8%A3%9D-apache-%2B-php-%2B-mysqlhttp://www.twbsd.org/cht/book...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://example.com/2013/09/10/www.html">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="YU KAI'S WEBSITE" href="http://example.com/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  <!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<a href="/">
+			<img class="avatar" src="/img/avatar.png" alt=""/>
+		</a>
+		
+		<h1 class="site-title">
+			<a href="/">YU KAI'S WEBSITE</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li>
+				<a class="page-link" href="/about" title="About">About</a>
+				<a class="page-link" href="/blog" title="Blog">Blog</a>
+			</li>
+			<!-- Social icons from Font Awesome, if enabled -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://github.com/rohanchandra/type-theme" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://twitter.com/twitter" title="Follow on Twitter">
+		<i class="fa fa-fw fa-twitter"></i>
+	</a>
+</li>
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+    
+
+
+<article >
+  <header style="background-image: url('/')">
+    <h1 class="title">WWW</h1>
+    <p class="meta">
+    September 10, 2013
+    
+    </p>
+  </header>
+  <section class="post-content"><p>http://bojack.pixnet.net/blog/post/12983723-%E3%80%90freebsd%E3%80%91%E7%94%A8-ports-%E5%AE%89%E8%A3%9D-apache-%2B-php-%2B-mysql</p>
+
+<p>http://www.twbsd.org/cht/book/</p>
+
+<p>安裝 vim
+cd /usr/ports/editors/vim
+make -DWITHOUT_X11 install clean</p>
+
+<p>DocumentRoot “/usr/local/www/data”</p>
+
+<p>DirectoryIndex index.php index.htm</p>
+
+<p>memory_limit = 8M</p>
+
+<p>post_max_size = 2M</p>
+
+<ul>
+  <li>my-huge.cnf: 適合 1GB - 2GB RAM的主機使用。</li>
+  <li>my-large.cnf: 適合 512MB RAM的主機使用。</li>
+  <li>my-medium.cnf: 只有 32MB - 64MB RAM 的主機使用，或者有 128MB RAM 但需要運行其他伺服器，例如 web server。</li>
+  <li>my-small.cnf: 記憶體少於 64MB 時適用這個，MySQL 會佔用較少資源。</li>
+</ul>
+
+<p>[Solved] Cannot set password To mysql Freebsd 7.2
+=&gt;http://forums.freebsd.org/showthread.php?t=13138</p>
+
+<p>/usr/local/etc/rc.d/mysql-server stop
+mv /var/db/mysql /var/db/mysql_old
+/usr/local/etc/rc.d/mysql-server start
+/usr/local/bin/mysqladmin -u root password ‘newpass’</p>
+
+<p>再安裝 PHP Extensions</p>
+
+<p>加勾選 GD、MYSQL、MBSTRING、ZIP 和 ZLIB PDO PDO_MYSQL</p>
+
+<p>ssh安裝</p>
+
+<p>在/etc/rc.conf
+加上 ssh_enable=”YES”
+啟動 /etc/rc.d/sshd restart</p>
+
+<p>設定檔位置
+/etc/ssh/sshd_config</p>
+
+<pre><code>date.timezone = "Asia/Taipei" 
+
+[mysqld]
+    character-set-server=utf8
+    collation-server=utf8_general_ci
+    init-connect='SET NAMES utf8'
+
+    [client]
+    default-character-set=utf8
+</code></pre>
+
+<p>http://www.dk101.com/Discuz/viewthread.php?tid=161541</p>
+
+</section>
+  <p id="post-meta"></p>
+
+</article>
+
+<!-- Disqus -->
+
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

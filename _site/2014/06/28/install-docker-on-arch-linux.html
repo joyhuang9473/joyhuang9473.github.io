@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>Install docker on Arch Linux | YU KAI'S WEBSITE</title>
+	<meta name="description" content="Install docker in Arch1. Search image or Create a Base ImageNote: Base Image https://docs.docker.com/terms/image/#base-image-defSearch image: sudo docker sea...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://example.com/2014/06/28/install-docker-on-arch-linux.html">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="YU KAI'S WEBSITE" href="http://example.com/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  <!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<a href="/">
+			<img class="avatar" src="/img/avatar.png" alt=""/>
+		</a>
+		
+		<h1 class="site-title">
+			<a href="/">YU KAI'S WEBSITE</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li>
+				<a class="page-link" href="/about" title="About">About</a>
+				<a class="page-link" href="/blog" title="Blog">Blog</a>
+			</li>
+			<!-- Social icons from Font Awesome, if enabled -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://github.com/rohanchandra/type-theme" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://twitter.com/twitter" title="Follow on Twitter">
+		<i class="fa fa-fw fa-twitter"></i>
+	</a>
+</li>
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+    
+
+
+<article >
+  <header style="background-image: url('/')">
+    <h1 class="title">Install docker on Arch Linux</h1>
+    <p class="meta">
+    June 28, 2014
+    
+    </p>
+  </header>
+  <section class="post-content"><p>Install docker in Arch
+1. Search image or Create a Base Image</p>
+
+<p>Note: Base Image https://docs.docker.com/terms/image/#base-image-def</p>
+
+<h1 id="search-image">Search image</h1>
+
+<p>: sudo docker search <image_name></image_name></p>
+
+<p>ex.</p>
+
+<pre><code>sudo docker search arch
+
+sudo docker pull base/arch
+
+sudo docker run base/arch echo "Hello World!"
+</code></pre>
+
+<p>Tip:
+The command docker run takes a minimum of two arguments:
+1) an image name, and
+2) the command you want to execute within that image.</p>
+
+<p>登入 image</p>
+
+<pre><code>sudo docker run -i -t base/arch /bin/bash
+</code></pre>
+
+<p>登出 image</p>
+
+<pre><code># exit
+</code></pre>
+
+<p>Note:
+Unlike VMs, containers don’t need to boot up or shut down the whole OS. Unless you’re running a process in it, your container isn’t taking up any resources apart from some disk space. Once our bash process has finished, your container is closed.</p>
+
+<p>Commit</p>
+
+<pre><code>sudo docker commit 85eed1376ab3 centos:LAMP
+</code></pre>
+
+<h1 id="create-a-base-image">Create a Base Image</h1>
+
+<p><a href="http://docs.docker.com/reference/commandline/cli/">http://docs.docker.com/reference/commandline/cli/</a></p>
+
+<p><a href="http://blog.blackwhite.tw/2013/12/docker.html">http://blog.blackwhite.tw/2013/12/docker.html</a></p>
+
+<p><a href="http://www.slideshare.net/ya790026/docker-33456641">http://www.slideshare.net/ya790026/docker-33456641</a></p>
+</section>
+  <p id="post-meta"></p>
+
+</article>
+
+<!-- Disqus -->
+
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>Blog | YU KAI'S WEBSITE</title>
+	<meta name="description" content="A website with blog posts and pages">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://example.com/blog/page33/">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="YU KAI'S WEBSITE" href="http://example.com/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  <!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<a href="/">
+			<img class="avatar" src="/img/avatar.png" alt=""/>
+		</a>
+		
+		<h1 class="site-title">
+			<a href="/">YU KAI'S WEBSITE</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li>
+				<a class="page-link" href="/about" title="About">About</a>
+				<a class="page-link" href="/blog" title="Blog">Blog</a>
+			</li>
+			<!-- Social icons from Font Awesome, if enabled -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://github.com/rohanchandra/type-theme" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://twitter.com/twitter" title="Follow on Twitter">
+		<i class="fa fa-fw fa-twitter"></i>
+	</a>
+</li>
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+    <div class="content">
+      <div class="home">
+
+  <div class="call-out">Blog</div>
+
+  <div class="posts">
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2013/10/27/algorithm-algorithms-program-job-1.html">
+            演算法 Algorithms : 程式作業1
+          </a>
+        </h2>
+        <p class="meta">
+          October 27, 2013
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>For two points p and q in the plane, we say that p dominates q if both x and y coordinates of p are greater than that of q respectively. Given a set S of n points, the rank of a point p in S is the number of points in S dominated by p. We want to find the rank of every point in S. A naïve algorithm needs O(n^2) time. Design a faster algorithm for this problem.</p>
+
+<p>Input</p>
+
+<p>The first line of input contains a single positive integer ( &lt; 20 ), the number of test cases. Each test case starts with a line containing a single integer n, the number of points in the plane. This line is followed by n lines, indicates the x and y coordinates for each points, p1, p2… pn. No integer in the input is greater than 224 or less than 0.</p>
+
+<p>Output</p>
+
+<p>The output of each cases contain n lines, the rank of p1, p2… pn. Cases are separated by a single blank line.</p>
+
+<p>Sample input:</p>
+
+<p>1</p>
+
+<p>3</p>
+
+<p>1 1</p>
+
+<p>2 2</p>
+
+<p>3 3</p>
+
+<p>Sample output: </p>
+
+<p>0</p>
+
+<p>1</p>
+
+<p>2</p>
+
+<p>Code：</p>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
+
+using namespace std;
+
+struct Points {
+    int x;
+    int y;
+    int rank;
+};
+
+struct Cases {
+    int point_nums;
+    Points* pointInfo;
+    int* sortedArray;
+};
+
+int getPointX(Points* pointInfo, int index) { return pointInfo[index].x; }
+int getPointY(Points* pointInfo, int index) { return pointInfo[index].y; }
+
+void mergeX(Points* pointInfo, int size1, int size2, int* sortedArray) {
+    int size = size1 + size2;
+    int* temp = (int*)malloc(size * sizeof(int));
+    int ptr1=0, ptr2=0;
+
+    // sort x : min to max
+    while ( (ptr1+ptr2) &lt; size ) {
+        if ( (ptr1 &lt; size1 &amp;&amp; ptr2 &gt;= size2) || (ptr1 &lt; size1 &amp;&amp; getPointX(pointInfo, sortedArray[ptr1]) &lt; getPointX(pointInfo, sortedArray[size1+ptr2])) ) {
+            temp[ptr1+ptr2] = sortedArray[ptr1++];
+        } else if ( (ptr2 &lt; size2 &amp;&amp; ptr1 &gt;= size1) || (ptr2 &lt; size2 &amp;&amp; getPointX(pointInfo, sortedArray[size1+ptr2]) &lt; getPointX(pointInfo, sortedArray[ptr1])) ) {
+            temp[ptr1+ptr2] = sortedArray[size1 + ptr2++];
+        } else if ( getPointX(pointInfo, sortedArray[ptr1]) == getPointX(pointInfo, sortedArray[size1+ptr2]) ) {
+            if ( getPointY(pointInfo, sortedArray[ptr1]) &lt; getPointY(pointInfo, sortedArray[size1+ptr2]) ) {
+                temp[ptr1+ptr2] = sortedArray[size1 + ptr2++];
+            } else {
+                temp[ptr1+ptr2] = sortedArray[ptr1++];
+            }
+        }
+    }
+    
+    for ( int i = 0 ; i &lt; size1+size2 ; i++ ) sortedArray[i] = temp[i];
+
+    free(temp);
+}
+
+void mergeYandSetRank(Points* pointInfo, int size1, int size2, int* sortedArray) {
+    int size = size1 + size2;
+    int* temp = (int*)malloc(size * sizeof(int));
+    int ptr1=0, ptr2=0;
+
+    // [Merge sort] sort y : max to min
+    while ( ptr1+ptr2 &lt; size1+size2 ) {
+        if ( (ptr1 &lt; size1 &amp;&amp; ptr2 &gt;= size2) || (ptr1 &lt; size1 &amp;&amp; getPointY(pointInfo, sortedArray[ptr1]) &gt;= getPointY(pointInfo, sortedArray[size1+ptr2])) ) {
+            temp[ptr1+ptr2] = sortedArray[ptr1++];
+        }else if ( (ptr2 &lt; size2 &amp;&amp; ptr1 &gt;= size1) || (ptr2 &lt; size2 &amp;&amp; getPointY(pointInfo, sortedArray[size1+ptr2]) &gt; getPointY(pointInfo, sortedArray[ptr1])) ) {
+            // set rank
+            if ( ptr1+ptr2 &lt; size1+ptr2 ) pointInfo[sortedArray[size1+ptr2]].rank += (size1+ptr2) - (ptr1+ptr2);
+
+            temp[ptr1+ptr2] = sortedArray[size1 + ptr2++];
+        }
+    }
+
+    for ( int i = 0 ; i &lt; size1+size2; i++ ) sortedArray[i] = temp[i];
+
+    free(temp);
+}
+
+void mergeSortX(Points* pointInfo, int* sortedArray, int size) {
+    if ( size == 1 ) return;  
+
+    int size1 = size / 2, size2 = size - size1;
+
+    mergeSortX(pointInfo, sortedArray, size1);
+    mergeSortX(pointInfo, sortedArray+size1, size2);
+    mergeX(pointInfo, size1, size2, sortedArray);
+}
+
+void mergeSortYandSetRank(Points* pointInfo, int* sortedArray, int size) {
+    if ( size == 1 ) return;  
+
+    int size1 = size / 2, size2 = size - size1;
+
+    mergeSortYandSetRank(pointInfo, sortedArray, size1);
+    mergeSortYandSetRank(pointInfo, sortedArray+size1, size2);
+    mergeYandSetRank(pointInfo, size1, size2, sortedArray);
+}
+
+void printRank(Points* pointInfo, int size) {
+    for ( int i = 0 ; i &lt; size ; i++ ) cout &lt;&lt; pointInfo[i].rank &lt;&lt; endl;
+}
+
+int main() {
+    int testCase;
+    Cases* cases;
+
+    cin &gt;&gt; testCase;
+
+    cases = (Cases*)malloc(testCase * sizeof(Cases));
+
+    for ( int i = 0 ; i &lt; testCase ; i++ ) {
+        cin &gt;&gt; cases[i].point_nums;
+
+        cases[i].pointInfo = (Points*)malloc(cases[i].point_nums * sizeof(Points));
+        cases[i].sortedArray = (int*)malloc(cases[i].point_nums * sizeof(int));
+
+        for ( int j = 0 ; j &lt; cases[i].point_nums ; j++ ) {
+            cin &gt;&gt; cases[i].pointInfo[j].x &gt;&gt; cases[i].pointInfo[j].y;
+            cases[i].pointInfo[j].rank = 0;
+            cases[i].sortedArray[j] = j;
+        }
+    }
+
+    for ( int i = 0 ; i &lt; testCase ; i++ ) {
+        mergeSortX(cases[i].pointInfo, cases[i].sortedArray, cases[i].point_nums);
+        mergeSortYandSetRank(cases[i].pointInfo, cases[i].sortedArray, cases[i].point_nums);
+
+        printRank(cases[i].pointInfo, cases[i].point_nums);
+        if ( i != testCase-1 ) {
+            cout &lt;&lt; endl;
+        }
+        free(cases[i].sortedArray);
+        free(cases[i].pointInfo);
+    }
+
+    free(cases);
+
+    system("pause");
+    return 0;
+}
+</code></pre>
+
+
+        <a class="button" href="/2013/10/27/algorithm-algorithms-program-job-1.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2013/10/27/algorithm-algorithmshomework-04.html">
+            演算法 Algorithms : Homework 04
+          </a>
+        </h2>
+        <p class="meta">
+          October 27, 2013
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>1 . Exercise 4.3‐9:
+Solve the recurrence T(n) = 2T(n^(1/2)) +1 by making a change of variables. Your solution
+should be asymptotically tight. Do not worry about whether values are integral.</p>
+
+<p>2 . Problem 4‐1: Recurrence examples
+Give asymptotic upper and lower bounds for T(n) in each of the following
+recurrences. Assume that T(n) is constant for n≦2. Make your bounds as tight as
+possible, and justify your answers.</p>
+
+<p>a . T(n) = 2T(n/2)+n^4
+b . T(n) = T(7n/10)+n
+c . T(n) = 16T(n/4)+n^2
+d . T(n) = 7T(n/3)+n^2
+e . T(n) = 7T(n/2)+n^2
+f . T(n) = 2T(n/4)+n^(1/2)
+g . T(n) = T(n-2)+n^2</p>
+
+<p>3 . Exercise 4.5‐4:
+Can the master method be applied to the recurrence T(n) = 4T(n/2) + n^2 * lgn ? Why or why not? Give an asymptotic upper bound for this recurrence.</p>
+
+<p>4 . Exercise 4.2‐3
+How would you modify Strassen’s algorithm to multiply n * n matrices in which n is not an exact power of 2? Show that the resulting algorithm runs in time θ(nlg7).</p>
+
+<p>5 . Exercise 4.2‐5
+V. Pan has discovered a way of multiplying 6868 matrices using 132,464 multiplications, a way of multiplying 70 * 70 matrices using 143,640 multiplications, and a way of multiplying 72 * 72 matrices using 155,424 multiplications. Which method yields the best asymptotic running time when used in a divide‐and‐conquer matrix‐multiplication algorithm? How does it compare to Strassen’s algorithm?</p>
+
+<p>6 . Exercise 4.2‐7
+Show how to multiply the complex numbers a  bi and c  di using only three multiplications of real numbers. The algorithm should take a, b, c, and d as input and produce the real component ac  bd and the imaginary component ad - bc separately.</p>
+
+<p>7 . Ext. 3‐1
+在課本4.1 節中(p.68)作者將stock buying problem 轉成 maximum‐subarray problem 再用Divide‐and‐conquer 的概念來解此問題，請給一個O(n)執行時間的 Pseudo code algorithm 直接解stock buying problem ， 無需再做任何 transformation。</p>
+
+<p>8 . Ext. 4‐1
+The input is a sequence of n integers with many duplications, such that the number of distinct integers in the sequence is O(log n).
+(a) Design a sorting algorithm to sort such sequences using at most O(n log log n)
+comparisons in the worst case.
+(b) Why is the lower bound of sorting (n log n) not satisfied in this case?</p>
+
+
+        <a class="button" href="/2013/10/27/algorithm-algorithmshomework-04.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2013/10/26/the-attack-and-defense-of-computers.html">
+            The Attack and Defense of Computers : Malware
+          </a>
+        </h2>
+        <p class="meta">
+          October 26, 2013
+        </p>
+      </header>
+      <div class="excerpt">
+        <h1 id="malware">Malware</h1>
+
+<p>1.Security Tools and toolkits
+2.Logic Bombs
+3.Key Logger
+- Ardamax Keylogger
+<a href="http://www.ardamax.com/akll/">[1]</a>
+<a href="http://www.freedownloadscenter.com/Utilities/Misc__Utilities/Ardamax_Keylogger.html">[2]</a></p>
+
+<p>4.Dialer
+5.Bacteria and Rabbits</p>
+
+<h1 id="binder">Binder</h1>
+
+<p>A tool that combines two or more files into a single file, usually for the purpose of hiding one of them.</p>
+
+<p>YAB: Yet Another Binder <a href="http://www.elhacker.net/hacking-programas-hack.htm">[1]</a>
+- User Guide <a href="http://www.windowsecurity.com/articles/Binders-Malware-Part1.html">[2]</a></p>
+
+<h1 id="dropper">Dropper</h1>
+<p>Types of Droppers, Depending on how a dropper is executed, there are two major types of droppers:
+-those that do not require user interaction
+-those that require user interaction by convincing the user that it is some legitimate or benign program.
+- 8sec!Trojan</p>
+
+<h1 id="trojan-horse">Trojan Horse</h1>
+
+<p>imitate the icon : 
+How to create fake icon in windows XP and Windows 7? <a href="http://www.techulator.com/resources/4517-How-create-fake-icon-windows-XP-Windows.aspx">[1]</a></p>
+
+<p>Unicode控制字元202E 副檔名欺騙
+ex.
+大師兄[202E]gpj.exe &lt;- real filename</p>
+
+<p>大師兄exe.jpg &lt;- displayed filename</p>
+
+<p>Well-known Trojan Horses
+- Back Orifice 
+- Back Orifice 2000 
+- Beast Trojan 
+- NetBus 
+- SubSeven 
+- Downloader-EV
+- Pest Trap
+- flooder 
+- Tagasaurus 
+- Vundo trojan 
+- Gromozon Trojan</p>
+
+
+        <a class="button" href="/2013/10/26/the-attack-and-defense-of-computers.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2013/10/26/boost-note.html">
+            Boost Note.
+          </a>
+        </h2>
+        <p class="meta">
+          October 26, 2013
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>Boost 是由一群功能獨立的函式庫所組合而成的集合體</p>
+
+
+        <a class="button" href="/2013/10/26/boost-note.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2013/10/24/c-note.html">
+            C++ Note.
+          </a>
+        </h2>
+        <p class="meta">
+          October 24, 2013
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>friend 函式、friend 類別</p>
+
+
+        <a class="button" href="/2013/10/24/c-note.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  
+  <div class="pagination">
+    
+    <a href="/blog/page32" class="button" >
+      <i class="fa fa-chevron-left"></i>
+      Prev
+    </a>
+    
+    
+    <a href="/blog/page34" class="button" >
+      Next
+      <i class="fa fa-chevron-right"></i>
+    </a>
+    
+  </div>
+  
+</div>
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

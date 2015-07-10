@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>Blog | YU KAI'S WEBSITE</title>
+	<meta name="description" content="A website with blog posts and pages">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://example.com/blog/page11/">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="YU KAI'S WEBSITE" href="http://example.com/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  <!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<a href="/">
+			<img class="avatar" src="/img/avatar.png" alt=""/>
+		</a>
+		
+		<h1 class="site-title">
+			<a href="/">YU KAI'S WEBSITE</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li>
+				<a class="page-link" href="/about" title="About">About</a>
+				<a class="page-link" href="/blog" title="Blog">Blog</a>
+			</li>
+			<!-- Social icons from Font Awesome, if enabled -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://github.com/rohanchandra/type-theme" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://twitter.com/twitter" title="Follow on Twitter">
+		<i class="fa fa-fw fa-twitter"></i>
+	</a>
+</li>
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+    <div class="content">
+      <div class="home">
+
+  <div class="call-out">Blog</div>
+
+  <div class="posts">
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2014/09/08/upgrade-gitlab-70-to-72.html">
+            Upgrade Gitlab 7.0 to 7.2
+          </a>
+        </h2>
+        <p class="meta">
+          September 8, 2014
+        </p>
+      </header>
+      <div class="excerpt">
+        <blockquote>
+  <p>update: 2014-10-08</p>
+</blockquote>
+
+<blockquote>
+  <p>正確的更新方式應該為 先從 7.0 升到 7.1 ，再升到 7.2，且按照官方的文件執行即可</p>
+</blockquote>
+
+<p>-ERROR-</p>
+
+<p>整個升級過程其實還算順利，只不過 7.2 的資料表 <code>projects</code> 增加了一個欄位 <code>star_count</code>，似乎是用來計算有多少人”“star” 這個專案，而 backup restore 的過程中卻會把 7.2 的資料表取代成 7.0 的資料表版本，所以程式會找不到 <code>projects</code>.<code>star_count</code> 這個欄位，一進到 gitlab 的專案列表就會出現 500</p>
+
+<p>查詢 log:</p>
+
+<pre><code>ActionView::Template::Error (Mysql2::Error: Unknown column 'projects.star_count' in 'field list'
+...
+</code></pre>
+
+<p>後來的做法就是手動替該資料表加上 <code>star_count</code> 欄位囉</p>
+
+<pre><code>#SQL
+ALTER TABLE projects ADD star_count int(11) NOT NULL DEFAULT '0';
+CREATE INDEX index_projects_on_star_count USING btree ON projects (star_count);
+</code></pre>
+
+<p>-//ERROR-</p>
+
+<p>reference:</p>
+
+<p><a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/raketasks/backup_restore.md">gitlab: backup</a></p>
+
+<p><a href="http://apidock.com/rails/v4.0.2/ActiveRecord/ConnectionAdapters/SchemaStatements/add_index">ruby on rails: add_index</a></p>
+
+<p><a href="http://dev.mysql.com/doc/refman/5.1/en/alter-table.html">mysql: alter column</a></p>
+
+
+        <a class="button" href="/2014/09/08/upgrade-gitlab-70-to-72.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2014/09/08/korea-brand-lotte-dipper.html">
+            韓國飲料品牌: 樂天七星
+          </a>
+        </h2>
+        <p class="meta">
+          September 8, 2014
+        </p>
+      </header>
+      <div class="excerpt">
+        <blockquote>
+  <p>飲料自動販賣機是個通往“夢想”的開關。韓國飲料品牌樂天七星在車站中設立只有“Free”按鈕的販賣機，路人按下後，暗門就會旋轉打開進入到天花板掛滿飲料瓶的“跳跳床樂園”，只要在30秒內跳上取下飲料瓶，就有機會讓樂天七星協助完成夢想</p>
+</blockquote>
+
+
+        <a class="button" href="/2014/09/08/korea-brand-lotte-dipper.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2014/09/05/noke.html">
+            Noke
+          </a>
+        </h2>
+        <p class="meta">
+          September 5, 2014
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>https://www.kickstarter.com/projects/fuzdesigns/noke-the-worlds-first-bluetooth-padlock</p>
+
+
+        <a class="button" href="/2014/09/05/noke.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2014/09/05/desperate-efforts-to.html">
+            不顧一切的努力
+          </a>
+        </h2>
+        <p class="meta">
+          September 5, 2014
+        </p>
+      </header>
+      <div class="excerpt">
+        <iframe width="560" height="315" src="//www.youtube.com/embed/9SyRoLcvwVs" frameborder="0" allowfullscreen=""></iframe>
+<p><br /></p>
+
+
+        <a class="button" href="/2014/09/05/desperate-efforts-to.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+    <div class="post-teaser">
+      <header>
+        <h2>
+          <a class="post-link" href="/2014/09/03/is-that-kind-of-shift-li-wenqi.html">
+            是什麼樣的轉變，李文琦？
+          </a>
+        </h2>
+        <p class="meta">
+          September 3, 2014
+        </p>
+      </header>
+      <div class="excerpt">
+        <p>這位歌手讓我震驚了，起因為 她在造型上的改變，記得最近網友們在網上討論說她的聲音真的不錯但造型太差，但回去看她兩年前的影片，她原本也是個時髦、會打扮的年輕女孩。</p>
+
+<p>是什麼樣的原因讓一個原本打扮時髦的女孩，選擇現在較為不起眼、簡樸的裝扮？</p>
+
+<p>我不知道她經歷過什麼，但我想這就是在貫徹自己的本質，純樸，從聲音，從外型，從內而外。</p>
+
+<hr />
+
+<p>第一次看到這位歌手是在《中國好聲音》的 youtube 視頻，當時他並沒有被導師選上，但卻讓導師們印象深刻，覺得挺可惜的</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/6bkSKihPc4E" frameborder="0" allowfullscreen=""></iframe>
+
+<p>沒想最近卻又有機會再看到，是在《中國好聲音》第三季 復活賽，這次她真的如願被導師選中了</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/uJohn-N0M6M" frameborder="0" allowfullscreen=""></iframe>
+
+<p>但特地會注意到這位歌手的原因是，碰巧我看到了另一段視頻，原來她已經參加過第一季的《中國好聲音》，原來她在兩年後的好聲音唱了同一首歌</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/O_XAyMl65Gk" frameborder="0" allowfullscreen=""></iframe>
+
+<p>真的是很有意思的一位歌手，我記住了妳的歌聲，妳的那份純樸。</p>
+
+<p>李文琦 - 蒲公英MV</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/FVxD9c58LUo" frameborder="0" allowfullscreen=""></iframe>
+<p><br /></p>
+
+
+        <a class="button" href="/2014/09/03/is-that-kind-of-shift-li-wenqi.html">
+          Continue reading
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  
+  <div class="pagination">
+    
+    <a href="/blog/page10" class="button" >
+      <i class="fa fa-chevron-left"></i>
+      Prev
+    </a>
+    
+    
+    <a href="/blog/page12" class="button" >
+      Next
+      <i class="fa fa-chevron-right"></i>
+    </a>
+    
+  </div>
+  
+</div>
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

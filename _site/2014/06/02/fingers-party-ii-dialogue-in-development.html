@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>Fingers Party II 開發中的對話 | YU KAI'S WEBSITE</title>
+	<meta name="description" content="記錄他人合作開發的對話，文中似乎透露一些開發流程與模式，待好好琢磨一下。引自： 炎羅的網誌 2014.05.24==============================綠魚:  看魔方網的評測，麻糬亂跑好像本來非原始設定?(會跨去另一色塊區域)不過經介紹後反而亂跑也很有趣炎羅:  噢，他有問我  我說那是bu...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://example.com/2014/06/02/fingers-party-ii-dialogue-in-development.html">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="YU KAI'S WEBSITE" href="http://example.com/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  <!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<a href="/">
+			<img class="avatar" src="/img/avatar.png" alt=""/>
+		</a>
+		
+		<h1 class="site-title">
+			<a href="/">YU KAI'S WEBSITE</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li>
+				<a class="page-link" href="/about" title="About">About</a>
+				<a class="page-link" href="/blog" title="Blog">Blog</a>
+			</li>
+			<!-- Social icons from Font Awesome, if enabled -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://github.com/rohanchandra/type-theme" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://twitter.com/twitter" title="Follow on Twitter">
+		<i class="fa fa-fw fa-twitter"></i>
+	</a>
+</li>
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+    
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            
+            
+        
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            
+            
+        
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            
+            
+        
+    
+
+
+<article >
+  <header style="background-image: url('/')">
+    <h1 class="title">Fingers Party II 開發中的對話</h1>
+    <p class="meta">
+    June 2, 2014
+    
+    </p>
+  </header>
+  <section class="post-content"><p>記錄他人合作開發的對話，文中似乎透露一些開發流程與模式，待好好琢磨一下。</p>
+
+<p>引自： 炎羅的網誌 <a href="https://www.facebook.com/notes/%E7%82%8E%E7%BE%85/20140524/10150411856819975">2014.05.24</a></p>
+
+<p>==============================</p>
+
+<p>綠魚:</p>
+
+<blockquote>
+  <p>看魔方網的評測，麻糬亂跑好像本來非原始設定?(會跨去另一色塊區域)不過經介紹後反而亂跑也很有趣</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>噢，他有問我</p>
+</blockquote>
+
+<blockquote>
+  <p>我說那是bug，不過因為覺得無所謂，所以就變spec了</p>
+</blockquote>
+
+<p>綠魚:</p>
+
+<blockquote>
+  <p>哦哦XD</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>沒關係嗎？我是想看有沒有機會改好 :O</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>麻糬晚點再討論</p>
+</blockquote>
+
+<blockquote>
+  <p>工作要先排優先次序，重要的先做，不重要的捨棄，剩下捨棄不掉的才延長時間</p>
+</blockquote>
+
+<p>==============================</p>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>你開始吧</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>FP2要做的更新</p>
+</blockquote>
+
+<blockquote>
+  <p>免費版我就不說了</p>
+</blockquote>
+
+<blockquote>
+  <p>最重要的有兩項</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>Review網址更新</li>
+    <li>一般模式漂浮方塊功能補齊</li>
+  </ul>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>嗯</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>剩下一些是我不太想做，但是大家覺得必須要做的</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>[Title] 多語系提示</li>
+    <li>[Gameplay - Tapping] 交換顏色的閃白特效</li>
+    <li>[Gameplay - Obstacle] 反彈炸彈和反彈冰凍在第一次反彈後要閃爍</li>
+    <li>[Gameplay - Tapping] 強化和弱化重疊的作用時間有問題</li>
+    <li>[Gameplay - Tapping] 連續用交換方塊沒有反應</li>
+    <li>[Gameplay - Tapping] 麻糬碰撞不自然</li>
+    <li>[Gameplay通用] 暫停時看的到發動效果</li>
+    <li>[Gameplay通用] 真正暫停玩法</li>
+    <li>[Gameplay - Tapping] 動態障礙未跟著交換</li>
+    <li>[通用] loading時按下按鈕在的位置，還可以聽到按按鈕的聲音</li>
+    <li>[Setting] 回合選完立刻按垃圾桶清除一個，仍然會進入準備狀態</li>
+    <li>[Setting] 在READY到位前再按返回，READY會卡住不動</li>
+    <li>[Title] 下方選單列的按鈕快速亂按會讓視窗內容變大</li>
+    <li>[Gameplay通用] 從暫停回到遊戲再快速回到暫停，BGM沒有消失</li>
+    <li>[Setting] 選回合時未選好且沒放手，此時選好顏色會跳到下一頁面，中間的回合會卡住</li>
+    <li>[Gameplay - Tapping] 麻糬移動會超出色塊範圍- 等級隨機</li>
+    <li>暫停按鈕很容易誤觸- 贏家出爐時，回合數和時間等資訊，可以擺到確定按鈕左右</li>
+    <li>再有個最終結算好像會更好，統計每回合玩家的相關資訊</li>
+    <li>製作人名單在中文時可以中文</li>
+    <li>英文可以用暱稱，這樣圖框就不會壞掉了(等等附圖)</li>
+    <li>麻糬跟靜態障礙很像，覺得可以放到比較前面的等級</li>
+    <li>交換顏色方塊，感覺比較難理解，後來才發現可以交換著玩，覺得可以改成交換長度- 障礙都從交界處出，感覺對空間小的玩家比較不利</li>
+    <li>選色和選關卡的操作方式，好像沒有很快讓試玩者理解(看了許久)，覺得也可以考慮加上手指點擊動畫</li>
+    <li>有的時候漂浮方塊會很難按到(按了照跑)，不過大部分時候正常</li>
+  </ul>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>OK 我等等幫你刪減</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>前面沒加[ ]的是上次beta test後，綠魚整理出來建議改善的部分</p>
+</blockquote>
+
+<blockquote>
+  <p>因為不知道大家對這些需求的重視程度，所以我都沒有刪減</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>OK.. 我看看</p>
+</blockquote>
+
+<blockquote>
+  <p>我先刪減一些東西</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>好</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <ul>
+    <li>等級隨機 { 不需要 }</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>舉個例子最近正好要請Gx和唐宋安排比賽</p>
+</blockquote>
+
+<blockquote>
+  <p>如果是我來定賽制，我應該會這樣設計三戰兩勝，玩三場(一樣是三戰兩勝)</p>
+</blockquote>
+
+<blockquote>
+  <p>第一場: 全選一般模式，Level 5</p>
+</blockquote>
+
+<blockquote>
+  <p>第二場: 全選障礙模式，Level 5</p>
+</blockquote>
+
+<blockquote>
+  <p>如果兩場結果為平手，則第三場: Random x 三戰兩勝，不管選到哪個模式都設定為 Level 5</p>
+</blockquote>
+
+<blockquote>
+  <p>所以我覺得沒有必要連等級都隨機，這樣不利舉辦活動</p>
+</blockquote>
+
+<blockquote>
+  <p>妳覺得呢?</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>我基本上會先看程式美術好不好做，等級隨機要做會是大工程，程式可能還好，不過UI流程勢必要重新設計的
+比賽也是一個考量沒錯</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>嗯，我的角度是設計角度，你的角度是開發成本</p>
+</blockquote>
+
+<blockquote>
+  <p>如果設計的預期效益沒有超過開發成本，那就可以捨棄OK，總之這點捨棄掉</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩，而且以目前的遊戲性來說，我覺得現在的版本已經夠好玩了</p>
+</blockquote>
+
+<blockquote>
+  <p>OK</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>暫停按鈕很容易誤觸 { 不理會 }</li>
+</ul>
+
+<blockquote>
+  <p>如果想找個很好的解決方案，需要的設計成本太大了(目前沒有任何頭緒)。</p>
+</blockquote>
+
+<blockquote>
+  <p>而且這點在暫停紐縮小後已經改善一些.. 我覺得頂多讓暫停紐右移，接近螢幕邊緣(但別貼著邊緣)就好。</p>
+</blockquote>
+
+<blockquote>
+  <p>雖然我覺得有無右移影響不大就是了</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩，感覺放哪裡都可能會被點到，尤其玩到一個程度所有手指都下去的時候</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>OK，所以不理會</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>贏家出爐時，回合數和時間等資訊，可以擺到確定按鈕左右</li>
+</ul>
+
+<blockquote>
+  <p>這影響沒有很大吧？我覺得目前的score配置已經很清楚了。不理會</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>OK</p>
+</blockquote>
+
+<blockquote>
+  <p>阿</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>嗯?</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>可能是那時玩那一版我還沒有隱藏掉和WINNER同時出現的回合/時間</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>嗯，這部份的處理很不錯</p>
+</blockquote>
+
+<blockquote>
+  <p>讓 UI 看起來不像是半成品 :)</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>因為自己看了也彆扭 :(</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>製作人名單在中文時可以中文 { 不理會 }有什麼效益嗎?</li>
+</ul>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>我覺得…玩家應該不太會注意製作者吧</p>
+</blockquote>
+
+<blockquote>
+  <p>所以中英文好像沒什麼差</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>yes</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>英文可以用暱稱，這樣圖框就不會壞掉了(等等附圖)</li>
+</ul>
+
+<blockquote>
+  <p>圖框壞掉的問題應該修好了</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩，這個好了，忘了刪掉</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>麻糬跟靜態障礙很像，覺得可以放到比較前面的等級 { 不處理 }</li>
+</ul>
+
+<ol>
+  <li>UI 變動成本太大</li>
+  <li>效益太小.. 動態障礙在哪個等級出現幾乎沒啥太大的差別，而且我們的等級也不是很難鍊，最終都期望玩家以Level 5和未來會開放的Custom Level 來玩</li>
+</ol>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩，對我的考量是UI是一個問題，然後未來會有LV6，到時哪個先哪個後其實沒什麼差別</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<p>OK</p>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>交換顏色方塊，感覺比較難理解，後來才發現可以交換著玩，覺得可以改成交換長度</li>
+</ul>
+
+<blockquote>
+  <p>這個我看不太懂？</p>
+</blockquote>
+
+<blockquote>
+  <p>噢.. 意思是玩家的色塊位置不變，而是改變雙方的長度。</p>
+</blockquote>
+
+<blockquote>
+  <p>不過兩者相比，我覺得交換色塊會比交換長度好，妳覺得呢？</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>我是覺得交換顏色比較刺激好玩在拼到最後一刻時，突然被交換顏色…對方獲勝XD</p>
+</blockquote>
+
+<blockquote>
+  <p>而且這樣手指也才有機會交纏</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>yes，重點在讓玩家的手有機會交錯</p>
+</blockquote>
+
+<blockquote>
+  <p>OK，不處理</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>障礙都從交界處出，感覺對空間小的玩家比較不利 { 不處理 }</li>
+</ul>
+
+<blockquote>
+  <p>不能讓遊戲形成拉鋸，而且一般模式後來也從「方塊從中間出現」改為「方塊從交界出現」~ 是一樣的道理。</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>對阿</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>OK</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>選色和選關卡的操作方式，好像沒有很快讓試玩者理解(看了許久)，覺得也可以考慮加上手指點擊動畫 { 不處理 }</li>
+</ul>
+
+<blockquote>
+  <p>跟Gameplay主選單按扭的問題一樣，要改到好需要花費的本太大了。</p>
+</blockquote>
+
+<blockquote>
+  <p>而且玩家本能會去按螢幕上的東西，遲早會發現用點擊來選色、換色；我們也有動畫提示玩家滑動螢幕來切換回合數。</p>
+</blockquote>
+
+<blockquote>
+  <p>FP2目前切換回合數的 ui 不是合格的輸送帶ui.. 正確的輸送帶ui 應該像iOS換頁一樣，底下有一排sliders。</p>
+</blockquote>
+
+<blockquote>
+  <p>不過當初設計的時候我沒有這個概念，現在要加開發成本太大了</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩，slider那個可以研究看看怎做</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>下個案子再說，DC 有類似的 ui ，以後要做可以直接問嚕米怎樣弄..</p>
+</blockquote>
+
+<blockquote>
+  <p>ngui 應該有內建的 framework</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>好</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>有的時候漂浮方塊會很難按到(按了照跑)，不過大部分時候正常 { 不處理 }</li>
+</ul>
+
+<blockquote>
+  <p>理由一樣，這要改到好很花成本。</p>
+</blockquote>
+
+<blockquote>
+  <p>不過我大概說幾個points:</p>
+</blockquote>
+
+<ol>
+  <li>讓碰撞和touched為兩個不同的collider，這樣調大touched collider (為了方便點擊、拖拉)才不會影響到方塊碰撞行為。</li>
+  <li>可以去研究一下iOS的touch scan演算法.. 他是依據人類的手指點擊螢幕時，實際碰觸到的位置，和人類認為點到的位置做offset ( 將實際點到的位置轉為人類以為點到的位置 )，不過轉換的幅度很小就是了。</li>
+</ol>
+
+<blockquote>
+  <p>重點在這套系統based on使用者當時的「裝置方向」..</p>
+</blockquote>
+
+<blockquote>
+  <p>也就是說，當手機原本是直持的時候，在反向的 user 原本就比較不好點。</p>
+</blockquote>
+
+<blockquote>
+  <p>在一代我的處理方式是讓touch collider在垂直方向加大，然後稍微往上位移。</p>
+</blockquote>
+
+<blockquote>
+  <p>不過二代如果沒有先解決 1. 的問題，這點優化會很難進行</p>
+</blockquote>
+
+<p>[註] 關於 ios touch system 其實我也沒有很熟，有興趣請自行google :p</p>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩，了解</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>再來就剩下原本的16個問題</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>我先挑優先度最高的</p>
+</blockquote>
+
+<ul>
+  <li>[Title] 多語系提示</li>
+  <li>[Gameplay - Tapping] 交換顏色的閃白特效</li>
+  <li>[Gameplay - Obstacle] 反彈炸彈和反彈冰凍在第一次反彈後要閃爍</li>
+</ul>
+
+<blockquote>
+  <p>這三點</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>多語系很重要，因為我們付費版的主要TA是歐美市場，而免費版的主要TA是亞洲市場。因此讓玩家在第一次遊戲時能自選語言是很重要的事情，對的語言會減少玩家的流失。</p>
+</blockquote>
+
+<blockquote>
+  <p>而且我們今天晚餐的時候也討論過了，如果依照我提的方式，在語言中多設定一項undefined… 每次進 title 時如果發現玩家的語言設定為 undefined的話，就會自動彈出語言選單。</p>
+</blockquote>
+
+<blockquote>
+  <p>但是不特別處理玩家沒選語言的問題，因為目前的選單並沒有特別要求玩家選語言；而是在UI呈現(view)的時候..</p>
+</blockquote>
+
+<blockquote>
+  <p>如果發現語言存檔為undefined，就自動呈現hardcode的default language就好。</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩，OK，這個我再處理</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>OK</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>[Gameplay - Tapping] 交換顏色的閃白特效</li>
+  <li>[Gameplay - Obstacle] 反彈炸彈和反彈冰凍在第一次反彈後要閃爍</li>
+</ul>
+
+<blockquote>
+  <p>這兩點關乎到遊戲的質感，就跟你改score顯示一樣.. 為了別讓遊戲有「半成品」的感覺，我覺得要做好。 (目前上架的版本少了這兩個特效)</p>
+</blockquote>
+
+<blockquote>
+  <p>實作上盡量減少美術的需求，特效能由程式搞定就由程式搞定，執行細節可以再找我討論。</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩，這兩個我是覺得必須做，所以把優先度提到前面</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>OK</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>再來，我們討論最不重要的，也就是剛剛提過的麻糬問題</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>好</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<ul>
+  <li>[Gameplay - Tapping] 動態障礙未跟著交換</li>
+  <li>[Gameplay - Tapping] 麻糬移動會超出色塊範圍</li>
+</ul>
+
+<blockquote>
+  <p>如果讓麻糬的spec改為他會在雙方色塊範圍內到處亂跑… 目前的bug就不用特別去修。</p>
+</blockquote>
+
+<blockquote>
+  <p>要討論的是有沒有必要去改code，讓它變得真的符合新的spec.. 會在雙方色塊內亂跑。</p>
+</blockquote>
+
+<blockquote>
+  <p>我是傾向不理會，因為改了code可能會衍生出新的問題，而又不得不改的話就得不償失。</p>
+</blockquote>
+
+<blockquote>
+  <p>除非你很有把握，改code只是輕而易舉的事，那就可以改。不然保持現況就好。</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩，那可能先維持現狀</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>OK</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>再來是次重要的</p>
+</blockquote>
+
+<ul>
+  <li>[Setting] 回合選完立刻按垃圾桶清除一個，仍然會進入準備狀態</li>
+  <li>[Setting] 在READY到位前再按返回，READY會卡住不動</li>
+  <li>[Setting] 選回合時未選好且沒放手，此時選好顏色會跳到下一頁面，中間的回合會卡住</li>
+</ul>
+
+<blockquote>
+  <p>這三點，我覺得會影響玩家操作</p>
+</blockquote>
+
+<blockquote>
+  <p>這三點發生的原因都在「玩家按很快」的時候，我覺得在玩家急著玩下一場的情況下..</p>
+</blockquote>
+
+<blockquote>
+  <p>這種時機挺大的。所以應該要修，不過重要性不算太大，可以延到更後面的更新再來做，這次更新先不管。</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<ul>
+  <li>[Setting] 回合選完立刻按垃圾桶清除一個，仍然會進入準備狀態</li>
+  <li>[Setting] 在READY到位前再按返回，READY會卡住不動</li>
+  <li>[Setting] 選回合時未選好且沒放手，此時選好顏色會跳到下一頁面，中間的回合會卡住</li>
+  <li>[Title] 下方選單列的按鈕快速亂按會讓視窗內容變大</li>
+  <li>[通用] loading時按下按鈕在的位置，還可以聽到按按鈕的聲音</li>
+</ul>
+
+<blockquote>
+  <p>這5個應該算一起的，如果擋特效的collider可以做好，這些問題都可以解決</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>OK，不過我把Setting獨立分開，是因為setting比較重要</p>
+</blockquote>
+
+<blockquote>
+  <p>另外兩個玩家連點的機會較小，特別是快速亂按下方按鈕.. 一般玩家不會這樣做</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>喔喔，了解</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>就算真的這樣做，也沒啥影響.. 重開就好了</p>
+</blockquote>
+
+<blockquote>
+  <p>不過如果你這邊有統一的解決方案，就一起處理。</p>
+</blockquote>
+
+<blockquote>
+  <p>只要瞭解這五個問題，雖然解決方法一樣，但問題的權重不太一樣</p>
+</blockquote>
+
+<blockquote>
+  <p>因為問題的影響程度不同~</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>OK</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>再來…</p>
+</blockquote>
+
+<ul>
+  <li>[Gameplay通用] 暫停時看的到發動效果</li>
+</ul>
+
+<blockquote>
+  <p>這個容易處理嗎？</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>其實前一版我有初步處理過，不過成效沒有很好我是覺得這個要處理，因為我們遊戲沒有真正暫停</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>嗯，那這個就斟酌實際工作時間來決定要不要做</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>有時間就做，沒時間就先不做</p>
+</blockquote>
+
+<blockquote>
+  <p>因為遊戲中按暫停也不是很常發生的事情</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>好的</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>最後剩下五個問題</p>
+</blockquote>
+
+<blockquote>
+  <p>我分成三組:</p>
+</blockquote>
+
+<p>1.</p>
+
+<ul>
+  <li>[Gameplay - Tapping] 強化和弱化重疊的作用時間有問題</li>
+  <li>[Gameplay - Tapping] 連續用交換方塊沒有反應</li>
+</ul>
+
+<p>2.</p>
+
+<ul>
+  <li>[Gameplay - Tapping] 麻糬碰撞不自然</li>
+</ul>
+
+<p>3.</p>
+
+<ul>
+  <li>[Gameplay通用] 從暫停回到遊戲再快速回到暫停，BGM沒有消失</li>
+  <li>[Gameplay通用] 真正暫停玩法</li>
+</ul>
+
+<blockquote>
+  <p>第一組優先度最高，因為直接影響遊戲性.. 但暫時不處理也還好，理由一樣，發生機會不高</p>
+</blockquote>
+
+<blockquote>
+  <p>而後三點都是我覺得現有架構下，比較不好處裡的問題</p>
+</blockquote>
+
+<blockquote>
+  <p>我自己是傾向最後兩點不處理，反正影響也不大</p>
+</blockquote>
+
+<blockquote>
+  <p>而第三點，麻糬(或者說方塊)夢狀不自然的問題，如果有時間、有機會，更熟悉unity物理系統的話，可以再修看看</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>恩恩，好的</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>OK</p>
+</blockquote>
+
+<p>炎羅:</p>
+
+<p>===== Level 1 =====</p>
+
+<blockquote>
+  <ul>
+    <li>[Title] 多語系提示</li>
+    <li>[Gameplay - Tapping] 交換顏色的閃白特效</li>
+    <li>[Gameplay - Obstacle] 反彈炸彈和反彈冰凍在第一次反彈後要閃爍</li>
+  </ul>
+</blockquote>
+
+<p>===== Level 2 =====</p>
+
+<blockquote>
+  <ul>
+    <li>[Setting] 回合選完立刻按垃圾桶清除一個，仍然會進入準備狀態</li>
+    <li>[Setting] 在READY到位前再按返回，READY會卡住不動</li>
+    <li>[Setting] 選回合時未選好且沒放手，此時選好顏色會跳到下一頁面，中間的回合會卡住</li>
+    <li>[通用] loading時按下按鈕在的位置，還可以聽到按按鈕的聲音</li>
+    <li>[Title] 下方選單列的按鈕快速亂按會讓視窗內容變大</li>
+  </ul>
+</blockquote>
+
+<p>===== Level 3 =====</p>
+
+<blockquote>
+  <ul>
+    <li>[Gameplay - Tapping] 強化和弱化重疊的作用時間有問題</li>
+    <li>[Gameplay - Tapping] 連續用交換方塊沒有反應</li>
+  </ul>
+</blockquote>
+
+<p>===== Level 4 =====</p>
+
+<p>(能修就修，不能修就算惹。)</p>
+
+<blockquote>
+  <ul>
+    <li>[Gameplay通用] 暫停時看的到發動效果</li>
+    <li>[Gameplay - Tapping] 麻糬碰撞不自然</li>
+  </ul>
+</blockquote>
+
+<p>===== Level 5 =====</p>
+
+<p>(很難修，修好效益也不大，算惹。)</p>
+
+<blockquote>
+  <ul>
+    <li>[Gameplay通用] 從暫停回到遊戲再快速回到暫停，BGM沒有消失</li>
+    <li>[Gameplay通用] 真正暫停玩法</li>
+  </ul>
+</blockquote>
+
+<p>===== Level 6 =====</p>
+
+<p>(可接受的bug，直接將bug視為spec。)</p>
+
+<blockquote>
+  <ul>
+    <li>[Gameplay - Tapping] 動態障礙未跟著交換</li>
+    <li>[Gameplay - Tapping] 麻糬移動會超出色塊範圍</li>
+  </ul>
+</blockquote>
+
+<p>Thunder:</p>
+
+<p>O&gt; K</p>
+
+<p>炎羅:</p>
+
+<blockquote>
+  <p>那就這樣，要改完 Level 1，然後將features做完(包含測試、修改)，才能全球上架</p>
+</blockquote>
+
+<p>Thunder:</p>
+
+<blockquote>
+  <p>好的</p>
+</blockquote>
+
+<hr />
+
+<p>引自： 炎羅的網誌 <a href="https://www.facebook.com/notes/%E7%82%8E%E7%BE%85/20140524/10150411856819975">2014.05.24</a></p>
+
+<p><a href="https://www.facebook.com/nomads.games">Nomads 粉絲頁</a></p>
+
+<p><a href="http://fingers-party-ii.blogspot.tw/">Fingers Party Blog</a></p>
+
+<p><strong>手機遊戲《Fingers Party 2》介紹</strong></p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/Ujnrq-5IUNc" frameborder="0" allowfullscreen=""></iframe>
+<p><br /></p>
+</section>
+  <p id="post-meta">Posted with <i class="fa fa-tags"></i>: <a href="/blog/tag/筆記/">筆記</a>, <a href="/blog/tag/軟體工程/">軟體工程</a>, <a href="/blog/tag/開發流程/">開發流程</a></p>
+
+</article>
+
+<!-- Disqus -->
+
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

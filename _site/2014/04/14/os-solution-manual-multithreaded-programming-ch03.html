@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>[OS] Solution Manual : Process Concept ch03 | YU KAI'S WEBSITE</title>
+	<meta name="description" content="3.1Describe the differences among short term, medium term and long term sheduling?Ans:Short-term scheduler is invoked very frequently (milliseconds) ⇒ (must ...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://example.com/2014/04/14/os-solution-manual-multithreaded-programming-ch03.html">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="YU KAI'S WEBSITE" href="http://example.com/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  <!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<a href="/">
+			<img class="avatar" src="/img/avatar.png" alt=""/>
+		</a>
+		
+		<h1 class="site-title">
+			<a href="/">YU KAI'S WEBSITE</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li>
+				<a class="page-link" href="/about" title="About">About</a>
+				<a class="page-link" href="/blog" title="Blog">Blog</a>
+			</li>
+			<!-- Social icons from Font Awesome, if enabled -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://github.com/rohanchandra/type-theme" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://twitter.com/twitter" title="Follow on Twitter">
+		<i class="fa fa-fw fa-twitter"></i>
+	</a>
+</li>
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+    
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            
+            
+        
+    
+
+
+<article >
+  <header style="background-image: url('/')">
+    <h1 class="title">[OS] Solution Manual : Process Concept ch03</h1>
+    <p class="meta">
+    April 14, 2014
+    
+    </p>
+  </header>
+  <section class="post-content"><p>3.1</p>
+
+<p>Describe the differences among short term, medium term and long term sheduling?</p>
+
+<p>Ans:</p>
+
+<p>Short-term scheduler is invoked very frequently (milliseconds) ⇒ (must be fast)”</p>
+
+<p>Long-term scheduler is invoked very infrequently (seconds, minutes) ⇒ (may be slow)”</p>
+
+<p>3.2</p>
+
+<p>Describe the actions taken by a kernel to switch between processes?</p>
+
+<p>Ans:</p>
+
+<p>the system must save the state of the old process and load the saved state for the new process via a context switch.</p>
+
+<p>3.3</p>
+
+<p>Ans:(none)</p>
+
+<p>3.4</p>
+
+<p>Explain the role of the init process on unix and linux system in regard to process termination?</p>
+
+<p>Ans:</p>
+
+<p>init is the parent of all processes. Its primary role is to create processes from a script stored in  the file /etc/inittab.</p>
+
+<p>init is the first process started during booting of the computer system</p>
+
+<p>3.5</p>
+
+<p>Including the initial parent process, how many process are created by the program shown in Figure 3.31?</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+
+int main() {
+	int i;
+  
+  for ( i = 0 ; i &lt; 4 ; i++ ) {
+      fork();
+  }
+  
+  return 0;
+}
+</code></pre>
+
+<p>Ans:</p>
+
+<p>1+4+3+2+1 = 11</p>
+
+<p>3.6</p>
+
+<p>Ans:(none)</p>
+
+<p>3.7</p>
+
+<p>Using the program in Figure 3.29, identify the values of pid at lines A, B, C and D. (Assume that the actual pids of the parent and child are 2600 and 2603, respectively.)</p>
+
+<pre><code>#include &lt;sys/types.h&gt; 
+#include &lt;stdio.h&gt; 
+#include &lt;unistd.h&gt; 
+ 
+int main () 
+{
+    /* fork a child process */ 
+    pid = fork(); 
+    if ( pid &lt; 0 ) { /*error occurred 
+        fprintf(stderr, “Fork Failed”); 
+        return 1; 
+    } 
+    else if (pid ==0) { /* child process */ 
+        pid1 = getpid(); 
+        printf(“child: pid = %d” ,pid); /* A */ 
+        printf(“child: pid1 = %d” ,pid1); /* B */ 
+    } 
+    else { /* parent process */ 
+        pid1 = getpid(); 
+        printf(“parent: pid = %d” ,pid); /* C */ 
+        printf(“parent: pid1 = %d” ,pid1); /* D */ 
+        wait(NULL); 
+    } 
+    return 0; 
+} 
+</code></pre>
+
+<p>Ans:</p>
+
+<p>A: 0, B: 2603, C: 2603, D: 2600</p>
+
+<p>http://hscc.cs.nthu.edu.tw/~sheujp/homework/os09/HW3_ref.pdf</p>
+
+<p>3.8</p>
+
+<p>Give an example of a situation in which ordinary pipes are more suitable than named pipes and an example of a situation in which named pipes are more suitable than ordinary pipes?</p>
+
+<p>Ans:</p>
+
+<p>ordinary pipes:</p>
+
+<p>ordinary pipes require parent-child relationship between communicating processes.</p>
+
+<p>ordinary pipes are unidirectional (producer-consumer style).</p>
+
+<p>named pipes:</p>
+
+<p>No parent-child relationship is necessary between the communicating processes.</p>
+
+<p>named pipes is bidirectional.</p>
+
+<p>3.9</p>
+
+<p>Consider the RPC mechanism. Describe the undesirable circumstances that could arise from not enforcing either the “at most once” or “exactly once” semantics. Describe possible uses for a mechanism that had neither of these guarantees.</p>
+
+<p>Ans:</p>
+
+<p>If an RPC mechanism could not support either the “at most once” or “at least once” semantics, then the <strong>RPC server cannot guarantee that a remote procedure will not be invoked multiple occurrences</strong>. Consider if a remote procedure were <strong>withdrawing money</strong> from a bank account on a system that did not support these semantics. It is possible that a single invocation of the remote procedure might lead to multiple withdrawals on the server. For a system to support either of these semantics generally requires the server maintain some form of client state such as the timestamp.</p>
+
+<p><strong>If a system were unable to support either of these semantics</strong>, then such a <strong>system could only safely provide remote procedures that do not alter data or provide time-sensitive results</strong>. Using our bank account as an example, we certainly require “at most once” or “at least once” semantics for performing a withdrawal (or deposit!) However, an inquiry into an account balance or other account information such as <strong>name, address, etc. does not require these semantics</strong></p>
+
+<p>https://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CC4QFjAA&amp;url=http%3A%2F%2Fwww.cs.gsu.edu%2F~cscnaax%2Fsummer%2Fcs4320_6320%2FAssignments%2Fsol1.doc&amp;ei=rqpMU6jUFIaSkQX_uoHABA&amp;usg=AFQjCNGBO5A7ln5oYa2Yj1aJMIjYF58iJg&amp;sig2=okRebCDG4VPA6UFZFYeBcA</p>
+
+<p>3.10</p>
+
+<p>Ans:</p>
+
+<p>Line X : 0, -1, -2, -3, -4
+Line Y : 0, 1, 2, 3, 4</p>
+
+<p>3.11</p>
+
+<p>What are the benefits and the disadvantages of each of the following? Consider both the system level and the programmer level.</p>
+
+<p>a. Synchronous and asynchronous communication</p>
+
+<p>Ans:</p>
+
+<p>A benefit of <strong>synchronous communication</strong> is that it allows a rendezvous between the sender and receiver. A disadvantage of a <strong>blocking</strong> send is that a rendezvous may not be required and the message could be delivered asynchronously. As a result, message-passing systems often provide both forms of synchronization.</p>
+
+<p>Synchronous =&gt; blocking</p>
+
+<p>asynchronous =&gt; nonblocking</p>
+
+<p>b. Automatic and explicit buffering</p>
+
+<p>Ans:</p>
+
+<p><strong>Automatic</strong> buffering provides <strong>a queue with indefinite length</strong>, thus <strong>ensuring the sender will never have to block while waiting to copy a message</strong>. There are no specifications on how automatic buffering will be provided; one scheme <strong>may reserve sufficiently large memory where much of the memory is wasted</strong>. <strong>Explicit buffering</strong> <strong>specifies how large the buffer is</strong>. In this situation, the <strong>sender may be blocked while waiting for available space in the queue</strong>. However, it is less likely that memory will be wasted with explicit buffering.</p>
+
+<p>c. Send by copy and send by reference</p>
+
+<p>Ans:</p>
+
+<p>Send by copy does not allow the receiver to alter the state of the parameter.
+Send by reference does allow it.</p>
+
+<p>A benefit of send by reference is that it allows the programmer to write a distributed version of a centralized application. Java’s RMI provides both; however, passing a parameter by reference requires declaring the parameter as a remote object as well.</p>
+
+<p>d. Fixed-sized and variable-sized messages</p>
+
+<p>Ans:</p>
+
+<p>The implications of this are mostly related to buffering issues; with fixed-size messages, a buffer with a specific size can hold a known number of messages. The number of variable-sized messages that can be held by such a buffer is unknown.</p>
+</section>
+  <p id="post-meta">Posted with <i class="fa fa-tag"></i>: <a href="/blog/tag/OS/">OS</a></p>
+
+</article>
+
+<!-- Disqus -->
+
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

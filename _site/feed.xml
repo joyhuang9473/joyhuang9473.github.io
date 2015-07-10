@@ -1,102 +1,361 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>YU KAI&#39;S BLOG</title>
+    <title>YU KAI&#39;S WEBSITE</title>
     <atom:link href="http://example.com/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://example.com/</link>
     <description>A website with blog posts and pages</description>
-    <pubDate>Sat, 27 Jun 2015 18:13:26 +0800</pubDate>
+    <pubDate>Fri, 10 Jul 2015 16:32:53 +0800</pubDate>
     
       <item>
-        <title>Sample post</title>
-        <link>http://example.com/programming/2014/11/30/sample-post.html</link>
-        <guid isPermaLink="true">http://example.com/programming/2014/11/30/sample-post.html</guid>
-        <description>&lt;p&gt;Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
-  &lt;li&gt;Donec a diam lectus&lt;/li&gt;
-  &lt;li&gt;Sed sit amet ipsum mauris&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.&lt;/p&gt;
-
-&lt;p&gt;Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula &lt;em&gt;semper consectetur sagittis&lt;/em&gt;, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum.&lt;/p&gt;
-
-&lt;p&gt;Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque&lt;/p&gt;
+        <title>TED: 從一次赤腳運動中學到的</title>
+        <link>http://example.com/2015/04/17/ted-learned-from-a-barefoot-movement.html</link>
+        <guid isPermaLink="true">http://example.com/2015/04/17/ted-learned-from-a-barefoot-movement.html</guid>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;夜校考慮到孩子們的需求，而不是老師們的需求&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;他們一開始忽略你，然後嘲笑你，然後和你鬥爭，最後的贏家是你 - 聖雄甘地&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.&lt;/p&gt;
+&lt;p&gt;TED: http://www.ted.com/talks/bunker_roy/transcript?language=zh-tw#t-338065&lt;/p&gt;
+
+&lt;iframe src=&quot;https://embed-ssl.ted.com/talks/bunker_roy.html&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 30 Nov 2014 00:00:00 +0800</pubDate>
+        <pubDate>Fri, 17 Apr 2015 15:35:00 +0800</pubDate>
       </item>
     
       <item>
-        <title>Feature images</title>
-        <link>http://example.com/2014/11/29/feature-images.html</link>
-        <guid isPermaLink="true">http://example.com/2014/11/29/feature-images.html</guid>
-        <description>&lt;p&gt;This is an example of a post which includes a feature image specified in the front matter of the post. The feature image spans the full-width of the page, and is shown with the title on permalink pages.&lt;/p&gt;
+        <title>思語</title>
+        <link>http://example.com/2015/02/11/words.html</link>
+        <guid isPermaLink="true">http://example.com/2015/02/11/words.html</guid>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;內方還要外邊圓&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
-        <pubDate>Sat, 29 Nov 2014 00:00:00 +0800</pubDate>
+        <pubDate>Wed, 11 Feb 2015 15:10:00 +0800</pubDate>
       </item>
     
       <item>
-        <title>Markdown and HTML</title>
-        <link>http://example.com/2014/11/28/markdown-and-html.html</link>
-        <guid isPermaLink="true">http://example.com/2014/11/28/markdown-and-html.html</guid>
-        <description>&lt;p&gt;Jeykll supports the use of &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.&lt;/p&gt;
+        <title>思語</title>
+        <link>http://example.com/2015/02/10/words.html</link>
+        <guid isPermaLink="true">http://example.com/2015/02/10/words.html</guid>
+        <description>&lt;p&gt;HBO 影集：The Newsroom 新聞急先鋒&lt;/p&gt;
 
-&lt;p&gt;Tables have also been extended from Markdown:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;解決問題的第一步，是承認問題的存在&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;First Header&lt;/th&gt;
-      &lt;th&gt;Second Header&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-      &lt;td&gt;Content Cell&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Here’s an example of an image, which is included using Markdown:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/sample_feature_img_2.png&quot; alt=&quot;Geometric pattern with fading gradient&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Highlighting for code in Jekyll is done using Pygments or Rouge. This theme makes use of Pygments by default.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// count to ten&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// count to twenty&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Type Theme uses KaTeX to display maths. Equations such as &lt;script type=&quot;math/tex&quot;&gt;S_n = a \times \frac{1-r^n}{1-r}&lt;/script&gt; can be displayed inline.&lt;/p&gt;
-
-&lt;p&gt;Alternatively, they can be shown on a new line:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(x) = \int \frac{2x^2+4x+6}{x-2}&lt;/script&gt;
+&lt;p&gt;http://youtu.be/tG8F6BeAER8&lt;/p&gt;
 </description>
-        <pubDate>Fri, 28 Nov 2014 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 10 Feb 2015 15:30:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>Google 模式 - How Google Works</title>
+        <link>http://example.com/2015/01/23/google-mode-how-google-works.html</link>
+        <guid isPermaLink="true">http://example.com/2015/01/23/google-mode-how-google-works.html</guid>
+        <description>&lt;p&gt;Sega Cheng: CEO at LIVEhouse.in&lt;/p&gt;
+
+&lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/43779604&quot; width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt;
+&lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/segacheng/google-how-google-works&quot; title=&quot;Google 模式 - How Google Works&quot; target=&quot;_blank&quot;&gt;Google 模式 - How Google Works&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;//www.slideshare.net/segacheng&quot; target=&quot;_blank&quot;&gt;Sega Cheng&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+</description>
+        <pubDate>Fri, 23 Jan 2015 15:22:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>原來示波器可以這樣玩！</title>
+        <link>http://example.com/2015/01/22/used-oscilloscope-can-be-so-fun.html</link>
+        <guid isPermaLink="true">http://example.com/2015/01/22/used-oscilloscope-can-be-so-fun.html</guid>
+        <description>&lt;p&gt;C1-65A - Bad Apple (HD)&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/7pzvEouWino&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 22 Jan 2015 18:49:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>「自動裝配」的機器人</title>
+        <link>http://example.com/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot.html</link>
+        <guid isPermaLink="true">http://example.com/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot.html</guid>
+        <description>&lt;p&gt;&lt;a href=&quot;http://tw.leaderg.com/article/index?sn=10703&quot;&gt;LEADERG: 空中合體成形！MIT 研發能在風中、水中「自動裝配」的機器人&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Fluid Assembly: Chair Test&lt;/p&gt;
+
+&lt;iframe src=&quot;//player.vimeo.com/video/112761863?byline=0&amp;amp;portrait=0&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;http://vimeo.com/112761863&quot;&gt;Fluid Assembly: Chair Test&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user1791262&quot;&gt;Self-Assembly Lab, MIT&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Aerial Assemblies&lt;/p&gt;
+
+&lt;iframe src=&quot;//player.vimeo.com/video/109708208?byline=0&amp;amp;portrait=0&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;http://vimeo.com/109708208&quot;&gt;Aerial Assemblies&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user1791262&quot;&gt;Self-Assembly Lab, MIT&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 18 Jan 2015 02:58:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>Change your words. Change your world.</title>
+        <link>http://example.com/2015/01/03/change-your-words-change-your-world.html</link>
+        <guid isPermaLink="true">http://example.com/2015/01/03/change-your-words-change-your-world.html</guid>
+        <description>&lt;iframe marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;http://vlog.xuite.net/embed/dHR0S0Y5LTIxMDgzNzExLmZsdg==?ar=0&amp;amp;as=0&quot; width=&quot;640&quot; height=&quot;360&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 03 Jan 2015 07:01:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>臺灣吧 Taiwan Bar</title>
+        <link>http://example.com/2015/01/03/taiwan-taiwan-bar.html</link>
+        <guid isPermaLink="true">http://example.com/2015/01/03/taiwan-taiwan-bar.html</guid>
+        <description>&lt;p&gt;有幸在網路上發現這一個團體，這樣精巧的動畫影片僅由四個年輕人就能達成，或許 臺灣吧 官網上的觀點就能表達台灣現今年輕人的一種自我論述吧。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;我們四個人，是和平富足時代長大的幸運孩子，上一代的歷史包袱離我們很遠，或許正因為這樣，我們能用更寬闊的視野、更清明的心來處理歷史，思考我們的過去、當下與未來。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://taiwanbar.cc/&quot;&gt;臺灣吧 Taiwan Bar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;臺灣吧 Taiwan Bar 第0集『賣台？後藤桑の如意算盤 淺談日治初期的「台灣賣卻論」』&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/eHTV_Xdrkp8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 03 Jan 2015 02:48:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>《Lumino City》</title>
+        <link>http://example.com/2015/01/02/lumino-city.html</link>
+        <guid isPermaLink="true">http://example.com/2015/01/02/lumino-city.html</guid>
+        <description>&lt;p&gt;創作團隊 State of Play&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.biosmonthly.com/contactd.php?id=5479&quot;&gt;BIOS: 以紙打造的電玩世界&lt;/a&gt;
+&lt;a href=&quot;http://www.stateofplaygames.com/work/lumino-city/&quot;&gt;stateofplaygames: Lumino City&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;遊戲的主角是一位充滿冒險精神的少女，在城市裡尋找她走失的祖母，而玩家們將與少女一起探尋並解決遭遇的謎團。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;遊戲畫面的場景通通是由手工製作的紙板架疊起來的房屋，並掛起小小的發光 LED 燈飾作為城市場景裡的道具，接上電力後，遊戲人物和場景便能產生細緻的互動。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe src=&quot;//player.vimeo.com/video/97832046&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;http://vimeo.com/97832046&quot;&gt;Lumino City - Official Trailer&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user6948875&quot;&gt;State of Play&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 02 Jan 2015 11:54:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>初探 MEAN stack (一)</title>
+        <link>http://example.com/2014/12/28/a-preliminary-study-on-meanjs-a.html</link>
+        <guid isPermaLink="true">http://example.com/2014/12/28/a-preliminary-study-on-meanjs-a.html</guid>
+        <description>&lt;p&gt;最近看到 &lt;a href=&quot;https://www.youtube.com/playlist?list=PL6rhBJX0L3TWYrwrQIi1_MzQDvVhkUVPI&quot;&gt;Bossable.com: 30 day MEAN STACK Honolulu CHALLENGE&lt;/a&gt; 教學視頻，想說就來了解一下什麼是 MEAN stack 吧，將來也會配合這視頻，記錄一下學習的歷程，希望能真的在 30 天以內學好 MEAN.js :)&lt;/p&gt;
+
+&lt;p&gt;首先先推這篇文章，寫得簡單易懂！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://adon988.logdown.com/posts/247366-mean-stack-engineers-clean-title&quot;&gt;擁抱Javascript全端開發 - MEAN stack 工程師，你跟上了沒~&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MEAN&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- MongoDB
+- Express
+- AngularJS
+- Node.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Full stack&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;對於Javascript前後端通吃的特性，可以稱做 “Javascript全端能力(full stack JavaScript)”或者”純Javascript解決方案(pure JavaScript solutions)”
+Full stack工程師&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;MEAN.JS: http://meanjs.org/docs.html
+bossable.com: http://www.bossable.com/&lt;/p&gt;
+
+&lt;p&gt;– clear –&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Getting started with the MEAN stack&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;nodejs&lt;/li&gt;
+  &lt;li&gt;mongoDB&lt;/li&gt;
+  &lt;li&gt;bower&lt;/li&gt;
+  &lt;li&gt;grunt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(nodejs的安裝不敘述了，而 mongoDB 的部分採用線上免費的 &lt;a href=&quot;https://mongolab.com&quot;&gt;mongolab&lt;/a&gt; ，大概有 500MB 空間可用)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g bower
+
+$ npm install -g grunt-cli
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;install-the-meanjs-generator&quot;&gt;Install the MEAN.JS generator&lt;/h2&gt;
+
+&lt;p&gt;另外還安裝了 Yo Generator ，將來會用它來取得最新的 MEAN.JS&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The recommended way would be to use the official Yo Generator which will generate the latest stable copy of the MEAN.JS boilerplate and supply multiple sub-generators to ease your daily development cycles.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g yo
+
+$ npm install -g generator-meanjs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;create-your-mean-app&quot;&gt;Create your MEAN App&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /path/to/project
+yo meanjs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;set-up-database&quot;&gt;set up database&lt;/h2&gt;
+
+&lt;p&gt;這裡我改用 mongolab ，以下文中有簡單的使用教學：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.codedata.com.tw/database/mongodb-tutorial-1-setting-up-cloud-env/&quot;&gt;MongoDB Tutorial（1）雲端時代的 MongoDB 環境建置&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# edit /path/to/project/config/env/development.js
+&#39;use strict&#39;;
+
+module.exports = {
+    db: &#39;mongodb://&amp;lt;dbuser&amp;gt;:&amp;lt;dbpassword&amp;gt;@something.mongolab.com:49130/mydatabase&#39;,
+    app: {
+            title: &#39;blog - Development Environment&#39;
+    },
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;start&quot;&gt;start&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;$ grunt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;這樣就可以看到簡單的範例網頁了&lt;/p&gt;
+</description>
+        <pubDate>Sun, 28 Dec 2014 14:05:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>墨華：橫軸探索解謎遊戲</title>
+        <link>http://example.com/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html</link>
+        <guid isPermaLink="true">http://example.com/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html</guid>
+        <description>&lt;p&gt;偶然在網路上看到，聽說是大學生的畢業專題，感覺蠻精緻的，看到他人有如此的傑作，小弟心生慚愧啊&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/7YG59JPY-l4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 28 Dec 2014 09:40:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>遠端 Ubuntu 14.04 桌面</title>
+        <link>http://example.com/2014/12/27/remote-desktop-for-ubuntu-1404.html</link>
+        <guid isPermaLink="true">http://example.com/2014/12/27/remote-desktop-for-ubuntu-1404.html</guid>
+        <description>&lt;p&gt;最近因為期末專題的關係，選用了 Ubuntu 14.04 作為系統環境，而由於在下做的是跟影像辨識有關的題目，考量之後要秀出影像結果等需要，就來處理一下遠端桌面的功能，好讓我能帶著 MBP 去 demo :)&lt;/p&gt;
+
+&lt;p&gt;原本想說 ubuntu 這麼多人用，應該只要稍微設定一下就能用遠端桌面了吧，沒想到弄起來還是挺麻煩的 ==&lt;/p&gt;
+
+&lt;p&gt;首先還是先介紹可以正常運作的教學：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://c-nergy.be/blog/?p=5305&quot;&gt;Ubuntu 14.04 – How to install xrdp in Ubuntu 14.04&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;其實主要精神就是 &lt;strong&gt;安裝 xrdp ，改用 Xfce4&lt;/strong&gt; 作為桌面環境（desktop environment）&lt;/p&gt;
+
+&lt;p&gt;另外還有可能碰到的問題是，每當關閉遠端連線後，下次再遠端桌面登入卻是不同的 session ，就是重新遠端後看到的卻不是上一次遠端的桌面，那解決方法就是：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://askubuntu.com/questions/133343/how-do-i-set-up-xrdp-session-that-reuses-an-existing-session&quot;&gt;How do I set up xrdp session that reuses an existing session?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Note:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;that only works if there’s already an existing session though. The first time in, there’s no session so it fails to connect to port 5912.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;似乎還不是一個很好的辦法，之後再找找囉。&lt;/p&gt;
+
+&lt;p&gt;– clear –&lt;/p&gt;
+
+&lt;p&gt;修改 /etc/xrdp/xrdp.ini&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[xrdp1]
+name=sesman-vnc
+lib=libvnc.so
+username=ask
+password=ask
+ip=127.0.0.1
+port=5910 #原本的值為 -1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;至於為甚麼不能用 ubuntu 本身的 Unity 作為桌面環境，雖然還不確定原因，但感覺是 Unity, Gnome 對 xrdp 的支援程度有關，總之試過 gnome-session 的寫法，遠端後的結果都不樂觀，都會是 &lt;strong&gt;灰底畫面，還可以顯示的 ‘X’ 游標&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;（以下寫法都不能正常運作遠端桌面功能）&lt;/p&gt;
+
+&lt;p&gt;~/.xsession file :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Uncomment one of list items below, if you really want to try and test
+
+#gnome-session --session=gnome-classic
+#gnome-session --session=gnome-fallback
+#gnome-session –-session=ubuntu-2d
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Sat, 27 Dec 2014 03:18:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>Install Caffe and ImageNet model </title>
+        <link>http://example.com/2014/12/24/caffe-first-experience.html</link>
+        <guid isPermaLink="true">http://example.com/2014/12/24/caffe-first-experience.html</guid>
+        <description>&lt;p&gt;原本想安裝在 Windows，不過過程實在是太不順利了，最後還是依照網路上的一篇教學文，安裝在 Ubuntu 14.04 上，只差在它是用虛擬機，我是用實機安裝。&lt;/p&gt;
+
+&lt;p&gt;教學文如下，
+&lt;a href=&quot;https://github.com/BVLC/caffe/wiki/Ubuntu-14.04-VirtualBox-VM&quot;&gt;BVLC/caffe Ubuntu 14.04 VirtualBox VM&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a guide to setting up Caffe in a 14.04 virtual machine with CUDA 6.5 and the system Python for getting started with examples and PyCaffe.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;過程中還蠻順利的，除了&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Modify python/classify.py to add the –print_results option&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;這一步需要自己稍微修改一下 code ，那麼我就分享在 gist 上囉
+[custom classify.py in BVLC/caffe: &lt;path_to_caffe&gt;/python/classify.py](https://gist.github.com/Kai-Yu-Huang/6ae7ac4c496c6c4c18f9)&lt;/path_to_caffe&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Dec 2014 16:40:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>Someone already recreated Notch&#39;s insane new mansion in Minecraft</title>
+        <link>http://example.com/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html</link>
+        <guid isPermaLink="true">http://example.com/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html</guid>
+        <description>&lt;p&gt;http://www.dailydot.com/geek/notch-new-mansion-minecraft-style/?fb=dd&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/CdW8pmM1Ji8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 23 Dec 2014 07:40:00 +0800</pubDate>
+      </item>
+    
+      <item>
+        <title>呢喃</title>
+        <link>http://example.com/2014/12/12/words.html</link>
+        <guid isPermaLink="true">http://example.com/2014/12/12/words.html</guid>
+        <description>&lt;p&gt;不懂得如何表現溫柔的我，
+&lt;br /&gt;
+風雨中，心碎了才懂。&lt;/p&gt;
+</description>
+        <pubDate>Fri, 12 Dec 2014 15:58:00 +0800</pubDate>
       </item>
     
   </channel>
