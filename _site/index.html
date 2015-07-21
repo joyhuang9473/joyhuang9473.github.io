@@ -1,131 +1,506 @@
-<!DOCTYPE html>
-<html class="no-js">
-  <head>
-	<meta charset="utf-8">
-	<title> YU KAI'S WEBSITE</title>
-	<meta name="description" content="A website with blog posts and pages">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-Frame-Options" content="sameorigin">
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Latest Posts &#8211; YU KAI'S BLOG</title>
+<meta name="description" content="Just a blog I wrote.">
+<meta name="keywords" content="YU KAI'S BLOG, Yu-Kai Huang">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="/css/main.css">
 
-	<!--Favicon-->
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-	<!-- Canonical -->
-	<link rel="canonical" href="http://example.com/">
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Latest Posts">
+<meta property="og:description" content="Just a blog I wrote.">
+<meta property="og:url" content="/index.html">
+<meta property="og:site_name" content="YU KAI'S BLOG">
 
-	<!-- RSS -->
-	<link rel="alternate" type="application/atom+xml" title="YU KAI'S WEBSITE" href="http://example.com/feed.xml" />
 
-	<!-- Font Awesome -->
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-	<!-- Google Fonts -->
-	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
 
-  <!-- KaTeX -->
-	
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
-	
 
-	<!-- Google Analytics -->
-	
+<link rel="canonical" href="/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="YU KAI'S BLOG Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
 </head>
 
-  <body>
-    <header class="site-header">
-	<div class="branding">
+<body id="post-index" class="feature">
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="/images/avatar.jpg" alt="YU-KAI HUANG photo" class="author-photo">
+					<h4>YU-KAI HUANG</h4>
+					<p>Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice.</p>
+				</li>
+				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				<li>
+					<a href="mailto:you@email.com"><i class="fa fa-fw fa-envelope"></i> Email</a>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/posts/">All Posts</a></li>
+				<li><a href="/tags/">All Tags</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Projects</a>
+			<ul class="dl-submenu">
+				<li><a href="/projects/">All Projects</a></li>
+			</ul>
+		</li>
+
 		
-		<a href="/">
-			<img class="avatar" src="/img/avatar.png" alt=""/>
-		</a>
-		
-		<h1 class="site-title">
-			<a href="/">YU KAI'S WEBSITE</a>
-		</h1>
-	</div>
-	<nav class="site-nav">
-		<ul>
-			<li>
-				<a class="page-link" href="/about" title="About">About</a>
-				<a class="page-link" href="/blog" title="Blog">Blog</a>
-			</li>
-			<!-- Social icons from Font Awesome, if enabled -->
-			
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+<div class="entry-header">
+  <div class="image-credit">Image source: <a href="http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/">dargadgetz</a></div><!-- /.image-credit -->
+  
+    <div class="entry-image">
+      <img src="/images/abstract-1.jpg" alt="Latest Posts">
+    </div><!-- /.entry-image -->
+  
+  <div class="header-title">
+    <div class="header-title-wrap">
+      <h1>YU KAI'S BLOG</h1>
+      <h2>Latest Posts</h2>
+    </div><!-- /.header-title-wrap -->
+  </div><!-- /.header-title -->
+</div><!-- /.entry-header -->
+
+<div id="main" role="main">
+  
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-04-17T15:35:00+08:00"><a href="/ted-learned-from-a-barefoot-movement/">April 17, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/ted-learned-from-a-barefoot-movement/" rel="bookmark" title="TED: 從一次赤腳運動中學到的" itemprop="url">TED: 從一次赤腳運動中學到的</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <blockquote>
+  <p>夜校考慮到孩子們的需求，而不是老師們的需求</p>
+</blockquote>
+
+<blockquote>
+  <p>他們一開始忽略你，然後嘲笑你，然後和你鬥爭，最後的贏家是你 - 聖雄甘地</p>
+</blockquote>
+
+<p>TED: http://www.ted.com/talks/bunker_roy/transcript?language=zh-tw#t-338065</p>
+
+<iframe src="https://embed-ssl.ted.com/talks/bunker_roy.html" width="640" height="360" frameborder="0" scrolling="no" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<p><br /></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-02-11T15:10:00+08:00"><a href="/words/">February 11, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/words/" rel="bookmark" title="思語" itemprop="url">思語</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <blockquote>
+  <p>內方還要外邊圓</p>
+</blockquote>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-02-10T15:30:00+08:00"><a href="/words/">February 10, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/words/" rel="bookmark" title="思語" itemprop="url">思語</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>HBO 影集：The Newsroom 新聞急先鋒</p>
+
+<blockquote>
+  <p>解決問題的第一步，是承認問題的存在</p>
+</blockquote>
+
+<p>http://youtu.be/tG8F6BeAER8</p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-01-23T15:22:00+08:00"><a href="/google-mode-how-google-works/">January 23, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/google-mode-how-google-works/" rel="bookmark" title="Google 模式 - How Google Works" itemprop="url">Google 模式 - How Google Works</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>Sega Cheng: CEO at LIVEhouse.in</p>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/43779604" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/segacheng/google-how-google-works" title="Google 模式 - How Google Works" target="_blank">Google 模式 - How Google Works</a> </strong> from <strong><a href="//www.slideshare.net/segacheng" target="_blank">Sega Cheng</a></strong> </div>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-01-22T18:49:00+08:00"><a href="/used-oscilloscope-can-be-so-fun/">January 22, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/used-oscilloscope-can-be-so-fun/" rel="bookmark" title="原來示波器可以這樣玩！" itemprop="url">原來示波器可以這樣玩！</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>C1-65A - Bad Apple (HD)</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/7pzvEouWino" frameborder="0" allowfullscreen=""></iframe>
+<p><br /></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+
+<div class="pagination">
+  
+    Previous
+  
+  <ul class="inline-list">
+    <li>
+      
+        <span class="current-page">1</span>
+      
+    </li>
+    
+      <li>
+        
+          <a href="/page2">2</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page3">3</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page4">4</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page5">5</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page6">6</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page7">7</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page8">8</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page9">9</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page10">10</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page11">11</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page12">12</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page13">13</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page14">14</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page15">15</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page16">16</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page17">17</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page18">18</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page19">19</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page20">20</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page21">21</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page22">22</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page23">23</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page24">24</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page25">25</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page26">26</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page27">27</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page28">28</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page29">29</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page30">30</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page31">31</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page32">32</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page33">33</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page34">34</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/page35">35</a>
+        
+      </li>
+    
+  </ul>
+  
+    <a href="/page2" class="btn">Next</a>
+  
+</div><!-- /.pagination -->
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2015 YU-KAI HUANG. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
 
 
 
+          
 
-
-
-
-
-
-
-
-
-
-
-<li>
-	<a href="https://github.com/rohanchandra/type-theme" title="Follow on GitHub">
-		<i class="fa fa-fw fa-github"></i>
-	</a>
-</li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li>
-	<a href="https://twitter.com/twitter" title="Follow on Twitter">
-		<i class="fa fa-fw fa-twitter"></i>
-	</a>
-</li>
-
-
-
-
-
-
-		</ul>
-	</nav>
-</header>
-
-    <div class="content">
-      <div class="home">
-
-  <div class="call-out">Hi, I'm Yu Kai.</div>
-
-</div>
-
-    </div>
-    <script src="/js/main.js"></script>
-
-
-<footer class="site-footer">
-	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
-</p>
-</footer>
-
-
-  </body>
+</body>
 </html>

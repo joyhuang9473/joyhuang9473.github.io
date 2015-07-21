@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>YU KAI&#39;S WEBSITE</title>
-    <atom:link href="http://example.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>http://example.com/</link>
-    <description>A website with blog posts and pages</description>
-    <pubDate>Fri, 10 Jul 2015 16:32:53 +0800</pubDate>
-    
-      <item>
-        <title>TED: 從一次赤腳運動中學到的</title>
-        <link>http://example.com/2015/04/17/ted-learned-from-a-barefoot-movement.html</link>
-        <guid isPermaLink="true">http://example.com/2015/04/17/ted-learned-from-a-barefoot-movement.html</guid>
-        <description>&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">YU KAI'S BLOG</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="/feed.xml" />
+<link rel="alternate" type="text/html" href="" />
+<updated>2015-07-21T20:27:33+08:00</updated>
+<id>/</id>
+<author>
+  <name>YU-KAI HUANG</name>
+  <uri>/</uri>
+  <email>you@email.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[TED: 從一次赤腳運動中學到的]]></title>
+ <link rel="alternate" type="text/html" href="/ted-learned-from-a-barefoot-movement/" />
+  <id>/ted-learned-from-a-barefoot-movement</id>
+  <published>2015-04-17T15:35:00+08:00</published>
+  <updated>2015-04-17T15:35:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;blockquote&gt;
   &lt;p&gt;夜校考慮到孩子們的需求，而不是老師們的需求&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -23,65 +37,115 @@
 
 &lt;iframe src=&quot;https://embed-ssl.ted.com/talks/bunker_roy.html&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 17 Apr 2015 15:35:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>思語</title>
-        <link>http://example.com/2015/02/11/words.html</link>
-        <guid isPermaLink="true">http://example.com/2015/02/11/words.html</guid>
-        <description>&lt;blockquote&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/ted-learned-from-a-barefoot-movement/&quot;&gt;TED: 從一次赤腳運動中學到的&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on April 17, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[思語]]></title>
+ <link rel="alternate" type="text/html" href="/words/" />
+  <id>/words</id>
+  <published>2015-02-11T15:10:00+08:00</published>
+  <updated>2015-02-11T15:10:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;blockquote&gt;
   &lt;p&gt;內方還要外邊圓&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
-        <pubDate>Wed, 11 Feb 2015 15:10:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>思語</title>
-        <link>http://example.com/2015/02/10/words.html</link>
-        <guid isPermaLink="true">http://example.com/2015/02/10/words.html</guid>
-        <description>&lt;p&gt;HBO 影集：The Newsroom 新聞急先鋒&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/words/&quot;&gt;思語&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on February 11, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[思語]]></title>
+ <link rel="alternate" type="text/html" href="/words/" />
+  <id>/words</id>
+  <published>2015-02-10T15:30:00+08:00</published>
+  <updated>2015-02-10T15:30:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;HBO 影集：The Newsroom 新聞急先鋒&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;解決問題的第一步，是承認問題的存在&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;http://youtu.be/tG8F6BeAER8&lt;/p&gt;
-</description>
-        <pubDate>Tue, 10 Feb 2015 15:30:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>Google 模式 - How Google Works</title>
-        <link>http://example.com/2015/01/23/google-mode-how-google-works.html</link>
-        <guid isPermaLink="true">http://example.com/2015/01/23/google-mode-how-google-works.html</guid>
-        <description>&lt;p&gt;Sega Cheng: CEO at LIVEhouse.in&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/words/&quot;&gt;思語&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on February 10, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Google 模式 - How Google Works]]></title>
+ <link rel="alternate" type="text/html" href="/google-mode-how-google-works/" />
+  <id>/google-mode-how-google-works</id>
+  <published>2015-01-23T15:22:00+08:00</published>
+  <updated>2015-01-23T15:22:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Sega Cheng: CEO at LIVEhouse.in&lt;/p&gt;
 
 &lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/43779604&quot; width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt;
 &lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/segacheng/google-how-google-works&quot; title=&quot;Google 模式 - How Google Works&quot; target=&quot;_blank&quot;&gt;Google 模式 - How Google Works&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;//www.slideshare.net/segacheng&quot; target=&quot;_blank&quot;&gt;Sega Cheng&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
-</description>
-        <pubDate>Fri, 23 Jan 2015 15:22:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>原來示波器可以這樣玩！</title>
-        <link>http://example.com/2015/01/22/used-oscilloscope-can-be-so-fun.html</link>
-        <guid isPermaLink="true">http://example.com/2015/01/22/used-oscilloscope-can-be-so-fun.html</guid>
-        <description>&lt;p&gt;C1-65A - Bad Apple (HD)&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/google-mode-how-google-works/&quot;&gt;Google 模式 - How Google Works&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 23, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[原來示波器可以這樣玩！]]></title>
+ <link rel="alternate" type="text/html" href="/used-oscilloscope-can-be-so-fun/" />
+  <id>/used-oscilloscope-can-be-so-fun</id>
+  <published>2015-01-22T18:49:00+08:00</published>
+  <updated>2015-01-22T18:49:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;C1-65A - Bad Apple (HD)&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/7pzvEouWino&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 22 Jan 2015 18:49:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>「自動裝配」的機器人</title>
-        <link>http://example.com/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot.html</link>
-        <guid isPermaLink="true">http://example.com/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot.html</guid>
-        <description>&lt;p&gt;&lt;a href=&quot;http://tw.leaderg.com/article/index?sn=10703&quot;&gt;LEADERG: 空中合體成形！MIT 研發能在風中、水中「自動裝配」的機器人&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/used-oscilloscope-can-be-so-fun/&quot;&gt;原來示波器可以這樣玩！&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 22, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[「自動裝配」的機器人]]></title>
+ <link rel="alternate" type="text/html" href="/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot/" />
+  <id>/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot</id>
+  <published>2015-01-18T02:58:00+08:00</published>
+  <updated>2015-01-18T02:58:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;&lt;a href=&quot;http://tw.leaderg.com/article/index?sn=10703&quot;&gt;LEADERG: 空中合體成形！MIT 研發能在風中、水中「自動裝配」的機器人&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Fluid Assembly: Chair Test&lt;/p&gt;
 
@@ -92,25 +156,45 @@
 
 &lt;iframe src=&quot;//player.vimeo.com/video/109708208?byline=0&amp;amp;portrait=0&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;a href=&quot;http://vimeo.com/109708208&quot;&gt;Aerial Assemblies&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user1791262&quot;&gt;Self-Assembly Lab, MIT&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 18 Jan 2015 02:58:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>Change your words. Change your world.</title>
-        <link>http://example.com/2015/01/03/change-your-words-change-your-world.html</link>
-        <guid isPermaLink="true">http://example.com/2015/01/03/change-your-words-change-your-world.html</guid>
-        <description>&lt;iframe marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;http://vlog.xuite.net/embed/dHR0S0Y5LTIxMDgzNzExLmZsdg==?ar=0&amp;amp;as=0&quot; width=&quot;640&quot; height=&quot;360&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot/&quot;&gt;「自動裝配」的機器人&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 18, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Change your words. Change your world.]]></title>
+ <link rel="alternate" type="text/html" href="/change-your-words-change-your-world/" />
+  <id>/change-your-words-change-your-world</id>
+  <published>2015-01-03T07:01:00+08:00</published>
+  <updated>2015-01-03T07:01:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;iframe marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;http://vlog.xuite.net/embed/dHR0S0Y5LTIxMDgzNzExLmZsdg==?ar=0&amp;amp;as=0&quot; width=&quot;640&quot; height=&quot;360&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 03 Jan 2015 07:01:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>臺灣吧 Taiwan Bar</title>
-        <link>http://example.com/2015/01/03/taiwan-taiwan-bar.html</link>
-        <guid isPermaLink="true">http://example.com/2015/01/03/taiwan-taiwan-bar.html</guid>
-        <description>&lt;p&gt;有幸在網路上發現這一個團體，這樣精巧的動畫影片僅由四個年輕人就能達成，或許 臺灣吧 官網上的觀點就能表達台灣現今年輕人的一種自我論述吧。&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/change-your-words-change-your-world/&quot;&gt;Change your words. Change your world.&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 03, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[臺灣吧 Taiwan Bar]]></title>
+ <link rel="alternate" type="text/html" href="/taiwan-taiwan-bar/" />
+  <id>/taiwan-taiwan-bar</id>
+  <published>2015-01-03T02:48:00+08:00</published>
+  <updated>2015-01-03T02:48:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;有幸在網路上發現這一個團體，這樣精巧的動畫影片僅由四個年輕人就能達成，或許 臺灣吧 官網上的觀點就能表達台灣現今年輕人的一種自我論述吧。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;我們四個人，是和平富足時代長大的幸運孩子，上一代的歷史包袱離我們很遠，或許正因為這樣，我們能用更寬闊的視野、更清明的心來處理歷史，思考我們的過去、當下與未來。&lt;/p&gt;
@@ -122,15 +206,25 @@
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/eHTV_Xdrkp8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 03 Jan 2015 02:48:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>《Lumino City》</title>
-        <link>http://example.com/2015/01/02/lumino-city.html</link>
-        <guid isPermaLink="true">http://example.com/2015/01/02/lumino-city.html</guid>
-        <description>&lt;p&gt;創作團隊 State of Play&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/taiwan-taiwan-bar/&quot;&gt;臺灣吧 Taiwan Bar&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 03, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[《Lumino City》]]></title>
+ <link rel="alternate" type="text/html" href="/lumino-city/" />
+  <id>/lumino-city</id>
+  <published>2015-01-02T11:54:00+08:00</published>
+  <updated>2015-01-02T11:54:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;創作團隊 State of Play&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.biosmonthly.com/contactd.php?id=5479&quot;&gt;BIOS: 以紙打造的電玩世界&lt;/a&gt;
 &lt;a href=&quot;http://www.stateofplaygames.com/work/lumino-city/&quot;&gt;stateofplaygames: Lumino City&lt;/a&gt;&lt;/p&gt;
@@ -145,15 +239,25 @@
 
 &lt;iframe src=&quot;//player.vimeo.com/video/97832046&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;a href=&quot;http://vimeo.com/97832046&quot;&gt;Lumino City - Official Trailer&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user6948875&quot;&gt;State of Play&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 02 Jan 2015 11:54:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>初探 MEAN stack (一)</title>
-        <link>http://example.com/2014/12/28/a-preliminary-study-on-meanjs-a.html</link>
-        <guid isPermaLink="true">http://example.com/2014/12/28/a-preliminary-study-on-meanjs-a.html</guid>
-        <description>&lt;p&gt;最近看到 &lt;a href=&quot;https://www.youtube.com/playlist?list=PL6rhBJX0L3TWYrwrQIi1_MzQDvVhkUVPI&quot;&gt;Bossable.com: 30 day MEAN STACK Honolulu CHALLENGE&lt;/a&gt; 教學視頻，想說就來了解一下什麼是 MEAN stack 吧，將來也會配合這視頻，記錄一下學習的歷程，希望能真的在 30 天以內學好 MEAN.js :)&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/lumino-city/&quot;&gt;《Lumino City》&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 02, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[初探 MEAN stack (一)]]></title>
+ <link rel="alternate" type="text/html" href="/a-preliminary-study-on-meanjs-a/" />
+  <id>/a-preliminary-study-on-meanjs-a</id>
+  <published>2014-12-28T14:05:00+08:00</published>
+  <updated>2014-12-28T14:05:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;最近看到 &lt;a href=&quot;https://www.youtube.com/playlist?list=PL6rhBJX0L3TWYrwrQIi1_MzQDvVhkUVPI&quot;&gt;Bossable.com: 30 day MEAN STACK Honolulu CHALLENGE&lt;/a&gt; 教學視頻，想說就來了解一下什麼是 MEAN stack 吧，將來也會配合這視頻，記錄一下學習的歷程，希望能真的在 30 天以內學好 MEAN.js :)&lt;/p&gt;
 
 &lt;p&gt;首先先推這篇文章，寫得簡單易懂！&lt;/p&gt;
 
@@ -238,27 +342,47 @@ module.exports = {
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;這樣就可以看到簡單的範例網頁了&lt;/p&gt;
-</description>
-        <pubDate>Sun, 28 Dec 2014 14:05:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>墨華：橫軸探索解謎遊戲</title>
-        <link>http://example.com/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html</link>
-        <guid isPermaLink="true">http://example.com/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html</guid>
-        <description>&lt;p&gt;偶然在網路上看到，聽說是大學生的畢業專題，感覺蠻精緻的，看到他人有如此的傑作，小弟心生慚愧啊&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/a-preliminary-study-on-meanjs-a/&quot;&gt;初探 MEAN stack (一)&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 28, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[墨華：橫軸探索解謎遊戲]]></title>
+ <link rel="alternate" type="text/html" href="/mo-wa-horizontal-exploration-puzzle-game/" />
+  <id>/mo-wa-horizontal-exploration-puzzle-game</id>
+  <published>2014-12-28T09:40:00+08:00</published>
+  <updated>2014-12-28T09:40:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;偶然在網路上看到，聽說是大學生的畢業專題，感覺蠻精緻的，看到他人有如此的傑作，小弟心生慚愧啊&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/7YG59JPY-l4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 28 Dec 2014 09:40:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>遠端 Ubuntu 14.04 桌面</title>
-        <link>http://example.com/2014/12/27/remote-desktop-for-ubuntu-1404.html</link>
-        <guid isPermaLink="true">http://example.com/2014/12/27/remote-desktop-for-ubuntu-1404.html</guid>
-        <description>&lt;p&gt;最近因為期末專題的關係，選用了 Ubuntu 14.04 作為系統環境，而由於在下做的是跟影像辨識有關的題目，考量之後要秀出影像結果等需要，就來處理一下遠端桌面的功能，好讓我能帶著 MBP 去 demo :)&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/mo-wa-horizontal-exploration-puzzle-game/&quot;&gt;墨華：橫軸探索解謎遊戲&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 28, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[遠端 Ubuntu 14.04 桌面]]></title>
+ <link rel="alternate" type="text/html" href="/remote-desktop-for-ubuntu-1404/" />
+  <id>/remote-desktop-for-ubuntu-1404</id>
+  <published>2014-12-27T03:18:00+08:00</published>
+  <updated>2014-12-27T03:18:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;最近因為期末專題的關係，選用了 Ubuntu 14.04 作為系統環境，而由於在下做的是跟影像辨識有關的題目，考量之後要秀出影像結果等需要，就來處理一下遠端桌面的功能，好讓我能帶著 MBP 去 demo :)&lt;/p&gt;
 
 &lt;p&gt;原本想說 ubuntu 這麼多人用，應該只要稍微設定一下就能用遠端桌面了吧，沒想到弄起來還是挺麻煩的 ==&lt;/p&gt;
 
@@ -305,15 +429,25 @@ port=5910 #原本的值為 -1
 #gnome-session --session=gnome-fallback
 #gnome-session –-session=ubuntu-2d
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-        <pubDate>Sat, 27 Dec 2014 03:18:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>Install Caffe and ImageNet model </title>
-        <link>http://example.com/2014/12/24/caffe-first-experience.html</link>
-        <guid isPermaLink="true">http://example.com/2014/12/24/caffe-first-experience.html</guid>
-        <description>&lt;p&gt;原本想安裝在 Windows，不過過程實在是太不順利了，最後還是依照網路上的一篇教學文，安裝在 Ubuntu 14.04 上，只差在它是用虛擬機，我是用實機安裝。&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/remote-desktop-for-ubuntu-1404/&quot;&gt;遠端 Ubuntu 14.04 桌面&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 27, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Install Caffe and ImageNet model ]]></title>
+ <link rel="alternate" type="text/html" href="/caffe-first-experience/" />
+  <id>/caffe-first-experience</id>
+  <published>2014-12-24T16:40:00+08:00</published>
+  <updated>2014-12-24T16:40:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;原本想安裝在 Windows，不過過程實在是太不順利了，最後還是依照網路上的一篇教學文，安裝在 Ubuntu 14.04 上，只差在它是用虛擬機，我是用實機安裝。&lt;/p&gt;
 
 &lt;p&gt;教學文如下，
 &lt;a href=&quot;https://github.com/BVLC/caffe/wiki/Ubuntu-14.04-VirtualBox-VM&quot;&gt;BVLC/caffe Ubuntu 14.04 VirtualBox VM&lt;/a&gt;&lt;/p&gt;
@@ -330,33 +464,170 @@ port=5910 #原本的值為 -1
 
 &lt;p&gt;這一步需要自己稍微修改一下 code ，那麼我就分享在 gist 上囉
 [custom classify.py in BVLC/caffe: &lt;path_to_caffe&gt;/python/classify.py](https://gist.github.com/Kai-Yu-Huang/6ae7ac4c496c6c4c18f9)&lt;/path_to_caffe&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 24 Dec 2014 16:40:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>Someone already recreated Notch&#39;s insane new mansion in Minecraft</title>
-        <link>http://example.com/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html</link>
-        <guid isPermaLink="true">http://example.com/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html</guid>
-        <description>&lt;p&gt;http://www.dailydot.com/geek/notch-new-mansion-minecraft-style/?fb=dd&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/caffe-first-experience/&quot;&gt;Install Caffe and ImageNet model &lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 24, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Someone already recreated Notch's insane new mansion in Minecraft]]></title>
+ <link rel="alternate" type="text/html" href="/someone-already-recreated-notchs-insane-new-mansion-in-minecraft/" />
+  <id>/someone-already-recreated-notchs-insane-new-mansion-in-minecraft</id>
+  <published>2014-12-23T07:40:00+08:00</published>
+  <updated>2014-12-23T07:40:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;http://www.dailydot.com/geek/notch-new-mansion-minecraft-style/?fb=dd&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/CdW8pmM1Ji8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-</description>
-        <pubDate>Tue, 23 Dec 2014 07:40:00 +0800</pubDate>
-      </item>
-    
-      <item>
-        <title>呢喃</title>
-        <link>http://example.com/2014/12/12/words.html</link>
-        <guid isPermaLink="true">http://example.com/2014/12/12/words.html</guid>
-        <description>&lt;p&gt;不懂得如何表現溫柔的我，
+
+    &lt;p&gt;&lt;a href=&quot;/someone-already-recreated-notchs-insane-new-mansion-in-minecraft/&quot;&gt;Someone already recreated Notch&#39;s insane new mansion in Minecraft&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 23, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[呢喃]]></title>
+ <link rel="alternate" type="text/html" href="/words/" />
+  <id>/words</id>
+  <published>2014-12-12T15:58:00+08:00</published>
+  <updated>2014-12-12T15:58:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;不懂得如何表現溫柔的我，
 &lt;br /&gt;
 風雨中，心碎了才懂。&lt;/p&gt;
-</description>
-        <pubDate>Fri, 12 Dec 2014 15:58:00 +0800</pubDate>
-      </item>
-    
-  </channel>
-</rss>
+
+    &lt;p&gt;&lt;a href=&quot;/words/&quot;&gt;呢喃&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 12, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[胡啟志老師 魔幻水晶球鐵環特技極限秀]]></title>
+ <link rel="alternate" type="text/html" href="/magic-crystal-ball-hoop-hu-qizhi-teacher-limit-stunt-show/" />
+  <id>/magic-crystal-ball-hoop-hu-qizhi-teacher-limit-stunt-show</id>
+  <published>2014-12-10T15:24:00+08:00</published>
+  <updated>2014-12-10T15:24:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/giS6KZ7WdQ4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/magic-crystal-ball-hoop-hu-qizhi-teacher-limit-stunt-show/&quot;&gt;胡啟志老師 魔幻水晶球鐵環特技極限秀&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 10, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[GSS - Layouts Not Possible with Tomorrow's CSS]]></title>
+ <link rel="alternate" type="text/html" href="/gss-layouts-not-possible-with-tomorrows-css/" />
+  <id>/gss-layouts-not-possible-with-tomorrows-css</id>
+  <published>2014-12-08T10:21:00+08:00</published>
+  <updated>2014-12-08T10:21:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;iframe src=&quot;//player.vimeo.com/video/91393694?title=0&amp;amp;byline=0&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;http://vimeo.com/91393694&quot;&gt;GSS - Layouts Not Possible with Tomorrow&#39;s CSS // O&#39;Reilly Fluent 2014&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/d4tocchini&quot;&gt;Dan Tocchini&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/gss-layouts-not-possible-with-tomorrows-css/&quot;&gt;GSS - Layouts Not Possible with Tomorrow&#39;s CSS&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 08, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[哥賣的是商品]]></title>
+ <link rel="alternate" type="text/html" href="/brother-are-selling-merchandise/" />
+  <id>/brother-are-selling-merchandise</id>
+  <published>2014-12-04T11:11:00+08:00</published>
+  <updated>2014-12-04T11:11:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;每次的協商，不是沒有結果，就是在討價還價，對我來說，這不僅沒意義，更是一種人格上的污辱&lt;/p&gt;
+
+&lt;p&gt;我不曉得妳有什麼資格反悔，約是妳要簽的，功能、價格、時程我們都確認過了&lt;/p&gt;
+
+&lt;p&gt;功能，我答應妳的都做了，而其他妳答應我們的，妳做到了嗎？&lt;/p&gt;
+
+&lt;p&gt;我認為今天的問題不是金錢上的問題，也不是身份上妳是大人我們是學生的問題&lt;/p&gt;
+
+&lt;p&gt;而是人與人之間最基本的互信原則&lt;/p&gt;
+
+&lt;p&gt;既然妳做到這種地步，那我也不想廢話了，妳要我的商品，就請付足夠的錢&lt;/p&gt;
+
+&lt;p&gt;如果不行，不好意思，我的商品不是跟菜市場一樣可以討價還價的&lt;/p&gt;
+
+&lt;p&gt;但現在妳就算願意付錢，妳也沒資格跟我做生意了&lt;/p&gt;
+
+&lt;p&gt;我只賣商品，不賣尊嚴 :)&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/brother-are-selling-merchandise/&quot;&gt;哥賣的是商品&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 04, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Sony's e-paper watch is a thing of minimalist beauty]]></title>
+ <link rel="alternate" type="text/html" href="/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty/" />
+  <id>/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty</id>
+  <published>2014-12-02T07:42:00+08:00</published>
+  <updated>2014-12-02T07:42:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;http://www.theverge.com/2014/11/28/7301573/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/omvve2pVPH0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty/&quot;&gt;Sony&#39;s e-paper watch is a thing of minimalist beauty&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 02, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Guy Kawasaki - The 12 Lessons I Learned from Steve Jobs ]]></title>
+ <link rel="alternate" type="text/html" href="/guy-kawasaki-the-12-lessons-i-learned-from-steve-jobs/" />
+  <id>/guy-kawasaki-the-12-lessons-i-learned-from-steve-jobs</id>
+  <published>2014-11-26T16:24:00+08:00</published>
+  <updated>2014-11-26T16:24:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri></uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/edEs4sjlmJY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/guy-kawasaki-the-12-lessons-i-learned-from-steve-jobs/&quot;&gt;Guy Kawasaki - The 12 Lessons I Learned from Steve Jobs &lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on November 26, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+</feed>
