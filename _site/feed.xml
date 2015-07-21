@@ -4,12 +4,12 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2015-07-21T20:27:33+08:00</updated>
+<updated>2015-07-21T21:33:05+08:00</updated>
 <id>/</id>
 <author>
   <name>YU-KAI HUANG</name>
   <uri>/</uri>
-  <email>you@email.com</email>
+  <email>yu-kai@ags.tw</email>
 </author>
 
 
@@ -22,7 +22,7 @@
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;blockquote&gt;
@@ -52,7 +52,7 @@
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;blockquote&gt;
@@ -73,7 +73,7 @@
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;HBO 影集：The Newsroom 新聞急先鋒&lt;/p&gt;
@@ -98,7 +98,7 @@
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;Sega Cheng: CEO at LIVEhouse.in&lt;/p&gt;
@@ -120,7 +120,7 @@
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;C1-65A - Bad Apple (HD)&lt;/p&gt;
@@ -142,7 +142,7 @@
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;&lt;a href=&quot;http://tw.leaderg.com/article/index?sn=10703&quot;&gt;LEADERG: 空中合體成形！MIT 研發能在風中、水中「自動裝配」的機器人&lt;/a&gt;&lt;/p&gt;
@@ -171,7 +171,7 @@
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;iframe marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;http://vlog.xuite.net/embed/dHR0S0Y5LTIxMDgzNzExLmZsdg==?ar=0&amp;amp;as=0&quot; width=&quot;640&quot; height=&quot;360&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
@@ -191,7 +191,7 @@
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;有幸在網路上發現這一個團體，這樣精巧的動畫影片僅由四個年輕人就能達成，或許 臺灣吧 官網上的觀點就能表達台灣現今年輕人的一種自我論述吧。&lt;/p&gt;
@@ -221,7 +221,7 @@
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;創作團隊 State of Play&lt;/p&gt;
@@ -254,7 +254,7 @@
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;最近看到 &lt;a href=&quot;https://www.youtube.com/playlist?list=PL6rhBJX0L3TWYrwrQIi1_MzQDvVhkUVPI&quot;&gt;Bossable.com: 30 day MEAN STACK Honolulu CHALLENGE&lt;/a&gt; 教學視頻，想說就來了解一下什麼是 MEAN stack 吧，將來也會配合這視頻，記錄一下學習的歷程，希望能真的在 30 天以內學好 MEAN.js :)&lt;/p&gt;
@@ -357,7 +357,7 @@ module.exports = {
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;偶然在網路上看到，聽說是大學生的畢業專題，感覺蠻精緻的，看到他人有如此的傑作，小弟心生慚愧啊&lt;/p&gt;
@@ -379,7 +379,7 @@ module.exports = {
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;最近因為期末專題的關係，選用了 Ubuntu 14.04 作為系統環境，而由於在下做的是跟影像辨識有關的題目，考量之後要秀出影像結果等需要，就來處理一下遠端桌面的功能，好讓我能帶著 MBP 去 demo :)&lt;/p&gt;
@@ -444,7 +444,7 @@ port=5910 #原本的值為 -1
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;原本想安裝在 Windows，不過過程實在是太不順利了，最後還是依照網路上的一篇教學文，安裝在 Ubuntu 14.04 上，只差在它是用虛擬機，我是用實機安裝。&lt;/p&gt;
@@ -479,7 +479,7 @@ port=5910 #原本的值為 -1
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;http://www.dailydot.com/geek/notch-new-mansion-minecraft-style/?fb=dd&lt;/p&gt;
@@ -502,7 +502,7 @@ port=5910 #原本的值為 -1
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;不懂得如何表現溫柔的我，
@@ -523,7 +523,7 @@ port=5910 #原本的值為 -1
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/giS6KZ7WdQ4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
@@ -543,7 +543,7 @@ port=5910 #原本的值為 -1
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;iframe src=&quot;//player.vimeo.com/video/91393694?title=0&amp;amp;byline=0&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
@@ -563,7 +563,7 @@ port=5910 #原本的值為 -1
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;每次的協商，不是沒有結果，就是在討價還價，對我來說，這不僅沒意義，更是一種人格上的污辱&lt;/p&gt;
@@ -598,7 +598,7 @@ port=5910 #原本的值為 -1
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;p&gt;http://www.theverge.com/2014/11/28/7301573/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty&lt;/p&gt;
@@ -620,7 +620,7 @@ port=5910 #原本的值為 -1
   <author>
     <name>YU-KAI HUANG</name>
     <uri></uri>
-    <email>you@email.com</email>
+    <email>yu-kai@ags.tw</email>
   </author>
   <content type="html">
     &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/edEs4sjlmJY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;

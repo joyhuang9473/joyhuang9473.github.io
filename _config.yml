@@ -1,5 +1,5 @@
 title:            YU KAI'S BLOG
-description:      Describe your website here.
+description:      Just a blog I wrote.
 disqus_shortname: hpstrtheme
 reading_time:     true
 words_per_minute: 200
@@ -11,12 +11,12 @@ url:
 owner:
   name:           YU-KAI HUANG
   avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  bio:            "Hi! I'm a coder, interested in web, machine leaning, computer security and games."
+  email:          yu-kai@ags.tw
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       
-  github:         
+  github:         Kai-Yu-Huang
   stackexchange:  
   linkedin:       
   instagram:      
@@ -29,7 +29,7 @@ owner:
 background: 
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
+google_analytics:   true
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
