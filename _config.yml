@@ -1,7 +1,7 @@
 title:            YU KAI'S BLOG
 description:      Just a blog I wrote.
 disqus_shortname: hpstrtheme
-reading_time:     true
+reading_time:     false
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
@@ -16,7 +16,7 @@ owner:
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       
-  github:         Kai-Yu-Huang
+  github:         joyhuang9473
   stackexchange:  
   linkedin:       
   instagram:      
@@ -39,8 +39,8 @@ timezone:    Asia/Taipei
 future:      true
 highlighter: pygments
 markdown:    kramdown
-gems:
-  - jekyll-sitemap
+#gems:
+#  - jekyll-sitemap
 sass:
   sass_dir: _sass
   style: compressed

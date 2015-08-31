@@ -83,7 +83,7 @@
 				
 				
 				<li>
-					<a href="http://github.com/Kai-Yu-Huang"><i class="fa fa-fw fa-github"></i> GitHub</a>
+					<a href="http://github.com/joyhuang9473"><i class="fa fa-fw fa-github"></i> GitHub</a>
 				</li>
 				
 				
@@ -131,45 +131,19 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-10-01T01:21:00+08:00"><a href="/algorithms/">October 01, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        
-        Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
+      <span class="entry-date date published updated"><time datetime="2013-10-24T14:44:00+08:00"><a href="/c-note/">October 24, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="/algorithms/" rel="bookmark" title="Algorithms" itemprop="url">Algorithms</a></h1>
+      <h1 class="entry-title"><a href="/c-note/" rel="bookmark" title="C++ Note." itemprop="url">C++ Note.</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>http://blog.xuite.net/jackie.xie/bluelove/7457574</p>
+    <p>friend 函式、friend 類別</p>
 
-<p>http://cey.cs.au.edu.tw/Algo/down/NP.txt</p>
+<p>在定義類別成員時，私用成員只能被同一個類別定義的成員存取，不可以直接由外界進行存取，然而有些時候，您希望提供私用成員給某些外部函式來存取，這時您 可以設定類別的「好友」，只有好友才可以直接存取自家的私用成員。</p>
 
-<p>P problems,
-NP problems,
-NP-hard problems,
-NP-complete problems</p>
-
-<hr />
-
-<p>traveling-salesman problem</p>
-
-<p>10/13</p>
-
-<hr />
-
-<p>Divide-and-Conquer
-Greedy Algorithms
-Decrease-and-Conquer
-Dynamic Programming
-Iterative Improvement(e.g. Max-Flow)
-Branch-and-Bound
-Backtracking</p>
-
+<p><a href="http://openhome.cc/Gossip/CppGossip/friendFunctionClass.html">http://openhome.cc/Gossip/CppGossip/friendFunctionClass.html</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -178,149 +152,308 @@ Backtracking</p>
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-09-18T09:27:00+08:00"><a href="/git-server/">September 18, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        
-        Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
+      <span class="entry-date date published updated"><time datetime="2013-10-02T14:06:00+08:00"><a href="/install-gitlab-on-arch-linux/">October 02, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="/git-server/" rel="bookmark" title="Git-server" itemprop="url">Git-server</a></h1>
+      <h1 class="entry-title"><a href="/install-gitlab-on-arch-linux/" rel="bookmark" title="Install Gitlab on Arch Linux" itemprop="url">Install Gitlab on Arch Linux</a></h1>
     
   </header>
   <div class="entry-content">
-    <p><a href="https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md">https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md</a></p>
+    <h2 id="gitlab-wiki">Gitlab Wiki</h2>
+<p><a href="https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md" title="gitlab wiki">https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md</a></p>
 
-<pre><code>sudo pacman -S python-docutils
+<h2 id="reference">Reference</h2>
+<p><a href="https://gist.github.com/axilleas/3305554" title="reference">https://gist.github.com/axilleas/3305554</a></p>
 
-mail server: postfix
+<h2 id="begin">Begin</h2>
 
-sudo pacman -S postfix
+<h3 id="packages--dependencies--install-the-required-packages">1.Packages / Dependencies : Install the required packages</h3>
+
+<pre><code>sudo pacman -S sudo base-devel zlib libyaml openssl gdbm readline ncurses libffi curl git openssh redis libxml2 libxslt icu python2 python-docutils cmake
 </code></pre>
 
-<ol>
-  <li>
-    <p>Ruby</p>
+<h3 id="ruby">2.Ruby</h3>
 
-    <p>cd ~
- mkdir ruby &amp;&amp; cd ruby
- curl –progress ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p247.tar.gz | tar xz
- cd ruby-2.0.0-p247
- ./configure</p>
-  </li>
-</ol>
+<p>Download Ruby and compile it:</p>
 
-<p>[error]</p>
-
-<p>Make GitLab start on boot:</p>
-
-<pre><code>sudo update-rc.d gitlab defaults 21
+<pre><code>mkdir /tmp/ruby &amp;&amp; cd /tmp/ruby
+curl -L --progress ftp://ftp.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz | tar xz
+cd ruby-2.1.2
+./configure
+make
+sudo make install
 </code></pre>
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+<p>Install the Bundler Gem:</p>
 
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-09-10T10:59:00+08:00"><a href="/www/">September 10, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        
-        Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/www/" rel="bookmark" title="WWW" itemprop="url">WWW</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>http://bojack.pixnet.net/blog/post/12983723-%E3%80%90freebsd%E3%80%91%E7%94%A8-ports-%E5%AE%89%E8%A3%9D-apache-%2B-php-%2B-mysql</p>
-
-<p>http://www.twbsd.org/cht/book/</p>
-
-<p>安裝 vim
-cd /usr/ports/editors/vim
-make -DWITHOUT_X11 install clean</p>
-
-<p>DocumentRoot “/usr/local/www/data”</p>
-
-<p>DirectoryIndex index.php index.htm</p>
-
-<p>memory_limit = 8M</p>
-
-<p>post_max_size = 2M</p>
-
-<ul>
-  <li>my-huge.cnf: 適合 1GB - 2GB RAM的主機使用。</li>
-  <li>my-large.cnf: 適合 512MB RAM的主機使用。</li>
-  <li>my-medium.cnf: 只有 32MB - 64MB RAM 的主機使用，或者有 128MB RAM 但需要運行其他伺服器，例如 web server。</li>
-  <li>my-small.cnf: 記憶體少於 64MB 時適用這個，MySQL 會佔用較少資源。</li>
-</ul>
-
-<p>[Solved] Cannot set password To mysql Freebsd 7.2
-=&gt;http://forums.freebsd.org/showthread.php?t=13138</p>
-
-<p>/usr/local/etc/rc.d/mysql-server stop
-mv /var/db/mysql /var/db/mysql_old
-/usr/local/etc/rc.d/mysql-server start
-/usr/local/bin/mysqladmin -u root password ‘newpass’</p>
-
-<p>再安裝 PHP Extensions</p>
-
-<p>加勾選 GD、MYSQL、MBSTRING、ZIP 和 ZLIB PDO PDO_MYSQL</p>
-
-<p>ssh安裝</p>
-
-<p>在/etc/rc.conf
-加上 ssh_enable=”YES”
-啟動 /etc/rc.d/sshd restart</p>
-
-<p>設定檔位置
-/etc/ssh/sshd_config</p>
-
-<pre><code>date.timezone = "Asia/Taipei" 
-
-[mysqld]
-    character-set-server=utf8
-    collation-server=utf8_general_ci
-    init-connect='SET NAMES utf8'
-
-    [client]
-    default-character-set=utf8
+<pre><code>sudo gem install bundler --no-ri --no-rdoc
 </code></pre>
 
-<p>http://www.dk101.com/Discuz/viewthread.php?tid=161541</p>
+<h3 id="system-users">3.System Users</h3>
 
+<p>Create a git user for Gitlab:</p>
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+<pre><code>sudo userdel git
+sudo useradd -m -s /bin/false git
+sudo chmod 755 /home/git
+</code></pre>
 
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-09-08T07:46:00+08:00"><a href="/five-minutes-to-teach-you-how-to-save-yourself-from-being-locked-network-dilemma/">September 08, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        
-        Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/five-minutes-to-teach-you-how-to-save-yourself-from-being-locked-network-dilemma/" rel="bookmark" title="五分鐘教你如何自救被鎖網的窘境" itemprop="url">五分鐘教你如何自救被鎖網的窘境</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p><img src="http://goo.gl/tJo6v4" alt="step 1" /><img src="http://goo.gl/A9Q6GX" alt="step 2" /><img src="http://goo.gl/GmXm3F" alt="step 3" /><img src="http://goo.gl/R8eD3p" alt="step 4" /><img src="http://goo.gl/76nbpC" alt="step 5" /></p>
+<h3 id="gitlab-shell">4.GitLab shell</h3>
+
+<p>GitLab Shell is an ssh access and repository management software developed specially for GitLab.</p>
+
+<pre><code># Go to home directory
+cd /home/git
+
+# Clone gitlab shell
+sudo -u git -H git clone https://github.com/gitlabhq/gitlab-shell.git
+
+cd gitlab-shell
+
+sudo -u git -H cp config.yml.example config.yml
+
+# Edit config and replace gitlab_url
+# with something like 'http://domain.com/'
+sudo -u git -H editor config.yml
+
+# Do setup
+sudo -u git -H ./bin/install
+</code></pre>
+
+<h3 id="database">5.Database</h3>
+
+<p>To setup the MySQL</p>
+
+<pre><code>sudo pacman -S mysql
+sudo systemctl start mysqld
+sudo mysql_secure_installation
+
+# Login to MySQL
+mysql -u root -p
+
+# Create a user for GitLab
+# change $password in the command below to a real password you pick
+mysql&gt; CREATE USER 'gitlab'@'localhost' IDENTIFIED BY '$password';
+
+# Create the GitLab production database
+mysql&gt; CREATE DATABASE IF NOT EXISTS `gitlabhq_production` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`;
+
+# Grant the GitLab user necessary permissions on the table.
+mysql&gt; GRANT SELECT, LOCK TABLES, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER ON `gitlabhq_production`.* TO 'gitlab'@'localhost';
+
+# Quit the database session
+mysql&gt; \q
+</code></pre>
+
+<h3 id="gitlab">6.GitLab</h3>
+
+<p>We’ll install GitLab into home directory of the user “git”</p>
+
+<pre><code>cd /home/git
+</code></pre>
+
+<h4 id="clone-the-source">Clone the Source</h4>
+
+<pre><code># Clone GitLab repository
+sudo -u git -H git clone https://github.com/gitlabhq/gitlabhq.git gitlab
+
+# Go to gitlab dir
+cd /home/git/gitlab
+
+# Checkout to stable release
+sudo -u git -H git checkout 7-0-stable
+</code></pre>
+
+<p>Note: You can change 7-0-stable to master if you want the bleeding edge version, but never install master on a production server!</p>
+
+<h4 id="configure-it">Configure it</h4>
+
+<pre><code>cd /home/git/gitlab
+
+# Copy the example GitLab config
+sudo -u git -H cp config/gitlab.yml.example config/gitlab.yml
+
+# Make sure to change "localhost" to the fully-qualified domain name of your
+# host serving GitLab where necessary
+sudo -u git -H editor config/gitlab.yml
+
+# Make sure GitLab can write to the log/ and tmp/ directories
+sudo chown -R git log/
+sudo chown -R git tmp/
+sudo chmod -R u+rwX  log/
+sudo chmod -R u+rwX  tmp/
+
+# Create directory for satellites
+sudo -u git -H mkdir /home/git/gitlab-satellites
+
+# Create directories for sockets/pids and make sure GitLab can write to them
+sudo -u git -H mkdir tmp/pids/
+sudo -u git -H mkdir tmp/sockets/
+sudo chmod -R u+rwX  tmp/pids/
+sudo chmod -R u+rwX  tmp/sockets/
+
+# Create public/uploads directory otherwise backup will fail
+sudo -u git -H mkdir public/uploads
+sudo chmod -R u+rwX  public/uploads
+
+# Copy the example Unicorn config
+sudo -u git -H cp config/unicorn.rb.example config/unicorn.rb
+
+# Enable cluster mode if you expect to have a high load instance
+# Ex. change amount of workers to 3 for 2GB RAM server
+sudo -u git -H editor config/unicorn.rb
+
+# Copy the example Rack attack config
+# sudo -u git -H cp config/initializers/rackattack.rb.example config/initializers/rackattack.rb**
+
+# Enable rack attack middleware
+# Find and uncomment the line 'config.middleware.use Rack::Attack'
+sudo -u git -H editor config/application.rb
+
+# Configure Git global settings for git user, useful when editing via web
+# Edit user.email according to what is set in gitlab.yml
+sudo -u git -H git config --global user.name "GitLab"
+sudo -u git -H git config --global user.email "gitlab@localhost"
+sudo -u git -H git config --global core.autocrlf input
+</code></pre>
+
+<h4 id="configure-gitlab-db-settings">Configure GitLab DB settings</h4>
+
+<pre><code># Mysql
+sudo -u git cp config/database.yml.mysql config/database.yml
+
+# Make sure to update username/password in config/database.yml.
+# You only need to adapt the production settings (first part).
+# If you followed the database guide then please do as follows:
+# Change 'root' to 'gitlab'
+# Change 'secure password' with the value you have given to $password
+# You can keep the double quotes around the password
+sudo -u git -H editor config/database.yml
+
+# Make config/database.yml readable to git only
+sudo -u git -H chmod o-rwx config/database.yml
+</code></pre>
+
+<h4 id="install-gems">Install Gems</h4>
+
+<pre><code>cd /home/git/gitlab
+
+# For MySQL (note, the option says "without ... postgres")
+sudo -u git -H bundle install --deployment --without development test postgres aws
+</code></pre>
+
+<h4 id="initialize-database-and-activate-advanced-features">Initialize Database and Activate Advanced Features</h4>
+
+<pre><code>sudo systemctl start redis
+sudo -u git -H bundle exec rake gitlab:setup RAILS_ENV=production
+
+# Type 'yes' to create the database.
+
+# When done you see 'Administrator account created:'
+</code></pre>
+
+<h4 id="install-init-script">Install Init Script</h4>
+
+<p>Download the init script (will be /etc/init.d/gitlab):</p>
+
+<pre><code># @Notice : 在 ArchLinux ， 這份 Init Script 無法正常執行，之後需要手動下 command
+# 即使如此，我仍 cp 這份 script 到 /etc/init.d/ [需創建資料夾] ，因為後面的 Check Application Status
+# 似乎會檢查 /etc/init.d/gitlab 是否存在
+sudo cp lib/support/init.d/gitlab /etc/init.d/gitlab
+sudo chmod +x /etc/init.d/gitlab
+</code></pre>
+
+<h4 id="setup-logrotate">Setup Logrotate</h4>
+
+<pre><code>sudo cp lib/support/logrotate/gitlab /etc/logrotate.d/gitlab
+</code></pre>
+
+<h4 id="check-application-status">Check Application Status</h4>
+
+<p>Check if GitLab and its environment are configured correctly:</p>
+
+<pre><code>sudo -u git -H bundle exec rake gitlab:env:info RAILS_ENV=production
+</code></pre>
+
+<h4 id="compile-assets">Compile Assets</h4>
+
+<pre><code>sudo -u git -H bundle exec rake assets:precompile RAILS_ENV=production
+</code></pre>
+
+<h4 id="starts-unicorn-and-sidekiq">Starts Unicorn and Sidekiq</h4>
+
+<pre><code># Remove old socket if it exists
+rm -f "/home/git/gitlab/tmp/sockets"/gitlab.socket 2&gt;/dev/null
+# Start the webserver
+cd /home/git/gitlab
+sudo -u git -H bundle exec unicorn_rails -D -c "/home/git/gitlab/config/unicorn.rb" -E "production"
+ 
+# If sidekiq is already running, don't start it again.
+# Starting the GitLab Sidekiq event dispatcher
+sudo -u git -H RAILS_ENV=production bundle exec rake sidekiq:start
+</code></pre>
+
+<h3 id="nginx">7.Nginx</h3>
+
+<h4 id="installation">Installation</h4>
+
+<pre><code>sudo pacman -S nginx
+</code></pre>
+
+<h4 id="site-configuration">Site Configuration</h4>
+
+<p>Download an example site config:</p>
+
+<pre><code>sudo cp lib/support/nginx/gitlab /etc/nginx/sites-available/gitlab
+sudo ln -s /etc/nginx/sites-available/gitlab /etc/nginx/sites-enabled/gitlab
+</code></pre>
+
+<p>Make sure to edit the config file to match your setup:</p>
+
+<pre><code># Change YOUR_SERVER_FQDN to the fully-qualified
+# domain name of your host serving GitLab.
+sudo vim /etc/nginx/sites-available/gitlab
+</code></pre>
+
+<p>Include /etc/nginx/sites-enabled/gitlab</p>
+
+<pre><code>sudo vim /etc/nginx/nginx.conf
+
+---
+http {
+...
+    include /etc/nginx/sites-enabled/*;
+...
+</code></pre>
+
+<h2 id="start-nginx">Start Nginx</h2>
+
+<pre><code>sudo systemctl start nginx
+</code></pre>
+
+<h2 id="double-check-application-status">Double-check Application Status</h2>
+
+<p>To make sure you didn’t miss anything run a more thorough check with:</p>
+
+<pre><code>sudo systemctl start redis
+sudo -u git -H bundle exec rake sidekiq:start RAILS_ENV=production
+sudo -u git -H bundle exec rake gitlab:check RAILS_ENV=production
+</code></pre>
+
+<p>If all items are green, then congratulations on successfully installing GitLab! However there are still a few steps left.</p>
+
+<h2 id="done">Done!</h2>
+
+<p>Visit YOUR_SERVER for your first GitLab login. The setup has created an admin account for you. You can use it to log in:</p>
+
+<pre><code>admin@local.host
+5iveL!fe
+</code></pre>
+
+<p>Important Note: Please go over to your profile page and immediately change the password, so nobody can access your GitLab by using this login information later on.</p>
+
+<p>Enjoy!</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
