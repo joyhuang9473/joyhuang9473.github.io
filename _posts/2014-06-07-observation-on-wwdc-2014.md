@@ -3,7 +3,7 @@ layout: post
 title: 'WWDC 2014'
 date: 2014-06-07 14:51
 comments: true
-tags: [Apple, WWDC, 2014]
+tags: [Apple, WWDC]
 ---
 看到了一個很不錯且簡單的整理，挑幾個有興趣的紀錄一下啦
 

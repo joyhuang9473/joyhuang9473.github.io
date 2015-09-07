@@ -3,7 +3,7 @@ layout: post
 title: 'Upgrade Gitlab 7.0 to 7.2'
 date: 2014-09-08 16:14
 comments: true
-tags: [GitLab, 7.2, add_index]
+tags: [GitLab]
 ---
 > update: 2014-10-08
 
