@@ -39,14 +39,11 @@ timezone:    Asia/Taipei
 future:      true
 highlighter: pygments
 markdown:    kramdown
-#gems:
-#  - jekyll-sitemap
+gems:
+  - jekyll-sitemap
 sass:
   sass_dir: _sass
   style: compressed
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
 
 # Amount of post to show on home page
 paginate: 5
@@ -64,3 +61,6 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Boxfile"]
