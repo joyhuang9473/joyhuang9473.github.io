@@ -1,0 +1,214 @@
+---
+layout: page
+title: About Me
+image:
+  feature: abstract-5.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+comments: false
+modified: 2015-07-21
+---
+<div class="header">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-sm-4">
+                <img src="../images/avatar.JPG" title="Avatar" alt="My Avatar">
+                <h4>{{ site.data.author.name }}</h4>
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-sm-8 visible-md-block visible-lg-block visible-sm-block">
+                <p><i class="fa fa-envelope-o fa-fw"></i> {{ site.data.author.email }} </p>
+                <p><i class="fa fa-github fa-fw"></i><a href="https://github.com/{{ site.data.author.github }}" target="_blank">  @{{ site.data.author.github }} </a></p>
+                <p><i class="fa fa-linkedin-square fa-fw"></i> <a href="https://tw.linkedin.com/pub/{{ site.data.author.linkedin }}" target="_blank"> {{ site.data.author.linkedin }} </a></p>
+                <p><i class="fa fa-twitter fa-fw"></i> <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank">  @{{ site.data.author.twitter }} </a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-12">
+            {% if site.data.author.workHistory %}
+                <h3 class="title with-icon"><span class="glyphicon glyphicon-plane cat-title"></span>Work History</h3>
+                <ul class="timeline">
+                    {% for work in site.data.author.workHistory %}
+                        <li class="timeline-inverted">
+                            {% if work.started %}
+                                <div class="timeline-badge info">{{ work.started }}</div>
+                            {% endif %}
+                            <div class="timeline-panel grid-block">
+                                <div class="timeline-heading">
+                                    {% if work.company %}
+                                        <h4 class="timeline-title">{{ work.company }} </h4>
+                                    {% endif %}
+                                    <p>
+                                        <small class="text-muted">
+                                            {% if work.title %}
+                                                {{ work.title }}
+                                            {% endif %}
+                                        </small>
+                                    </p>
+                                    <p>
+                                        <small class="text-muted">
+                                            {% if work.duration %}
+                                                <i class="fa fa-calendar"></i> {{ work.duration }} |
+                                            {% endif %}
+                                            {% if work.location %}
+                                                <i class="fa fa-map-marker"></i>  {{ work.location }}
+                                            {% endif %}
+                                        </small>
+                                    </p>
+                                </div>
+                                <div class="timeline-body">
+                                    <ul>
+                                        {% for list in work.description %}
+                                            <li>{{ list.content }}</li>
+                                        {% endfor%}
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="col-md-12">
+            {% if site.data.author.educationHistory %}
+                <h3 class="title with-icon"><span class="fa fa-book cat-title"></span>Education History</h3>
+                <ul class="timeline">
+                    {% for education in site.data.author.educationHistory %}
+                        <li class="timeline-inverted">
+                            {% if education.started %}
+                                <div class="timeline-badge info">{{ education.started }}</div>
+                            {% endif %}
+                            <div class="timeline-panel grid-block">
+                                <div class="timeline-heading">
+                                    {% if education.organization %}
+                                        <h4 class="timeline-title">{{ education.organization }}</h4>
+                                    {% endif %}
+                                    <p>
+                                        <small class="text-muted">
+                                            {% if education.degree %}
+                                                {{ education.degree }}
+                                            {% endif %}
+                                            {% if education.major %}
+                                                , {{ education.major }}
+                                            {% endif %}
+                                        </small>
+                                    </p>
+                                    {% if education.duration %}
+                                        <p>
+                                            <small class="text-muted"><i class="fa fa-calendar"></i> {{ education.duration }}
+                                            </small>
+                                        </p>
+                                    {% endif %}
+                                </div>
+                                <div class="timeline-body">
+                                    {% if education.description %}
+                                        <p>{{ education.description }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="col-md-12">
+            {% if site.data.author.programmingSkills %}
+                <h3 class="title with-icon"><span class="fa fa-code cat-title"></span> Programming Skills</h3>
+                <div class="grid-block">
+                    <ul class="list-unstyled list-skills">
+                        {% for programmingSkill in site.data.author.programmingSkills %}
+                            <li>
+                                {% if programmingSkill.name %}
+                                    <span class="caption-skill">{{ programmingSkill.name }}</span>
+                                {% endif %}
+                                {% if programmingSkill.percentage %}
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: {{ programmingSkill.percentage }}">
+                                            <span>{{ programmingSkill.percentage }} </span>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            {% if site.data.author.languages %}
+                <div class="deviter"></div>
+                <h3 class="title with-icon"><span class="fa fa-globe cat-title"></span> Language Skills</h3>
+                <div class="grid-block">
+                    <ul class="list-unstyled list-strip">
+                        {% for language in site.data.author.languages %}
+                            {% if language.name %}
+                                {% if language.proficiency %}
+                                    <li>
+                                        <i class="fa fa-check"></i> <span class="badge badge-green badge-right-float">{{ language.proficiency }}</span>{{ language.name }}
+                                    </li>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <div class="deviter"></div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="col-md-12">
+            {% if site.data.author.otherSkills %}
+                <h3 class="title with-icon"><span class="fa fa-plus cat-title"></span> Other Skills</h3>
+                <div class="grid-block">
+                    <ul class="list-unstyled list-skills">
+                        {% for otherSkill in site.data.author.otherSkills %}
+                            <li>
+                                {% if otherSkill.name %}
+                                    <span class="caption-skill">{{ otherSkill.name }}</span>
+                                {% endif %}
+                                {% if otherSkill.percentage %}
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: {{ otherSkill.percentage }}">
+                                            <span>{{ otherSkill.percentage }} </span>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="col-md-12">
+            {% if site.data.author.learningSkills %}
+                <h3 class="title with-icon"><span class="fa fa-pencil cat-title"></span> Now I'm learning ...</h3>
+                <div class="grid-block">
+                    <ul class="list-unstyled list-skills">
+                        {% for learningSkill in site.data.author.learningSkills %}
+                            <li>
+                                {% if learningSkill.name %}
+                                    <span class="caption-skill">{{ learningSkill.name }}</span>
+                                {% endif %}
+                                {% if learningSkill.percentage %}
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: {{ learningSkill.percentage }}">
+                                            <span>{{ learningSkill.percentage }} </span>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

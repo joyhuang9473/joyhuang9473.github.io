@@ -1,0 +1,105 @@
+# Author settings
+
+name: YU-KAI HUANG
+title: 
+address: 
+email: joyhuang@ags.tw
+link: 
+weibo:
+github: joyhuang9473
+linkedin: yu-kai-huang/91/a26/135
+twitter: 
+gavatar: /assets/img/avatar.JPG
+
+workHistory:
+  - work:
+    company: NCU - Computer Science and Information Engineering Department
+    location: Chung-Li, Taiwan
+    title: Member of System and Network Management Group
+    started: 2013
+    duration: (2013 - 2015)
+    description:
+      - list:
+        content: Manage the services in department.
+      - list:
+        content: Design and maintain the websites of services.
+      - list:
+        content: Solve the problems when users use our services or have computer/network problem.
+  - work:
+    company: NCU - Computer Science and Information Engineering Department
+    location: Chung-Li, Taiwan
+    title: Vice President of Information Club
+    started: 2012
+    duration: (2012 - 2013)
+    description:
+      - list:
+        content: Teach web-programming classes.
+      - list:
+        content: Manage the services in club.
+
+educationHistory:
+  - education:
+    organization: National Central University, Chung-Li, Taiwan
+    degree: Bachelor
+    major: Computer Science and Information Engineering
+    started: 2011
+    duration: (2011 - 2015)
+
+languages:
+  - language:
+    name: Chinese
+    proficiency: Native
+  - language:
+    name: English
+    proficiency: intermediate
+
+programmingSkills:
+  - skill:
+    name: C++
+    percentage: 70%
+  - skill:
+    name: Java
+    percentage: 70%
+  - skill:
+    name: Python
+    percentage: 70%
+  - skill:
+    name: Javascript
+    percentage: 70%
+  - skill:
+    name: PHP
+    percentage: 90%
+  - skill:
+    name: SQL
+    percentage: 90%
+  - skill:
+    name: HTML
+    percentage: 100%
+  - skill:
+    name: CSS
+    percentage: 100%
+
+otherSkills:
+  - skill:
+    name: Cocos2d-x
+    percentage: 50%
+  - skill:
+    name: Git
+    percentage: 90%
+  - skill:
+    name: Linux
+    percentage: 70%
+  - skill:
+    name: Apache
+    percentage: 80%
+  - skill:
+    name: Nginx
+    percentage: 80%
+
+learningSkills:
+  - skill:
+    name: RoR
+    percentage: 30%
+  - skill:
+    name: Docker
+    percentage: 30%
