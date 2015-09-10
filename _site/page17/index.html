@@ -74,7 +74,7 @@
 			<a href="#">About</a>
 			<ul class="dl-submenu">
 				<li>
-					<img src="//joyhuang9473.github.io/images/avatar.jpg" alt="YU-KAI HUANG photo" class="author-photo">
+					<img src="http://i.imgur.com/IM68HzY.jpg" alt="YU-KAI HUANG photo" class="author-photo">
 					<h4>YU-KAI HUANG</h4>
 					<p>Hi! I'm a coder, interested in web, machine leaning, computer security and games.</p>
 				</li>
@@ -133,6 +133,82 @@
 
 <div id="main" role="main">
   
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-07-25T09:22:00+08:00"><a href="//joyhuang9473.github.io/2014/07/25/litre-of-mariadb-100-on-occasional-pain.html">July 25, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/25/litre-of-mariadb-100-on-occasional-pain.html" rel="bookmark" title="升上 MariaDB 10.0 後，Redmine 又爆了" itemprop="url">升上 MariaDB 10.0 後，Redmine 又爆了</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>上次小弟才剛升級完 MariaDB 10.0 ，原本想說都沒事，網路服務都很正常，沒想到今天一重開機，Redmine 就爆了</p>
+
+<p>又是 Redmine</p>
+
+<p>又是 Redmine</p>
+
+<p>又是 Redmine</p>
+
+<pre><code>require': Incorrect MySQL client library version! This gem was compiled for 5.5.34-MariaDB but the client library is 10.0.10-MariaDB. (RuntimeError) from /usr/local/rvm/gems/ruby-2.1.0/gems/mysql2-0.3.15/lib/mysql2.rb:8:in'
+</code></pre>
+
+<p>類似這樣的訊息</p>
+
+<p>＝＝ 恩，好啦，其實整件事情跟 Redmine 本身是沒關係的</p>
+
+<p>-clear-</p>
+
+<p>那麼網路上查了一下，原來是之前安裝的 mysql2(gem) 適用於 MariaDB 5.5，由於我升到 MariaDB 10.0 ，所以我要再重新</p>
+
+<blockquote>
+  <p>compile mysql2 against MariaDB 10.0.10</p>
+</blockquote>
+
+<p>網路上已經有相關的 issue : <a href="https://github.com/brianmario/mysql2/issues/506">Error while connecting MariaDB v10.0.10</a></p>
+
+<p>那做法上就是移除之前的 mysql2，重新 compile mysql2 並加上 –with-mysql-config 參數</p>
+
+<pre><code># Reinstall mysql2 with Configuration options --with-mysql-config On Arch Linux
+
+[redmine@localhost ~] gem uninstall mysql2
+[redmine@localhost ~] gem install mysql2 -- --with-mysql-config=/usr/bin/mysql_config
+[redmine@localhost ~] cd /path/to/redmine/project
+[redmine@localhost redmine] bundle config build.mysql2 --with-mysql-config=/usr/bin/mysql_config
+[redmine@localhost redmine] bundle update
+</code></pre>
+
+<blockquote>
+  <p>Note:<br />
+bundle config build.mysql2 –with-mysql-config=/usr/bin/mysql_config</p>
+
+  <p>After running this command, every time bundler needs to install the mysql gem, it will pass along the flags you specified.</p>
+</blockquote>
+
+<p>這樣基本上就完成了，接著執行 rake 產生 secret token</p>
+
+<pre><code>[redmine@localhost redmine]$ rake generate_secret_token
+</code></pre>
+
+<p>回到 sudoer 用 systemctl 重新執行 redmine ，我的 redmine 就回來囉～</p>
+
+<pre><code>[sudoer@localhost ~]$ sudo systemctl restart redmine
+</code></pre>
+
+<h3 id="note">Note</h3>
+
+<p><a href="https://github.com/brianmario/mysql2#configuration-options">brianmario/mysql2</a> ：A modern, simple and very fast Mysql library for Ruby - binding to libmysql</p>
+
+<p><a href="https://wincent.com/wiki/Force_re-installing_the_MySQL_gem">Force re-installing the MySQL gem</a></p>
+
+<p><a href="http://bundler.io/v1.3/man/bundle-config.1.html">BUNDLE-CONFIG</a></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
 <article class="hentry">
   <header>
     
@@ -250,27 +326,6 @@ Jul 21 14:43:40 localhost mysqld[5451]: Version: '10.0.12-MariaDB-log'  socket: 
   </header>
   <div class="entry-content">
     <p>https://wiki.archlinux.org/index.php/BIND</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-07-21T14:30:00+08:00"><a href="//joyhuang9473.github.io/2014/07/21/try-bug-genie.html">July 21, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/21/try-bug-genie.html" rel="bookmark" title="Bug Genie 試架" itemprop="url">Bug Genie 試架</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p><a href="http://en.wikipedia.org/wiki/The_Bug_Genie">The Bug Genie wiki</a></p>
-
-<p>Github : <a href="https://github.com/thebuggenie/thebuggenie">thebuggenie/thebuggenie</a></p>
-
-<p>License : Mozilla Public License 1.1</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
