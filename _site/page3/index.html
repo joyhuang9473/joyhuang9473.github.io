@@ -6,8 +6,8 @@
 <head>
 <meta charset="utf-8">
 <title>Latest Posts &#8211; YU KAI'S BLOG</title>
-<meta name="description" content="Just a blog I wrote.">
-<meta name="keywords" content="YU KAI'S BLOG, Yu-Kai Huang">
+<meta name="description" content="yu kai's blog">
+<meta name="keywords" content="YU KAI'S BLOG, Yu-Kai Huang, joyhuang">
 
 
 
@@ -15,7 +15,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Latest Posts">
-<meta property="og:description" content="Just a blog I wrote.">
+<meta property="og:description" content="yu kai's blog">
 <meta property="og:url" content="//joyhuang9473.github.io/page3/index.html">
 <meta property="og:site_name" content="YU KAI'S BLOG">
 
@@ -137,99 +137,21 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-12-28T14:05:00+08:00"><a href="//joyhuang9473.github.io/2014/12/28/a-preliminary-study-on-meanjs-a.html">December 28, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2015-02-04T12:00:00+08:00"><a href="//joyhuang9473.github.io/project-general/project-web/2015/02/04/project-ncucsie-website.html">February 04, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/28/a-preliminary-study-on-meanjs-a.html" rel="bookmark" title="初探 MEAN stack (一)" itemprop="url">初探 MEAN stack (一)</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/project-general/project-web/2015/02/04/project-ncucsie-website.html" rel="bookmark" title="NCU CSIE Website" itemprop="url">NCU CSIE Website</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>最近看到 <a href="https://www.youtube.com/playlist?list=PL6rhBJX0L3TWYrwrQIi1_MzQDvVhkUVPI">Bossable.com: 30 day MEAN STACK Honolulu CHALLENGE</a> 教學視頻，想說就來了解一下什麼是 MEAN stack 吧，將來也會配合這視頻，記錄一下學習的歷程，希望能真的在 30 天以內學好 MEAN.js :)</p>
+    <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="//imgur.com/a/IDaQx/embed"></iframe>
 
-<p>首先先推這篇文章，寫得簡單易懂！</p>
+<p>URL: <a href="http://www.csie.ncu.edu.tw">http://www.csie.ncu.edu.tw</a></p>
 
-<p><a href="http://adon988.logdown.com/posts/247366-mean-stack-engineers-clean-title">擁抱Javascript全端開發 - MEAN stack 工程師，你跟上了沒~</a></p>
+<p>NCU-CSIE official website, written in LAMP.</p>
 
-<p><strong>MEAN</strong></p>
-
-<pre><code>- MongoDB
-- Express
-- AngularJS
-- Node.js
-</code></pre>
-
-<p><strong>Full stack</strong></p>
-
-<blockquote>
-  <p>對於Javascript前後端通吃的特性，可以稱做 “Javascript全端能力(full stack JavaScript)”或者”純Javascript解決方案(pure JavaScript solutions)”
-Full stack工程師</p>
-</blockquote>
-
-<p>MEAN.JS: http://meanjs.org/docs.html
-bossable.com: http://www.bossable.com/</p>
-
-<p>– clear –</p>
-
-<p><strong>Getting started with the MEAN stack</strong></p>
-
-<h2 id="prerequisites">Prerequisites</h2>
-
-<ul>
-  <li>nodejs</li>
-  <li>mongoDB</li>
-  <li>bower</li>
-  <li>grunt</li>
-</ul>
-
-<p>(nodejs的安裝不敘述了，而 mongoDB 的部分採用線上免費的 <a href="https://mongolab.com">mongolab</a> ，大概有 500MB 空間可用)</p>
-
-<pre><code>$ npm install -g bower
-
-$ npm install -g grunt-cli
-</code></pre>
-
-<h2 id="install-the-meanjs-generator">Install the MEAN.JS generator</h2>
-
-<p>另外還安裝了 Yo Generator ，將來會用它來取得最新的 MEAN.JS</p>
-
-<blockquote>
-  <p>The recommended way would be to use the official Yo Generator which will generate the latest stable copy of the MEAN.JS boilerplate and supply multiple sub-generators to ease your daily development cycles.</p>
-</blockquote>
-
-<pre><code>$ npm install -g yo
-
-$ npm install -g generator-meanjs
-</code></pre>
-
-<h2 id="create-your-mean-app">Create your MEAN App</h2>
-
-<pre><code>cd /path/to/project
-yo meanjs
-</code></pre>
-
-<h2 id="set-up-database">set up database</h2>
-
-<p>這裡我改用 mongolab ，以下文中有簡單的使用教學：</p>
-
-<p><a href="http://www.codedata.com.tw/database/mongodb-tutorial-1-setting-up-cloud-env/">MongoDB Tutorial（1）雲端時代的 MongoDB 環境建置</a></p>
-
-<pre><code># edit /path/to/project/config/env/development.js
-'use strict';
-
-module.exports = {
-    db: 'mongodb://&lt;dbuser&gt;:&lt;dbpassword&gt;@something.mongolab.com:49130/mydatabase',
-    app: {
-            title: 'blog - Development Environment'
-    },
-</code></pre>
-
-<h1 id="start">start</h1>
-
-<pre><code>$ grunt
-</code></pre>
-
-<p>這樣就可以看到簡單的範例網頁了</p>
+<p>Author: YU-KAI HUANG, Sheng-Han Yang, Hsing-Chien Cheng</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -238,17 +160,37 @@ module.exports = {
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-12-28T09:40:00+08:00"><a href="//joyhuang9473.github.io/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html">December 28, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2015-01-23T15:22:00+08:00"><a href="//joyhuang9473.github.io/2015/01/23/google-mode-how-google-works.html">January 23, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html" rel="bookmark" title="墨華：橫軸探索解謎遊戲" itemprop="url">墨華：橫軸探索解謎遊戲</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2015/01/23/google-mode-how-google-works.html" rel="bookmark" title="Google 模式 - How Google Works" itemprop="url">Google 模式 - How Google Works</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>偶然在網路上看到，聽說是大學生的畢業專題，感覺蠻精緻的，看到他人有如此的傑作，小弟心生慚愧啊</p>
+    <p>Sega Cheng: CEO at LIVEhouse.in</p>
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/7YG59JPY-l4" frameborder="0" allowfullscreen=""></iframe>
+<iframe src="//www.slideshare.net/slideshow/embed_code/43779604" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/segacheng/google-how-google-works" title="Google 模式 - How Google Works" target="_blank">Google 模式 - How Google Works</a> </strong> from <strong><a href="//www.slideshare.net/segacheng" target="_blank">Sega Cheng</a></strong> </div>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-01-22T18:49:00+08:00"><a href="//joyhuang9473.github.io/2015/01/22/used-oscilloscope-can-be-so-fun.html">January 22, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2015/01/22/used-oscilloscope-can-be-so-fun.html" rel="bookmark" title="原來示波器可以這樣玩！" itemprop="url">原來示波器可以這樣玩！</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>C1-65A - Bad Apple (HD)</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/7pzvEouWino" frameborder="0" allowfullscreen=""></iframe>
 <p><br /></p>
 
   </div><!-- /.entry-content -->
@@ -258,61 +200,25 @@ module.exports = {
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-12-27T03:18:00+08:00"><a href="//joyhuang9473.github.io/2014/12/27/remote-desktop-for-ubuntu-1404.html">December 27, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2015-01-18T02:58:00+08:00"><a href="//joyhuang9473.github.io/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot.html">January 18, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/27/remote-desktop-for-ubuntu-1404.html" rel="bookmark" title="遠端 Ubuntu 14.04 桌面" itemprop="url">遠端 Ubuntu 14.04 桌面</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot.html" rel="bookmark" title="「自動裝配」的機器人" itemprop="url">「自動裝配」的機器人</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>最近因為期末專題的關係，選用了 Ubuntu 14.04 作為系統環境，而由於在下做的是跟影像辨識有關的題目，考量之後要秀出影像結果等需要，就來處理一下遠端桌面的功能，好讓我能帶著 MBP 去 demo :)</p>
+    <p><a href="http://tw.leaderg.com/article/index?sn=10703">LEADERG: 空中合體成形！MIT 研發能在風中、水中「自動裝配」的機器人</a></p>
 
-<p>原本想說 ubuntu 這麼多人用，應該只要稍微設定一下就能用遠端桌面了吧，沒想到弄起來還是挺麻煩的 ==</p>
+<p>Fluid Assembly: Chair Test</p>
 
-<p>首先還是先介紹可以正常運作的教學：</p>
+<iframe src="//player.vimeo.com/video/112761863?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<p><a href="http://vimeo.com/112761863">Fluid Assembly: Chair Test</a> from <a href="http://vimeo.com/user1791262">Self-Assembly Lab, MIT</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
-<p><a href="http://c-nergy.be/blog/?p=5305">Ubuntu 14.04 – How to install xrdp in Ubuntu 14.04</a></p>
+<p>Aerial Assemblies</p>
 
-<p>其實主要精神就是 <strong>安裝 xrdp ，改用 Xfce4</strong> 作為桌面環境（desktop environment）</p>
-
-<p>另外還有可能碰到的問題是，每當關閉遠端連線後，下次再遠端桌面登入卻是不同的 session ，就是重新遠端後看到的卻不是上一次遠端的桌面，那解決方法就是：</p>
-
-<p><a href="http://askubuntu.com/questions/133343/how-do-i-set-up-xrdp-session-that-reuses-an-existing-session">How do I set up xrdp session that reuses an existing session?</a></p>
-
-<p>Note:</p>
-
-<blockquote>
-  <p>that only works if there’s already an existing session though. The first time in, there’s no session so it fails to connect to port 5912.</p>
-</blockquote>
-
-<p>似乎還不是一個很好的辦法，之後再找找囉。</p>
-
-<p>– clear –</p>
-
-<p>修改 /etc/xrdp/xrdp.ini</p>
-
-<pre><code>[xrdp1]
-name=sesman-vnc
-lib=libvnc.so
-username=ask
-password=ask
-ip=127.0.0.1
-port=5910 #原本的值為 -1
-</code></pre>
-
-<p>至於為甚麼不能用 ubuntu 本身的 Unity 作為桌面環境，雖然還不確定原因，但感覺是 Unity, Gnome 對 xrdp 的支援程度有關，總之試過 gnome-session 的寫法，遠端後的結果都不樂觀，都會是 <strong>灰底畫面，還可以顯示的 ‘X’ 游標</strong></p>
-
-<p>（以下寫法都不能正常運作遠端桌面功能）</p>
-
-<p>~/.xsession file :</p>
-
-<pre><code># Uncomment one of list items below, if you really want to try and test
-
-#gnome-session --session=gnome-classic
-#gnome-session --session=gnome-fallback
-#gnome-session –-session=ubuntu-2d
-</code></pre>
+<iframe src="//player.vimeo.com/video/109708208?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<p><a href="http://vimeo.com/109708208">Aerial Assemblies</a> from <a href="http://vimeo.com/user1791262">Self-Assembly Lab, MIT</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -321,52 +227,16 @@ port=5910 #原本的值為 -1
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-12-24T16:40:00+08:00"><a href="//joyhuang9473.github.io/2014/12/24/caffe-first-experience.html">December 24, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2015-01-03T07:01:00+08:00"><a href="//joyhuang9473.github.io/2015/01/03/change-your-words-change-your-world.html">January 03, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/24/caffe-first-experience.html" rel="bookmark" title="Install Caffe and ImageNet model " itemprop="url">Install Caffe and ImageNet model </a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2015/01/03/change-your-words-change-your-world.html" rel="bookmark" title="Change your words. Change your world." itemprop="url">Change your words. Change your world.</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>原本想安裝在 Windows，不過過程實在是太不順利了，最後還是依照網路上的一篇教學文，安裝在 Ubuntu 14.04 上，只差在它是用虛擬機，我是用實機安裝。</p>
-
-<p>教學文如下，
-<a href="https://github.com/BVLC/caffe/wiki/Ubuntu-14.04-VirtualBox-VM">BVLC/caffe Ubuntu 14.04 VirtualBox VM</a></p>
-
-<blockquote>
-  <p>This is a guide to setting up Caffe in a 14.04 virtual machine with CUDA 6.5 and the system Python for getting started with examples and PyCaffe.</p>
-</blockquote>
-
-<p>過程中還蠻順利的，除了</p>
-
-<ul>
-  <li>Modify python/classify.py to add the –print_results option</li>
-</ul>
-
-<p>這一步需要自己稍微修改一下 code ，那麼我就分享在 gist 上囉
-[custom classify.py in BVLC/caffe: <path_to_caffe>/python/classify.py](https://gist.github.com/Kai-Yu-Huang/6ae7ac4c496c6c4c18f9)</path_to_caffe></p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-12-23T07:40:00+08:00"><a href="//joyhuang9473.github.io/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html">December 23, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html" rel="bookmark" title="Someone already recreated Notch's insane new mansion in Minecraft" itemprop="url">Someone already recreated Notch's insane new mansion in Minecraft</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>http://www.dailydot.com/geek/notch-new-mansion-minecraft-style/?fb=dd</p>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/CdW8pmM1Ji8" frameborder="0" allowfullscreen=""></iframe>
+    <iframe marginwidth="0" marginheight="0" src="http://vlog.xuite.net/embed/dHR0S0Y5LTIxMDgzNzExLmZsdg==?ar=0&amp;as=0" width="640" height="360" scrolling="no" frameborder="0"></iframe>
 <p><br /></p>
-
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -586,6 +456,12 @@ port=5910 #原本的值為 -1
       <li>
         
           <a href="//joyhuang9473.github.io/page35">35</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page36">36</a>
         
       </li>
     

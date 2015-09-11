@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="//joyhuang9473.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="//joyhuang9473.github.io" />
-<updated>2015-09-10T22:01:00+08:00</updated>
+<updated>2015-09-11T20:52:41+08:00</updated>
 <id>//joyhuang9473.github.io/</id>
 <author>
   <name>YU-KAI HUANG</name>
@@ -17,8 +17,8 @@
   <title type="html"><![CDATA[Akatsuki Hackthon 2015 心得]]></title>
  <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2015/09/07/akatsuki-hackathon-2015.html" />
   <id>//joyhuang9473.github.io/2015/09/07/akatsuki-hackathon-2015</id>
-  <published>2015-09-07T00:00:00+08:00</published>
-  <updated>2015-09-07T00:00:00+08:00</updated>
+  <published>2015-09-07T12:00:00+08:00</published>
+  <updated>2015-09-07T12:00:00+08:00</updated>
   <author>
     <name>YU-KAI HUANG</name>
     <uri>//joyhuang9473.github.io</uri>
@@ -133,7 +133,7 @@
 
 &lt;p&gt;(團隊合影)&lt;/p&gt;
 
-&lt;h3 id=&quot;note--3&quot;&gt;Note: 團隊才是一切&lt;/h3&gt;
+&lt;h3 id=&quot;note--3&quot;&gt;Note: 團隊就是一切&lt;/h3&gt;
 
 &lt;p&gt;這段是想寫給團隊裡的各位，我們真的很努力，即使比賽沒有獲獎，但我們仍可以有自信自己的作品是最好的，且在比賽後還聽到你們討論著將來要怎麼改善這份程式並希望能夠上架，感覺很感動，這是一種不同於以往我接外包的感覺，那樣不管結果如何，盡心盡力去做就對了，而不是一定要得到什麼才行，我想這就是真正的享受，享受過程、享受編程的樂趣；那兩天裡，在我的虐待之下，想必讓你們吃了不少的苦頭，言語上也多有冒犯，但有時候緊急的情況下我只能用這種方式提醒你們，尤其是當我們經歷了二十幾個小時沒睡覺時，每個人那種接近恍惚卻還不斷 coding 的狀態，著實讓我非常的害怕，這也是我為何會不斷問大家，”你在幹麻？” “你做到哪了？” “你有沒有在聽?” 之類的話，且像有時候你們埋首寫一些有趣的功能時，我心裡都得猶豫該不該拉住你們，或是讓你們去實現自己的想法，即使那個功能對於整個程式並不是很重要，何時該拉、何時該放，這樣的抉擇過程是我的難處，也是我將來會再去努力學習、改進的地方。&lt;/p&gt;
 
@@ -144,6 +144,116 @@
 
 
     &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/09/07/akatsuki-hackathon-2015.html&quot;&gt;Akatsuki Hackthon 2015 心得&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on September 07, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Ginger & Ginger Man]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-game/2015/09/05/project-ginger-and-gingerman.html" />
+  <id>//joyhuang9473.github.io/project-general/project-game/2015/09/05/project-ginger-and-gingerman</id>
+  <published>2015-09-05T12:00:00+08:00</published>
+  <updated>2015-09-05T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;//imgur.com/a/5Slgs/embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Puzzle game, written in C++, Cocos2d-x&lt;/p&gt;
+
+&lt;p&gt;cocos2d-x version: 3.6&lt;/p&gt;
+
+&lt;p&gt;Author: YU-KAI HUANG, 簡嘉慶, 陳映亦, 鄭鈞輿, 傅之謙&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/project-general/project-game/2015/09/05/project-ginger-and-gingerman.html&quot;&gt;Ginger &amp; Ginger Man&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on September 05, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Flipping Maze]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-game/2015/08/02/project-flipping-maze.html" />
+  <id>//joyhuang9473.github.io/project-general/project-game/2015/08/02/project-flipping-maze</id>
+  <published>2015-08-02T12:00:00+08:00</published>
+  <updated>2015-08-02T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;//imgur.com/a/ueeYL/embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Tower defense game, written in C++, Cocos2d-x&lt;/p&gt;
+
+&lt;p&gt;cocos2d-x version: 3.6&lt;/p&gt;
+
+&lt;p&gt;Author: YU-KAI HUANG&lt;/p&gt;
+
+&lt;p&gt;Character Graphics designed by &lt;a href=&quot;http://opengameart.org/users/creek23&quot;&gt;creek23&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/project-general/project-game/2015/08/02/project-flipping-maze.html&quot;&gt;Flipping Maze&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on August 02, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[SuperMario-example]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-game/2015/07/31/project-supermario-example.html" />
+  <id>//joyhuang9473.github.io/project-general/project-game/2015/07/31/project-supermario-example</id>
+  <published>2015-07-31T12:00:00+08:00</published>
+  <updated>2015-07-31T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;//imgur.com/a/7NAMG/embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;2D action game, written in C++, Cocos2d-x&lt;/p&gt;
+
+&lt;p&gt;cocos2d-x version: 3.6&lt;/p&gt;
+
+&lt;p&gt;Author: YU-KAI HUANG&lt;/p&gt;
+
+&lt;p&gt;Character Graphics designed by &lt;a href=&quot;http://opengameart.org/users/creek23&quot;&gt;creek23&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Platformer Art Complete Pack by Kenney Vleugels (&lt;a href=&quot;www.kenney.nl&quot;&gt;www.kenney.nl&lt;/a&gt;)&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/project-general/project-game/2015/07/31/project-supermario-example.html&quot;&gt;SuperMario-example&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 31, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Aslan-Rainbow-x]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x.html" />
+  <id>//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x</id>
+  <published>2015-07-09T12:00:00+08:00</published>
+  <updated>2015-07-09T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;//imgur.com/a/dHi9K/embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;2D fighting game, written in C++, Cocos2d-x&lt;/p&gt;
+
+&lt;p&gt;cocos2d-x version: 3.3&lt;/p&gt;
+
+&lt;p&gt;Author: YU-KAI HUANG&lt;/p&gt;
+
+&lt;p&gt;Character Graphics designed by &lt;a href=&quot;http://opengameart.org/users/creek23&quot;&gt;creek23&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Platformer Art Complete Pack by Kenney Vleugels (&lt;a href=&quot;www.kenney.nl&quot;&gt;www.kenney.nl&lt;/a&gt;)&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x.html&quot;&gt;Aslan-Rainbow-x&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 09, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -174,6 +284,58 @@
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/04/17/ted-learned-from-a-barefoot-movement.html&quot;&gt;TED: 從一次赤腳運動中學到的&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on April 17, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Sunchi Website]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-web/2015/03/09/project-sunchi-website.html" />
+  <id>//joyhuang9473.github.io/project-general/project-web/2015/03/09/project-sunchi-website</id>
+  <published>2015-03-09T12:00:00+08:00</published>
+  <updated>2015-03-09T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;//imgur.com/a/jHXIW/embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;URL: &lt;a href=&quot;http://www.sunchi.co/&quot;&gt;http://www.sunchi.co/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sunchi Dance Club official website, written in LAMP.&lt;/p&gt;
+
+&lt;p&gt;Author: YU-KAI HUANG&lt;/p&gt;
+
+&lt;p&gt;Design: &lt;a href=&quot;http://templated.co/&quot;&gt;TEMPLATED&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/project-general/project-web/2015/03/09/project-sunchi-website.html&quot;&gt;Sunchi Website&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on March 09, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[FFdesign Website]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-web/2015/02/23/project-ffdesign-website.html" />
+  <id>//joyhuang9473.github.io/project-general/project-web/2015/02/23/project-ffdesign-website</id>
+  <published>2015-02-23T12:00:00+08:00</published>
+  <updated>2015-02-23T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;//imgur.com/a/9Gzqq/embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;FFdesign, written in LAMP.&lt;/p&gt;
+
+&lt;p&gt;Author: YU-KAI HUANG, YA-TING HSU&lt;/p&gt;
+
+&lt;p&gt;Design: &lt;a href=&quot;http://templated.co/&quot;&gt;TEMPLATED&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/project-general/project-web/2015/02/23/project-ffdesign-website.html&quot;&gt;FFdesign Website&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on February 23, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -220,6 +382,31 @@
 &lt;p&gt;http://youtu.be/tG8F6BeAER8&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/02/10/words.html&quot;&gt;思語&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on February 10, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[NCU CSIE Website]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-web/2015/02/04/project-ncucsie-website.html" />
+  <id>//joyhuang9473.github.io/project-general/project-web/2015/02/04/project-ncucsie-website</id>
+  <published>2015-02-04T12:00:00+08:00</published>
+  <updated>2015-02-04T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;//imgur.com/a/IDaQx/embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;URL: &lt;a href=&quot;http://www.csie.ncu.edu.tw&quot;&gt;http://www.csie.ncu.edu.tw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;NCU-CSIE official website, written in LAMP.&lt;/p&gt;
+
+&lt;p&gt;Author: YU-KAI HUANG, Sheng-Han Yang, Hsing-Chien Cheng&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/project-general/project-web/2015/02/04/project-ncucsie-website.html&quot;&gt;NCU CSIE Website&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on February 04, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -566,182 +753,6 @@ port=5910 #原本的值為 -1
 &lt;/code&gt;&lt;/pre&gt;
 
     &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/27/remote-desktop-for-ubuntu-1404.html&quot;&gt;遠端 Ubuntu 14.04 桌面&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 27, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Install Caffe and ImageNet model ]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2014/12/24/caffe-first-experience.html" />
-  <id>//joyhuang9473.github.io/2014/12/24/caffe-first-experience</id>
-  <published>2014-12-24T16:40:00+08:00</published>
-  <updated>2014-12-24T16:40:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;原本想安裝在 Windows，不過過程實在是太不順利了，最後還是依照網路上的一篇教學文，安裝在 Ubuntu 14.04 上，只差在它是用虛擬機，我是用實機安裝。&lt;/p&gt;
-
-&lt;p&gt;教學文如下，
-&lt;a href=&quot;https://github.com/BVLC/caffe/wiki/Ubuntu-14.04-VirtualBox-VM&quot;&gt;BVLC/caffe Ubuntu 14.04 VirtualBox VM&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a guide to setting up Caffe in a 14.04 virtual machine with CUDA 6.5 and the system Python for getting started with examples and PyCaffe.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;過程中還蠻順利的，除了&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Modify python/classify.py to add the –print_results option&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;這一步需要自己稍微修改一下 code ，那麼我就分享在 gist 上囉
-[custom classify.py in BVLC/caffe: &lt;path_to_caffe&gt;/python/classify.py](https://gist.github.com/Kai-Yu-Huang/6ae7ac4c496c6c4c18f9)&lt;/path_to_caffe&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/24/caffe-first-experience.html&quot;&gt;Install Caffe and ImageNet model &lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 24, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Someone already recreated Notch's insane new mansion in Minecraft]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html" />
-  <id>//joyhuang9473.github.io/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft</id>
-  <published>2014-12-23T07:40:00+08:00</published>
-  <updated>2014-12-23T07:40:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;http://www.dailydot.com/geek/notch-new-mansion-minecraft-style/?fb=dd&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/CdW8pmM1Ji8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html&quot;&gt;Someone already recreated Notch&#39;s insane new mansion in Minecraft&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 23, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[呢喃]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2014/12/12/words.html" />
-  <id>//joyhuang9473.github.io/2014/12/12/words</id>
-  <published>2014-12-12T15:58:00+08:00</published>
-  <updated>2014-12-12T15:58:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;不懂得如何表現溫柔的我，
-&lt;br /&gt;
-風雨中，心碎了才懂。&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/12/words.html&quot;&gt;呢喃&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 12, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[胡啟志老師 魔幻水晶球鐵環特技極限秀]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2014/12/10/magic-crystal-ball-hoop-hu-qizhi-teacher-limit-stunt-show.html" />
-  <id>//joyhuang9473.github.io/2014/12/10/magic-crystal-ball-hoop-hu-qizhi-teacher-limit-stunt-show</id>
-  <published>2014-12-10T15:24:00+08:00</published>
-  <updated>2014-12-10T15:24:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/giS6KZ7WdQ4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/10/magic-crystal-ball-hoop-hu-qizhi-teacher-limit-stunt-show.html&quot;&gt;胡啟志老師 魔幻水晶球鐵環特技極限秀&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 10, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[GSS - Layouts Not Possible with Tomorrow's CSS]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2014/12/08/gss-layouts-not-possible-with-tomorrows-css.html" />
-  <id>//joyhuang9473.github.io/2014/12/08/gss-layouts-not-possible-with-tomorrows-css</id>
-  <published>2014-12-08T10:21:00+08:00</published>
-  <updated>2014-12-08T10:21:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;iframe src=&quot;//player.vimeo.com/video/91393694?title=0&amp;amp;byline=0&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;http://vimeo.com/91393694&quot;&gt;GSS - Layouts Not Possible with Tomorrow&#39;s CSS // O&#39;Reilly Fluent 2014&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/d4tocchini&quot;&gt;Dan Tocchini&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/08/gss-layouts-not-possible-with-tomorrows-css.html&quot;&gt;GSS - Layouts Not Possible with Tomorrow&#39;s CSS&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 08, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[哥賣的是商品]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2014/12/04/brother-are-selling-merchandise.html" />
-  <id>//joyhuang9473.github.io/2014/12/04/brother-are-selling-merchandise</id>
-  <published>2014-12-04T11:11:00+08:00</published>
-  <updated>2014-12-04T11:11:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;每次的協商，不是沒有結果，就是在討價還價，對我來說，這不僅沒意義，更是一種人格上的污辱&lt;/p&gt;
-
-&lt;p&gt;我不曉得妳有什麼資格反悔，約是妳要簽的，功能、價格、時程我們都確認過了&lt;/p&gt;
-
-&lt;p&gt;功能，我答應妳的都做了，而其他妳答應我們的，妳做到了嗎？&lt;/p&gt;
-
-&lt;p&gt;我認為今天的問題不是金錢上的問題，也不是身份上妳是大人我們是學生的問題&lt;/p&gt;
-
-&lt;p&gt;而是人與人之間最基本的互信原則&lt;/p&gt;
-
-&lt;p&gt;既然妳做到這種地步，那我也不想廢話了，妳要我的商品，就請付足夠的錢&lt;/p&gt;
-
-&lt;p&gt;如果不行，不好意思，我的商品不是跟菜市場一樣可以討價還價的&lt;/p&gt;
-
-&lt;p&gt;但現在妳就算願意付錢，妳也沒資格跟我做生意了&lt;/p&gt;
-
-&lt;p&gt;我只賣商品，不賣尊嚴 :)&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/04/brother-are-selling-merchandise.html&quot;&gt;哥賣的是商品&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 04, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Sony's e-paper watch is a thing of minimalist beauty]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2014/12/02/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty.html" />
-  <id>//joyhuang9473.github.io/2014/12/02/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty</id>
-  <published>2014-12-02T07:42:00+08:00</published>
-  <updated>2014-12-02T07:42:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;http://www.theverge.com/2014/11/28/7301573/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/omvve2pVPH0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/02/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty.html&quot;&gt;Sony&#39;s e-paper watch is a thing of minimalist beauty&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 02, 2014.&lt;/p&gt;
   </content>
 </entry>
 

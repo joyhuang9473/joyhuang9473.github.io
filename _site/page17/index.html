@@ -6,8 +6,8 @@
 <head>
 <meta charset="utf-8">
 <title>Latest Posts &#8211; YU KAI'S BLOG</title>
-<meta name="description" content="Just a blog I wrote.">
-<meta name="keywords" content="YU KAI'S BLOG, Yu-Kai Huang">
+<meta name="description" content="yu kai's blog">
+<meta name="keywords" content="YU KAI'S BLOG, Yu-Kai Huang, joyhuang">
 
 
 
@@ -15,7 +15,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Latest Posts">
-<meta property="og:description" content="Just a blog I wrote.">
+<meta property="og:description" content="yu kai's blog">
 <meta property="og:url" content="//joyhuang9473.github.io/page17/index.html">
 <meta property="og:site_name" content="YU KAI'S BLOG">
 
@@ -137,74 +137,41 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-07-25T09:22:00+08:00"><a href="//joyhuang9473.github.io/2014/07/25/litre-of-mariadb-100-on-occasional-pain.html">July 25, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2014-07-30T17:04:00+08:00"><a href="//joyhuang9473.github.io/2014/07/30/heart-pain-is-only-the-engineers-of-engineers-can-understand.html">July 30, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/25/litre-of-mariadb-100-on-occasional-pain.html" rel="bookmark" title="升上 MariaDB 10.0 後，Redmine 又爆了" itemprop="url">升上 MariaDB 10.0 後，Redmine 又爆了</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/30/heart-pain-is-only-the-engineers-of-engineers-can-understand.html" rel="bookmark" title="工程師心裡的痛只有工程師能懂" itemprop="url">工程師心裡的痛只有工程師能懂</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>上次小弟才剛升級完 MariaDB 10.0 ，原本想說都沒事，網路服務都很正常，沒想到今天一重開機，Redmine 就爆了</p>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/5cZnagankWo" frameborder="0" allowfullscreen=""></iframe>
+<p><br /></p>
 
-<p>又是 Redmine</p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
 
-<p>又是 Redmine</p>
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-07-30T16:29:00+08:00"><a href="//joyhuang9473.github.io/2014/07/30/a-preliminary-study-on-dcard.html">July 30, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/30/a-preliminary-study-on-dcard.html" rel="bookmark" title="初探 Dcard" itemprop="url">初探 Dcard</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>今天和一位在 Dcard 工作的朋友聚聚，分享了彼此的接案經歷，覺得非常有收獲，同時有種心有戚戚焉的感覺</p>
 
-<p>又是 Redmine</p>
-
-<pre><code>require': Incorrect MySQL client library version! This gem was compiled for 5.5.34-MariaDB but the client library is 10.0.10-MariaDB. (RuntimeError) from /usr/local/rvm/gems/ruby-2.1.0/gems/mysql2-0.3.15/lib/mysql2.rb:8:in'
-</code></pre>
-
-<p>類似這樣的訊息</p>
-
-<p>＝＝ 恩，好啦，其實整件事情跟 Redmine 本身是沒關係的</p>
+<p>而這也讓我終於鼓起勇氣（好奇心？）註冊了 Dcard 帳號，其實我很久之前就知道這個網站了，但當第一眼看到它的註冊表單時，我就卻步了，因為有超多欄位要填，而個人我是非常懶的人，但聽說他們好像是人工審核，不能填假資料，當時就覺得，與其這麼麻煩弄個網路交友，我還不如…恩，看場電影好了</p>
 
 <p>-clear-</p>
 
-<p>那麼網路上查了一下，原來是之前安裝的 mysql2(gem) 適用於 MariaDB 5.5，由於我升到 MariaDB 10.0 ，所以我要再重新</p>
+<p>那麼總算又挑起了我的興趣，我也完整註冊了，但由於錯過了第一張卡，所以暫時就不分享心得囉，看看圖片過癮吧</p>
 
-<blockquote>
-  <p>compile mysql2 against MariaDB 10.0.10</p>
-</blockquote>
-
-<p>網路上已經有相關的 issue : <a href="https://github.com/brianmario/mysql2/issues/506">Error while connecting MariaDB v10.0.10</a></p>
-
-<p>那做法上就是移除之前的 mysql2，重新 compile mysql2 並加上 –with-mysql-config 參數</p>
-
-<pre><code># Reinstall mysql2 with Configuration options --with-mysql-config On Arch Linux
-
-[redmine@localhost ~] gem uninstall mysql2
-[redmine@localhost ~] gem install mysql2 -- --with-mysql-config=/usr/bin/mysql_config
-[redmine@localhost ~] cd /path/to/redmine/project
-[redmine@localhost redmine] bundle config build.mysql2 --with-mysql-config=/usr/bin/mysql_config
-[redmine@localhost redmine] bundle update
-</code></pre>
-
-<blockquote>
-  <p>Note:<br />
-bundle config build.mysql2 –with-mysql-config=/usr/bin/mysql_config</p>
-
-  <p>After running this command, every time bundler needs to install the mysql gem, it will pass along the flags you specified.</p>
-</blockquote>
-
-<p>這樣基本上就完成了，接著執行 rake 產生 secret token</p>
-
-<pre><code>[redmine@localhost redmine]$ rake generate_secret_token
-</code></pre>
-
-<p>回到 sudoer 用 systemctl 重新執行 redmine ，我的 redmine 就回來囉～</p>
-
-<pre><code>[sudoer@localhost ~]$ sudo systemctl restart redmine
-</code></pre>
-
-<h3 id="note">Note</h3>
-
-<p><a href="https://github.com/brianmario/mysql2#configuration-options">brianmario/mysql2</a> ：A modern, simple and very fast Mysql library for Ruby - binding to libmysql</p>
-
-<p><a href="https://wincent.com/wiki/Force_re-installing_the_MySQL_gem">Force re-installing the MySQL gem</a></p>
-
-<p><a href="http://bundler.io/v1.3/man/bundle-config.1.html">BUNDLE-CONFIG</a></p>
+<p><img src="http://i.imgur.com/5EEwSh4.png" alt="abarJEaQziwoShs87Ux1_Screen Shot 2014-07-31 at 12.23.47 AM.png" /></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -213,67 +180,59 @@ bundle config build.mysql2 –with-mysql-config=/usr/bin/mysql_config</p>
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-07-21T14:53:00+08:00"><a href="//joyhuang9473.github.io/2014/07/21/mariadb-100-enters.html">July 21, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2014-07-27T15:45:00+08:00"><a href="//joyhuang9473.github.io/2014/07/27/words-level.html">July 27, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/21/mariadb-100-enters.html" rel="bookmark" title="MariaDB 10.0 enters" itemprop="url">MariaDB 10.0 enters</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/27/words-level.html" rel="bookmark" title="關卡與挫折感" itemprop="url">關卡與挫折感</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>最近幫 Arch 更新時才發現 MariaDB 已經到 10.0 了，記得之前還是 MariaDB 5.5，想說是不是自己太久沒更新</p>
+    <blockquote>
+  <p>關卡既然是要讓玩家挑戰，就不見得要「公平」，只要「有解」就好</p>
+</blockquote>
 
-<p>但看 MariaDB 官網的 Download list ，的確是從 5.5 升到 10.0 及 10.1</p>
-
-<p><a href="https://downloads.mariadb.org/mariadb/+releases/">MariaDB - All Releases</a></p>
-
-<p>但為甚麼不將新版本取名為 MariaDB 5.6 而是直接跳到 MariaDB 10.0 ?</p>
-
-<p>因此不小心好奇了一下，尋找它的版本命名由來，所幸找到一篇翻譯文，翻得還蠻清楚的，以下摘錄：</p>
-
-<p>開源中國社區：<a href="http://www.oschina.net/translate/mariadb-10-0-and-mysql-5-6">MariaDB 10.0 和 MySQL 5.6 有何不同</a>
-原文：<a href="http://blog.mariadb.org/mariadb-10-0-and-mysql-5-6/">MariaDB 10.0 and MySQL 5.6</a></p>
+<p>巴哈姆特專欄：<a href="http://gnn.gamer.com.tw/3/100853.html">AI 不見得要聰明《Dungeon Clash》製作人談遊戲關卡設計</a></p>
 
 <blockquote>
-  <ol>
-    <li>MySQL5.6 的代码库的文件结构已经被改动了。比如单个代码文件已经被分成多个，又或者是某些代码已经被重新归类到了不同的文件内。所以要把MariaDB 去配合现在这个文件结构一定是一个非常消耗时间的过程。</li>
-  </ol>
+  <p>我們可以比較一下透過「提高AI等級」以及「以不公平的方式」來提高關卡難度，玩家會有怎樣的感受？</p>
 </blockquote>
 
 <blockquote>
-  <ol>
-    <li>MairaDB 5.5 已经有大量的代码不同于MySQL 5.5 的版本，而且也有很多的新的特征被整合到MariaDB 5.5 中，而这些特征直到 5.6 版本才出现在MySQL中。所以我们在比较同样功能的MySQL 和MariaDB的版本，同时在完成设计和QA方面的审核后，一个很明显的结论是MariaDB会是一个更好的产品。</li>
-  </ol>
+  <p>兩者都可能會讓玩家產生極大的「挫折感」，但後者讓玩家有「推託」的機會（不是我太笨，是電腦太作弊），這種「心理安慰」對提高玩家繼續挑戰的意願有很大的幫助。</p>
 </blockquote>
 
 <blockquote>
-  <p>由于我们引入了一些新功能（像 <a href="https://mariadb.com/kb/en/mariadb/mariadb-documentation/replication-cluster-multi-master/replication/multi-source-replication/">multi-source replication</a>多源复制, <a href="https://mariadb.com/kb/en/mariadb/mariadb-documentation/mariadb-storage-engines/storage-engines-cassandra-storage-engine/">Cassandra integration</a>, <a href="https://mariadb.com/kb/en/mariadb/mariadb-documentation/optimization-and-tuning/engine-independent-table-statistics/">engine independent statistics</a>独立统计系统等），所以我们需要搞个新版本。通常当你引入新功能时，你需要新建个版本。</p>
+  <p>試想「一對一」及「五對五」的競技類遊戲，玩家在面對失敗時有什麼差別？前者說明玩家自己技不如人，完全沒有托推的空間；但後者可以推給隊友是新手或者路人團默契不足…等因素，產生一種心理安慰，玩家才不會一下子就放棄。</p>
 </blockquote>
 
-<blockquote>
-  <p>下个版本称作“MariaDB5.6”是不准确的，因为他不是基于Mysql5.6，取而代之，我们决定版本号调为10.0</p>
-</blockquote>
+<p><a href="https://www.facebook.com/nomads.games/photos/a.437981879602783.105794.312922105442095/742232865844348/?type=1&amp;theater">Nomads 設計心得</a></p>
 
-<p>恩，因此簡而言之，MariaDB 並不是基於 Mysql 5.6 ，並且多了 multi-source replication, Cassandra integration, engine independent statistics 等新功能，故將版本號一口氣提升到 10.0 ，作為 MariaDB 邁入另一個里程碑的紀念（?）</p>
+<p>by 炎羅</p>
 
-<p>那麼在 Arch 的 MariaDB 升級上面，官方要我們 restart mysqld.service 和 run mysql_upgrade</p>
+<p><a href="http://guild.gamer.com.tw/guild.php?sn=9323">《Dungeon Clash》製作討論區</a></p>
 
-<p>before</p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
 
-<pre><code>[user@localhost ~]$ sudo systemctl status mysqld
-...
-Jul 16 13:48:59 localhost mysqld[203]: Version: '5.5.37-MariaDB-log'  socket: '/run/mysqld/mysqld.sock'  ...erver
-</code></pre>
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-07-27T02:24:00+08:00"><a href="//joyhuang9473.github.io/2014/07/27/game-of-thrones.html">July 27, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/27/game-of-thrones.html" rel="bookmark" title="Game of Thrones" itemprop="url">Game of Thrones</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p><a href="http://www.hbo.com/game-of-thrones#/">Game of Thrones</a></p>
 
-<p>after</p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/s7L2PVdrb_8" frameborder="0" allowfullscreen=""></iframe>
+<p><br /></p>
 
-<pre><code>[user@localhost ~]$ sudo systemctl status mysqld
-...
-Jul 21 14:43:40 localhost mysqld[5451]: Version: '10.0.12-MariaDB-log'  socket: '/run/mysqld/mysqld.sock'...erver
-</code></pre>
-
-<p><a href="https://www.archlinux.org/news/mariadb-100-enters-extra/">Arch News : MariaDB 10.0 enters [extra]</a>
-<a href="https://mariadb.com/kb/en/mariadb/what-is-in-the-different-mariadb-releases/what-is-mariadb-100/">What is MariaDB 10.0?</a></p>
+<p>博客來：<a href="http://www.books.com.tw/products/0010513216">http://www.books.com.tw/products/0010513216</a></p>
 
 
   </div><!-- /.entry-content -->
@@ -283,49 +242,16 @@ Jul 21 14:43:40 localhost mysqld[5451]: Version: '10.0.12-MariaDB-log'  socket: 
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-07-21T14:43:00+08:00"><a href="//joyhuang9473.github.io/2014/07/21/install-dokuwiki-on-arch-linux.html">July 21, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2014-07-27T02:04:00+08:00"><a href="//joyhuang9473.github.io/2014/07/27/restful-api-design.html">July 27, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/21/install-dokuwiki-on-arch-linux.html" rel="bookmark" title="Install DokuWiki on Arch Linux" itemprop="url">Install DokuWiki on Arch Linux</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/27/restful-api-design.html" rel="bookmark" title="RESTful API Design" itemprop="url">RESTful API Design</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>https://www.dokuwiki.org/dokuwiki</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-07-21T14:39:00+08:00"><a href="//joyhuang9473.github.io/2014/07/21/install-cacti-on-arch-linux.html">July 21, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/21/install-cacti-on-arch-linux.html" rel="bookmark" title="Install Cacti on Arch Linux" itemprop="url">Install Cacti on Arch Linux</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>https://wiki.archlinux.org/index.php/cacti</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-07-21T14:38:00+08:00"><a href="//joyhuang9473.github.io/2014/07/21/install-bind-on-arch-linux.html">July 21, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/21/install-bind-on-arch-linux.html" rel="bookmark" title="Install BIND on Arch Linux" itemprop="url">Install BIND on Arch Linux</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>https://wiki.archlinux.org/index.php/BIND</p>
+    <iframe src="//www.slideshare.net/slideshow/embed_code/37270579" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/AmigoChan/restful-api-design" title="RESTful API Design" target="_blank">RESTful API Design</a> </strong> from <strong><a href="http://www.slideshare.net/AmigoChan" target="_blank">Amigo Chan</a></strong> </div>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -545,6 +471,12 @@ Jul 21 14:43:40 localhost mysqld[5451]: Version: '10.0.12-MariaDB-log'  socket: 
       <li>
         
           <a href="//joyhuang9473.github.io/page35">35</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page36">36</a>
         
       </li>
     
