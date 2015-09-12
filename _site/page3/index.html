@@ -100,6 +100,7 @@
 			<ul class="dl-submenu">
 				<li><a href="//joyhuang9473.github.io/posts/">All Posts</a></li>
 				<li><a href="//joyhuang9473.github.io/tags/">All Tags</a></li>
+				<li><a href="//joyhuang9473.github.io/posts/ctf">CTF</a></li>
 			</ul>
 		</li>
 		<li>
@@ -137,21 +138,40 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-02-04T12:00:00+08:00"><a href="//joyhuang9473.github.io/project-general/project-web/2015/02/04/project-ncucsie-website.html">February 04, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-crypto1.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/project-general/project-web/2015/02/04/project-ncucsie-website.html" rel="bookmark" title="NCU CSIE Website" itemprop="url">NCU CSIE Website</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-crypto1.html" rel="bookmark" title="AIS3 2015 Writeup: crypto1" itemprop="url">AIS3 2015 Writeup: crypto1</a></h1>
     
   </header>
   <div class="entry-content">
-    <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="//imgur.com/a/IDaQx/embed"></iframe>
+    <h2 id="reference">Reference:</h2>
 
-<p>URL: <a href="http://www.csie.ncu.edu.tw">http://www.csie.ncu.edu.tw</a></p>
+<p>Keynote:</p>
 
-<p>NCU-CSIE official website, written in LAMP.</p>
+<ul>
+  <li>filename</li>
+</ul>
 
-<p>Author: YU-KAI HUANG, Sheng-Han Yang, Hsing-Chien Cheng</p>
+<p>Reference:</p>
+
+<ul>
+  <li>https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher</li>
+</ul>
+
+<p>Tools:</p>
+
+<ul>
+  <li>Vigenere Cipher Decoder http://www.dcode.fr/vigenere-cipher</li>
+  <li>Vigenère Cipher Codebreaker http://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx</li>
+</ul>
+
+<p>藉由第一個連結找出可能的 key length，再由第二個連結，設定 key size 後找出所有的可能，並搜尋 “the key is” 找出可辨識的字串</p>
+
+<p><img src="http://i.imgur.com/IdI4AD1.png" alt="vigenere_key_length_in_ais3's_crypto_question" /></p>
+
+<p><img src="http://i.imgur.com/xhFbfMR.png" alt="vigenere_decode_in_ais3's_crypto_question" /></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -160,18 +180,67 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-01-23T15:22:00+08:00"><a href="//joyhuang9473.github.io/2015/01/23/google-mode-how-google-works.html">January 23, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary3.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2015/01/23/google-mode-how-google-works.html" rel="bookmark" title="Google 模式 - How Google Works" itemprop="url">Google 模式 - How Google Works</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary3.html" rel="bookmark" title="AIS3 2015 Writeup: binary3" itemprop="url">AIS3 2015 Writeup: binary3</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>Sega Cheng: CEO at LIVEhouse.in</p>
+    <h2 id="bit-assembly-code">64bit assembly code</h2>
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/43779604" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe>
-<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/segacheng/google-how-google-works" title="Google 模式 - How Google Works" target="_blank">Google 模式 - How Google Works</a> </strong> from <strong><a href="//www.slideshare.net/segacheng" target="_blank">Sega Cheng</a></strong> </div>
+<p>Keynote:</p>
+
+<ul>
+  <li>little endian</li>
+  <li>xor</li>
+</ul>
+
+<p>Tools:</p>
+
+<ul>
+  <li>ida64</li>
+  <li>XOR Calculator online https://xor.pw/</li>
+  <li>Hex to ASCII text converter http://www.rapidtables.com/convert/number/hex-to-ascii.htm</li>
+</ul>
+
+<p>主要觀察 check1, check2, gg function</p>
+
+<p>check1:</p>
+
+<p><img src="http://i.imgur.com/MxSrGW4.png" alt="stupid_v2_check1_func_in_ais3's_binary_question" /></p>
+
+<p>check2:</p>
+
+<p><img src="http://i.imgur.com/kTJEAKj.png" alt="stupid_v2_check2_func_in_ais3's_binary_question" /></p>
+
+<p>gg:</p>
+
+<p><img src="http://i.imgur.com/8crNjMj.png" alt="stupid_v2_gg_func_in_ais3's_binary_question" /></p>
+
+<p>在 check1 時，to_reg function 會將 input 存入 rdx，key 的值為 0DDDDAAAADADADDAAh，經過運算：</p>
+
+<pre><code>key = (input) XOR 0DDDDAAAADADADDAAh
+</code></pre>
+
+<p>進入 check2 ，call gg function 並且 ax = 0 時即可進到正確的段落 “Yeah, It’s a flag !!! …”</p>
+
+<p>進入 gg function，分兩次檢查 key 的值，總之 key 的值要為 0BFB7B8CEh 和 0BCB4DEC4h 的連接</p>
+
+<pre><code>key = (input) XOR 0DDDDAAAADADADDAAh
+    = 0BCB4DEC4BFB7B8CEh
+</code></pre>
+
+<p>所以可得 input 值為 06169746e656d6564h 並拿去轉成 ascii，注意 little endian，反向讀取:</p>
+
+<pre><code>dementia
+</code></pre>
+
+<p>得到一個癡呆 :)</p>
+
+<p>flag: AIS3{dementia}</p>
+
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -180,18 +249,69 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-01-22T18:49:00+08:00"><a href="//joyhuang9473.github.io/2015/01/22/used-oscilloscope-can-be-so-fun.html">January 22, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2015/01/22/used-oscilloscope-can-be-so-fun.html" rel="bookmark" title="原來示波器可以這樣玩！" itemprop="url">原來示波器可以這樣玩！</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html" rel="bookmark" title="AIS3 2015 Writeup: binary2" itemprop="url">AIS3 2015 Writeup: binary2</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>C1-65A - Bad Apple (HD)</p>
+    <h2 id="shellcode-to-bin">Shellcode to bin</h2>
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/7pzvEouWino" frameborder="0" allowfullscreen=""></iframe>
-<p><br /></p>
+<p>Keynote:</p>
+
+<ul>
+  <li>shellcode</li>
+  <li>xor</li>
+</ul>
+
+<p>Reference:</p>
+
+<ul>
+  <li>http://theloshackers.blogspot.tw/2013/08/convert-hex-shellcode-to-binary-mode.html</li>
+</ul>
+
+<p>Tools:</p>
+
+<ul>
+  <li>ida64</li>
+  <li>XOR Calculator online https://xor.pw/</li>
+  <li>Hex to ASCII text converter http://www.rapidtables.com/convert/number/hex-to-ascii.htm</li>
+</ul>
+
+<p>將 shellcode 輸出成 bin</p>
+
+<pre><code>$ echo -ne "{ shellcode }" &gt; sc.bin
+</code></pre>
+
+<p>再丟到 ida 找到這個片段</p>
+
+<p><img src="http://i.imgur.com/0WraX3i.png" alt="sc_shellcode_to_bin_in_ais3's_binary_question" /></p>
+
+<p>總共有 40 個字元在堆疊中，藉由 [rsi+rdx] 逐一讀取 stack 中的字元並與 0CCh 做 xor，直到 dl 為 37 (25h)，也就是第 37 個字元為止</p>
+
+<pre><code># origin
+
+414141C6B1B9A3B5
+93BEA3AA93A8A0BC
+A1A5BF93BFA593A9
+A8A3AFA0A0A9A4BF
+93A7A3B7FF9F858D
+
+# after xor
+#[] : ignored
+
+[    ]0a7d756f79
+5f726f665f646c70
+6d69735f73695f65
+646f636c6c656873
+5f6b6f7b33534941
+</code></pre>
+
+<p>Little Endian 系統，反向讀取並將 hex 轉為 ascii 就可以看到 flag</p>
+
+<p><img src="http://i.imgur.com/ohf0t1o.png" alt="sc_converted_hex_to_ascii_in_ais3's_binary_question" /></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -200,25 +320,39 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-01-18T02:58:00+08:00"><a href="//joyhuang9473.github.io/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot.html">January 18, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary1.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot.html" rel="bookmark" title="「自動裝配」的機器人" itemprop="url">「自動裝配」的機器人</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary1.html" rel="bookmark" title="AIS3 2015 Writeup: binary1" itemprop="url">AIS3 2015 Writeup: binary1</a></h1>
     
   </header>
   <div class="entry-content">
-    <p><a href="http://tw.leaderg.com/article/index?sn=10703">LEADERG: 空中合體成形！MIT 研發能在風中、水中「自動裝配」的機器人</a></p>
+    <h2 id="strings">Strings</h2>
 
-<p>Fluid Assembly: Chair Test</p>
+<p>Keynote:</p>
 
-<iframe src="//player.vimeo.com/video/112761863?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-<p><a href="http://vimeo.com/112761863">Fluid Assembly: Chair Test</a> from <a href="http://vimeo.com/user1791262">Self-Assembly Lab, MIT</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<ul>
+  <li>動態分析</li>
+</ul>
 
-<p>Aerial Assemblies</p>
+<p>Tools:</p>
 
-<iframe src="//player.vimeo.com/video/109708208?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-<p><a href="http://vimeo.com/109708208">Aerial Assemblies</a> from <a href="http://vimeo.com/user1791262">Self-Assembly Lab, MIT</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<ul>
+  <li>ollyDbg201h</li>
+</ul>
+
+<p>把 bin1.exe 丟到 ollydbg ，搜尋 string ‘AIS3’ 就可以找到 flag</p>
+
+<p><img src="http://i.imgur.com/nnfBQ1S.png" alt="bin1_exe_strings_in_ais3's_binary_question" /></p>
+
+<p>有稍微的漏字，但就依照 flag 上的語義自己填補了</p>
+
+<p>p.s</p>
+
+<p>ollyDbg110 的 strings 比 ollyDbg201h 較不完整</p>
+
+<p>ollyDbg201h 的 strings 仍然會漏字，仍不清楚原因</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -227,16 +361,25 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-01-03T07:01:00+08:00"><a href="//joyhuang9473.github.io/2015/01/03/change-your-words-change-your-world.html">January 03, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2015-07-09T12:00:00+08:00"><a href="//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x.html">July 09, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2015/01/03/change-your-words-change-your-world.html" rel="bookmark" title="Change your words. Change your world." itemprop="url">Change your words. Change your world.</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x.html" rel="bookmark" title="Aslan-Rainbow-x" itemprop="url">Aslan-Rainbow-x</a></h1>
     
   </header>
   <div class="entry-content">
-    <iframe marginwidth="0" marginheight="0" src="http://vlog.xuite.net/embed/dHR0S0Y5LTIxMDgzNzExLmZsdg==?ar=0&amp;as=0" width="640" height="360" scrolling="no" frameborder="0"></iframe>
-<p><br /></p>
+    <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="//imgur.com/a/dHi9K/embed"></iframe>
+
+<p>2D fighting game, written in C++, Cocos2d-x</p>
+
+<p>cocos2d-x version: 3.3</p>
+
+<p>Author: YU-KAI HUANG</p>
+
+<p>Character Graphics designed by <a href="http://opengameart.org/users/creek23">creek23</a></p>
+
+<p>Platformer Art Complete Pack by Kenney Vleugels (<a href="www.kenney.nl">www.kenney.nl</a>)</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -462,6 +605,18 @@
       <li>
         
           <a href="//joyhuang9473.github.io/page36">36</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page37">37</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page38">38</a>
         
       </li>
     

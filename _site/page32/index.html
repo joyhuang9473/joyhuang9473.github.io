@@ -100,6 +100,7 @@
 			<ul class="dl-submenu">
 				<li><a href="//joyhuang9473.github.io/posts/">All Posts</a></li>
 				<li><a href="//joyhuang9473.github.io/tags/">All Tags</a></li>
+				<li><a href="//joyhuang9473.github.io/posts/ctf">CTF</a></li>
 			</ul>
 		</li>
 		<li>
@@ -137,389 +138,21 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-04-15T11:05:00+08:00"><a href="//joyhuang9473.github.io/2014/04/15/os-solution-manual-system-structures-ch02.html">April 15, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2014-05-01T15:43:00+08:00"><a href="//joyhuang9473.github.io/2014/05/01/the-film-eve-time.html">May 01, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/04/15/os-solution-manual-system-structures-ch02.html" rel="bookmark" title="[OS] Solution Manual : System Structures ch02" itemprop="url">[OS] Solution Manual : System Structures ch02</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>2.1</p>
-
-<p>The service and functions provided by an operating system can be divided into two main tags. Briefly describes the two tags and discuss how they differ.</p>
-
-<p>Ans:</p>
-
-<p><strong>One class</strong> of services provided by an operating system is to <strong>enforce protection between different processes running concurrently in the system</strong>. <strong>Processes are allowed to access only those memory locations that are associated with their address spaces</strong>. Also, processes are not allowed to corrupt files associated with other users. <strong>A process is also not allowed to access devices directly without operating system intervention</strong>.</p>
-
-<p><strong>The second class</strong> of services provided by an operating system is to <strong>provide new functionality that is not supported directly by the underlying hardware</strong>. <strong>Virtual memory</strong> and <strong>file systems</strong> are two such examples of new services provided by an operating system.</p>
-
-<p>2.2</p>
-
-<p>Describe three general methods for passing parameters to the operating system.</p>
-
-<p>Ans:</p>
-
-<p>Register, Block, Stack</p>
-
-<ol>
-  <li>pass the parameters in registers</li>
-  <li>Parameters stored in a block,or table,in memory,and address of block passed as a parameter in a register</li>
-  <li>Parameters placed,or pushed, onto the stack by the program and popped off the stack by the operating system</li>
-</ol>
-
-<p>2.3</p>
-
-<p>Describe how you could obtain a statistical profile of the amount of time spent by a program executing different sections of its code. Discuss the importance of obtaining such statistical profile.</p>
-
-<p>Ans:</p>
-
-<p>One could <strong>issue periodic timer interrupts</strong> and <strong>monitor what instructions or what sections of code are currently executing when the interrupts are delivered</strong>. A statistical profile of which pieces of code were active should be <strong>consistent with the time spent by the programin different sections of its code.</strong></p>
-
-<p>Once statistical profile has been obtained, the programmer could<strong>optimize those sections of code that are consuming more of the CPU resources.</strong></p>
-
-<p>http://wiki.answers.com/Q/Describe_how_you_could_obtain_a_statistical_profile_of_the_amount_of_time_spent_by_a_program_executing_different_sections_of_its_code?#slide=7</p>
-
-<p>2.4</p>
-
-<p>What are the five major activities of an operating system with regard to file management?</p>
-
-<p>Ans:</p>
-
-<p>The creation and deletion of files</p>
-
-<p>The creation and deletion of directories</p>
-
-<p>The support of primitives for manipulating files and directories （open, close, read, write, reposition）</p>
-
-<p>The mapping of files onto secondary storage</p>
-
-<p>The backup of files on stable (nonvolatile) storage media</p>
-
-<p>2.5</p>
-
-<p>What are the advantages and disadvantages of using the same system-call interface for manipulating both files and devices?</p>
-
-<p>Ans:</p>
-
-<p><strong>Each device can be accessed as though it was a file in the filesystem</strong>. Since most of the kernel deals with devices through this file interface,it is relatively easy to add a new device driver by implementing the hardware-specific code to support this abstract file interface. Therefore,t<strong>his benefits the development of both user program code, which can be written to access devices and files in the same manner</strong>, and device driver code, which can be written to support a well-defined API.</p>
-
-<p><strong>The disadvantage with using the same interface</strong> is that <strong>it might be difficult to capture the functionality of certain devices within the context of the file access API</strong>, <strong>thereby either resulting in a loss of functionality or a loss of performance</strong>. Some of this could be overcome by the use of ioctl operationthat provides a general purpose interface for processes to invokeoperations on devices.</p>
-
-<p>http://quizlet.com/13315241/operating-systems-ch-2-flash-cards/</p>
-
-<p>2.6</p>
-
-<p>Would it be possible for the user to develop a new command intepreter using the system-call interface provided by the operating system</p>
-
-<p>Ans:</p>
-
-<p>Yes.</p>
-
-<p>be able to develop a new command interpreter using the system-call interface provided by the operating system. <strong>The command interpreter allows an user to create and manage processes and also determine ways by which they communicate (such as through pipes and files).</strong> As all of this functionality could be accessed by an user-level program using the system calls, so it should be possible for the user to develop a new command-line interpreter.</p>
-
-<p>2.7</p>
-
-<p>What are the two models of interprocess communication? what are the strengths and weaknesses of the two approaches?</p>
-
-<p>Ans:</p>
-
-<p>One is <strong>message-passing model</strong> and the other is <strong>shared-memory model</strong>.</p>
-
-<p><strong>Message-passing strengths and weaknesses</strong>: <strong>message can be exchanged between the processes either directly or indirectly through a common mailbox</strong>. it is userful for exchanging smaller amounts of data and easier to implement for intercomputer communication. however,<strong>its speed is slower than shared-memory model</strong>.</p>
-
-<p><strong>Shared-memory strengths and weaknesses</strong>: it <strong>allows maxmum speed and convenience of communication</strong>. however,<strong>in the areas of protection and synchronization between the processes some problems exist</strong>.</p>
-
-<p>2.8</p>
-
-<p>Why is the separation of mechanism and policy desirable? </p>
-
-<p>Ans:</p>
-
-<p>The separation of mechanism and policy is important to <strong>provide flexibility to a system</strong>. If the interface between mechanism and policy is well defined, <strong>the change of policy may affect only a few parameters</strong>. On the other hand, if interface between these two is vague or not well defined, it might involve much deeper change to the system.</p>
-
-<p>Mechanism and policy must be separate to ensure that systems <strong>are 
-easy to modify</strong>.</p>
-
-<p>http://wiki.answers.com/Q/Why_is_the_separation_of_mechanism_and_policy_desirable?#slide=6</p>
-
-<p>http://ce.sharif.edu/courses/86-87/2/ce424/resources/root/Assignment%20Answers/OS-HW2%20Answers.pdf</p>
-
-<p>2.9</p>
-
-<p>It is sometimes difficult to achieve a layered approach if two components of the operating system are dependent on each other. Identify a scenario in which it is unclear how to layer two system components that require tight coupling of their functionalities.</p>
-
-<p>Ans:</p>
-
-<p>The <strong>virtual memory subsystem</strong> and the <strong>storage subsystem</strong> are typically tightly coupled and require careful design in a layered system due to the following interactions.</p>
-
-<p>Many <strong>systems allow files to be mapped into the virtual memory space of an executing process</strong>. <strong>On the other hand, the virtual memory subsystem typically uses the storage system to provide the backing store for pages that do not currently reside in memory.</strong></p>
-
-<p>Also, updates to the file system are sometimes buffered in <strong>physical memory</strong> before it is <strong>flushed to disk</strong>, thereby requiring <strong>careful coordination of the usage of memory between the virtual memory subsystem and the file system</strong>.</p>
-
-<p>https://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CC4QFjAB&amp;url=http%3A%2F%2Fportal.unimap.edu.my%3A7778%2Fportal%2Fpage%2Fportal30%2FLecturer%2520Notes%2FKEJURUTERAAN_KOMPUTER%2FSemester%25202%2520Sidang%2520Akademik%252020102011%2FDKT%2520221%2520Operating%2520System%2520Principle%2FTutorials%2FAnswers%2FSolutions%25202.docx&amp;ei=sTFNU532K5CtkgXimoCoCA&amp;usg=AFQjCNECZ54D48gtLMQBxEcVF1Ot-b9PZQ</p>
-
-<p>2.10</p>
-
-<p>What are the main advantages of the microkernel approach to system design?</p>
-
-<p>How do user programs and system services interact in a microkernel architecture?</p>
-
-<p>What are the disadvantages of using the microkernel approach?</p>
-
-<p>Ans:</p>
-
-<p>Beneﬁts typically include the following (a) adding a new service does <strong>not require modifying the kernel</strong>, (b) it is <strong>more secure</strong> as <strong>more operations are done in user mode than in kernel mode</strong>, and (c) a <strong>simpler</strong> kernel design and functionality typically results in a <strong>more reliable</strong> operating system.</p>
-
-<p>User programs and system services could interact through <strong>message passing</strong> or <strong>shared memory</strong> .</p>
-
-<p>the disadvantages is : suffer from <strong>performance decreases</strong> due to <strong>increased system function overhead</strong> (context switching increased).</p>
-
-<p>http://wiki.answers.com/Q/What_are_the_disadvantages_of_a_microkernel?r2as=1#slide=2</p>
-
-<p>http://answers-by-me.blogspot.tw/2010/11/operating-system-concepts-8e-exercise_8677.html</p>
-
-<p>http://codex.cs.yale.edu/avi/os-book/OS8/os8j/practice-exer-dir/2-web.pdf</p>
-
-<p>2.11</p>
-
-<p>What are the advantages of using loadable kernel modules?</p>
-
-<p>Ans:</p>
-
-<p>Each is <strong>loadable as needed</strong> within the kernel with <strong>more flexible</strong></p>
-
-<p>2.12</p>
-
-<p>How are iOS and Android similar, How are they different?</p>
-
-<p>Ans:</p>
-
-<p>the main similarities are: Android and iOS are <strong>both operating systems for mobile devices</strong>. They are <strong>both programmed in C and C++</strong>.</p>
-
-<p>the differences are: <strong>Android is an open-source</strong> OS and <strong>iOS is a closed source</strong> OS.</p>
-
-<p>ios is based on Mac OS X kernel.</p>
-
-<p>android is based on Linux kernel.</p>
-
-<p>http://wiki.answers.com/Q/How_are_iOS_and_Android_similar_How_are_they_different?#slide=5</p>
-
-<p>2.13</p>
-
-<p>Explain why java programs running on android systems do not use the standard java api and virtual machine?</p>
-
-<p>Ans:</p>
-
-<p>android api, Dalvik VM</p>
-
-<p>2.14</p>
-
-<p>Ans:(none)</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-04-14T15:18:00+08:00"><a href="//joyhuang9473.github.io/2014/04/14/os-solution-manual-multithreaded-programming-ch03.html">April 14, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/04/14/os-solution-manual-multithreaded-programming-ch03.html" rel="bookmark" title="[OS] Solution Manual : Process Concept ch03" itemprop="url">[OS] Solution Manual : Process Concept ch03</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>3.1</p>
-
-<p>Describe the differences among short term, medium term and long term sheduling?</p>
-
-<p>Ans:</p>
-
-<p>Short-term scheduler is invoked very frequently (milliseconds) ⇒ (must be fast)”</p>
-
-<p>Long-term scheduler is invoked very infrequently (seconds, minutes) ⇒ (may be slow)”</p>
-
-<p>3.2</p>
-
-<p>Describe the actions taken by a kernel to switch between processes?</p>
-
-<p>Ans:</p>
-
-<p>the system must save the state of the old process and load the saved state for the new process via a context switch.</p>
-
-<p>3.3</p>
-
-<p>Ans:(none)</p>
-
-<p>3.4</p>
-
-<p>Explain the role of the init process on unix and linux system in regard to process termination?</p>
-
-<p>Ans:</p>
-
-<p>init is the parent of all processes. Its primary role is to create processes from a script stored in  the file /etc/inittab.</p>
-
-<p>init is the first process started during booting of the computer system</p>
-
-<p>3.5</p>
-
-<p>Including the initial parent process, how many process are created by the program shown in Figure 3.31?</p>
-
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;unistd.h&gt;
-
-int main() {
-	int i;
-  
-  for ( i = 0 ; i &lt; 4 ; i++ ) {
-      fork();
-  }
-  
-  return 0;
-}
-</code></pre>
-
-<p>Ans:</p>
-
-<p>1+4+3+2+1 = 11</p>
-
-<p>3.6</p>
-
-<p>Ans:(none)</p>
-
-<p>3.7</p>
-
-<p>Using the program in Figure 3.29, identify the values of pid at lines A, B, C and D. (Assume that the actual pids of the parent and child are 2600 and 2603, respectively.)</p>
-
-<pre><code>#include &lt;sys/types.h&gt; 
-#include &lt;stdio.h&gt; 
-#include &lt;unistd.h&gt; 
- 
-int main () 
-{
-    /* fork a child process */ 
-    pid = fork(); 
-    if ( pid &lt; 0 ) { /*error occurred 
-        fprintf(stderr, “Fork Failed”); 
-        return 1; 
-    } 
-    else if (pid ==0) { /* child process */ 
-        pid1 = getpid(); 
-        printf(“child: pid = %d” ,pid); /* A */ 
-        printf(“child: pid1 = %d” ,pid1); /* B */ 
-    } 
-    else { /* parent process */ 
-        pid1 = getpid(); 
-        printf(“parent: pid = %d” ,pid); /* C */ 
-        printf(“parent: pid1 = %d” ,pid1); /* D */ 
-        wait(NULL); 
-    } 
-    return 0; 
-} 
-</code></pre>
-
-<p>Ans:</p>
-
-<p>A: 0, B: 2603, C: 2603, D: 2600</p>
-
-<p>http://hscc.cs.nthu.edu.tw/~sheujp/homework/os09/HW3_ref.pdf</p>
-
-<p>3.8</p>
-
-<p>Give an example of a situation in which ordinary pipes are more suitable than named pipes and an example of a situation in which named pipes are more suitable than ordinary pipes?</p>
-
-<p>Ans:</p>
-
-<p>ordinary pipes:</p>
-
-<p>ordinary pipes require parent-child relationship between communicating processes.</p>
-
-<p>ordinary pipes are unidirectional (producer-consumer style).</p>
-
-<p>named pipes:</p>
-
-<p>No parent-child relationship is necessary between the communicating processes.</p>
-
-<p>named pipes is bidirectional.</p>
-
-<p>3.9</p>
-
-<p>Consider the RPC mechanism. Describe the undesirable circumstances that could arise from not enforcing either the “at most once” or “exactly once” semantics. Describe possible uses for a mechanism that had neither of these guarantees.</p>
-
-<p>Ans:</p>
-
-<p>If an RPC mechanism could not support either the “at most once” or “at least once” semantics, then the <strong>RPC server cannot guarantee that a remote procedure will not be invoked multiple occurrences</strong>. Consider if a remote procedure were <strong>withdrawing money</strong> from a bank account on a system that did not support these semantics. It is possible that a single invocation of the remote procedure might lead to multiple withdrawals on the server. For a system to support either of these semantics generally requires the server maintain some form of client state such as the timestamp.</p>
-
-<p><strong>If a system were unable to support either of these semantics</strong>, then such a <strong>system could only safely provide remote procedures that do not alter data or provide time-sensitive results</strong>. Using our bank account as an example, we certainly require “at most once” or “at least once” semantics for performing a withdrawal (or deposit!) However, an inquiry into an account balance or other account information such as <strong>name, address, etc. does not require these semantics</strong></p>
-
-<p>https://www.google.com.tw/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CC4QFjAA&amp;url=http%3A%2F%2Fwww.cs.gsu.edu%2F~cscnaax%2Fsummer%2Fcs4320_6320%2FAssignments%2Fsol1.doc&amp;ei=rqpMU6jUFIaSkQX_uoHABA&amp;usg=AFQjCNGBO5A7ln5oYa2Yj1aJMIjYF58iJg&amp;sig2=okRebCDG4VPA6UFZFYeBcA</p>
-
-<p>3.10</p>
-
-<p>Ans:</p>
-
-<p>Line X : 0, -1, -2, -3, -4
-Line Y : 0, 1, 2, 3, 4</p>
-
-<p>3.11</p>
-
-<p>What are the benefits and the disadvantages of each of the following? Consider both the system level and the programmer level.</p>
-
-<p>a. Synchronous and asynchronous communication</p>
-
-<p>Ans:</p>
-
-<p>A benefit of <strong>synchronous communication</strong> is that it allows a rendezvous between the sender and receiver. A disadvantage of a <strong>blocking</strong> send is that a rendezvous may not be required and the message could be delivered asynchronously. As a result, message-passing systems often provide both forms of synchronization.</p>
-
-<p>Synchronous =&gt; blocking</p>
-
-<p>asynchronous =&gt; nonblocking</p>
-
-<p>b. Automatic and explicit buffering</p>
-
-<p>Ans:</p>
-
-<p><strong>Automatic</strong> buffering provides <strong>a queue with indefinite length</strong>, thus <strong>ensuring the sender will never have to block while waiting to copy a message</strong>. There are no specifications on how automatic buffering will be provided; one scheme <strong>may reserve sufficiently large memory where much of the memory is wasted</strong>. <strong>Explicit buffering</strong> <strong>specifies how large the buffer is</strong>. In this situation, the <strong>sender may be blocked while waiting for available space in the queue</strong>. However, it is less likely that memory will be wasted with explicit buffering.</p>
-
-<p>c. Send by copy and send by reference</p>
-
-<p>Ans:</p>
-
-<p>Send by copy does not allow the receiver to alter the state of the parameter.
-Send by reference does allow it.</p>
-
-<p>A benefit of send by reference is that it allows the programmer to write a distributed version of a centralized application. Java’s RMI provides both; however, passing a parameter by reference requires declaring the parameter as a remote object as well.</p>
-
-<p>d. Fixed-sized and variable-sized messages</p>
-
-<p>Ans:</p>
-
-<p>The implications of this are mostly related to buffering issues; with fixed-size messages, a buffer with a specific size can hold a known number of messages. The number of variable-sized messages that can be held by such a buffer is unknown.</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-04-14T04:04:00+08:00"><a href="//joyhuang9473.github.io/2014/04/14/excerpt-class-can-slide-cell-phone.html">April 14, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/04/14/excerpt-class-can-slide-cell-phone.html" rel="bookmark" title="[思語]上課可不可以滑手機？" itemprop="url">[思語]上課可不可以滑手機？</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/05/01/the-film-eve-time.html" rel="bookmark" title="[映畫] 夏娃的時間" itemprop="url">[映畫] 夏娃的時間</a></h1>
     
   </header>
   <div class="entry-content">
     <blockquote>
-  <p>滑手機、用筆電不尊重老師嗎？事實上，他們只是更尊重自己的時間、更尊重自己的求知慾、更尊重自己的生命。</p>
+  <p>這部是日本新銳動畫導演吉浦康裕所製作，最早是在 2008 年於日本雅虎網站上公開共 6 集的短篇動畫，之後在美國募資網站 Kickstarter 上，成功募資超過 21 萬 5433 元美金，才於 2010 年重新編輯成劇場版上映，在 2011 年登上 iTunes Store 下載電影排行榜的第 3 名。故事描述未來充滿機器人的世界，機器人試圖模仿得更像人類，是一部探討機器人與人類之間可能關係的動畫電影。</p>
 </blockquote>
 
-<p>引自：<a href="http://www.thenewslens.com/post/35037/" title="有關高等教育：為什麼要念研究所？上課可不可以滑手機？">有關高等教育：為什麼要念研究所？上課可不可以滑手機？</a></p>
+<p><img src="http://i.imgur.com/I464S6O.jpg" alt="N8dL4j6fTo27FKVnkfCv_1378362059-2770859302_n.jpg" /></p>
+
+<p>引自:<a href="http://bullhsu.pixnet.net/blog/post/169401008-2013-%E4%B8%8B%E5%8D%8A%E5%B9%B4-%E5%8B%95%E6%BC%AB%E7%A4%BE%E6%8E%A8%E8%96%A6%E5%8B%95%E7%95%AB%E6%B8%85%E5%96%AE" title="2013 下半年 動漫社推薦動畫清單">2013 下半年 動漫社推薦動畫清單</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -528,67 +161,93 @@ Send by reference does allow it.</p>
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-04-13T13:53:00+08:00"><a href="//joyhuang9473.github.io/2014/04/13/miscellaneous-engineers-to-coexist.html">April 13, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2014-04-29T14:21:00+08:00"><a href="//joyhuang9473.github.io/2014/04/29/si-so-called-effortlessly.html">April 29, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/04/13/miscellaneous-engineers-to-coexist.html" rel="bookmark" title="[思語]與工程師相處指南" itemprop="url">[思語]與工程師相處指南</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/04/29/si-so-called-effortlessly.html" rel="bookmark" title="所謂的毫不費力" itemprop="url">所謂的毫不費力</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>此來自某人的心情近況，有幾點我覺得跟我現在公司老闆的狀況還蠻像的，因此特別記錄下來。</p>
+    <blockquote>
+  <p>你需要非常努力，才能看起來毫不費力</p>
+</blockquote>
 
-<h3 id="section">1. 不要把工程師當「得來速」，隨便點餐。</h3>
+<p>引自:<a href="http://blog.shaolin.tw/2011/12/nisra-and-inter-university-information.html" title="一路走來，NISRA與金盾獎">一路走來，NISRA與金盾獎</a></p>
 
-<p>工程師正確的用法要這樣用：</p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
 
-<p>今天如果你有一個問題，你就直接跟他講你有什麼問題，有沒有辦法設計一個方案解決。工程師強的不是你以為的寫程式能力（這個另外討論）。而是他比你強的「工程角度」解決問題的能力。</p>
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-04-28T16:53:00+08:00"><a href="//joyhuang9473.github.io/2014/04/28/miscellaneous-0.html">April 28, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/04/28/miscellaneous-0.html" rel="bookmark" title="0" itemprop="url">0</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>歸零。</p>
 
-<p>你跟他講你有什麼問題，有一定能力以上的人可以很快就幫你想想出正確的 workround。甚至還親手幫你做好。</p>
+<p>自己就像是半瓶水，不堪搖晃，與其如此，還是把瓶中水倒光吧。</p>
 
-<p>切忌逼他寫你心目中想要的程式，他只會覺得你智障然後繼續回去打 diablo。</p>
+<p>一個眼神，一個舉動，而感到無助，又再次地懷疑自己適不適合這個工作。</p>
 
-<h3 id="section-1">2. 不要沒把解決手段想清楚就把問題扔給他</h3>
+<p>但就是因為難過、痛苦，才有去克服的價值。</p>
 
-<p>有的時候，那個問題不是純工程角度 workround 可以解的。而是必須從實體角度去切入，程式去輔助自動化。你必須先想清楚，實體你打算怎麼做。</p>
+<p>:)</p>
 
-<p>「我想上網開店賺大錢」這種 request 你丟給他。他會直接永久靜音你的 FB 對話。</p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
 
-<p>不要以為他是蠢。工程師在問題出現前 8 個小時前就可以看到問題，三秒鐘就可以判斷到底要不要做。人家聰明的很。後知後覺的是你。</p>
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-04-26T13:18:00+08:00"><a href="//joyhuang9473.github.io/2014/04/26/toy-bottle-of-milky-way.html">April 26, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/04/26/toy-bottle-of-milky-way.html" rel="bookmark" title="[TOY] 瓶中銀河" itemprop="url">[TOY] 瓶中銀河</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>夜光瓶，看起來挺漂亮的，改天來做一個 :)</p>
 
-<h3 id="section-2">3. 不要跟他講什麼「應該很簡單」</h3>
+<blockquote>
+  <p>材料：滴膠，瓶子
+工具：注射筒，滴膠瓶，鼠尾管，紙杯(用來裝廢液)</p>
+</blockquote>
 
-<p>「應該很簡單」只有「Senior Developer」才可以跟 「Developer」講的。其他人沒資格講。</p>
+<p><img src="http://s1.imgs.cc/img/CAWqXhm.jpg?YyS" alt="1.jpg" /></p>
 
-<p>你應該要跟 Developer 說，這個問題有一點挑戰，你不知道找誰。</p>
+<p>引自:<a href="http://ck101.com/thread-2971920-1-1.html" title="[新奇創意] 給妳一整個宇宙 30天自製超浪漫「瓶中銀河」">[新奇創意] 給妳一整個宇宙 30天自製超浪漫「瓶中銀河」</a></p>
 
-<p>你跟他講應該很簡單，他內心會直接跟你這個人絕交。</p>
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
 
-<h3 id="section-3">4. 請他吃高級燒肉</h3>
-
-<p>我還沒遇過工程師不喜歡吃燒肉的。吃燒肉友誼點數大概可以灌 3 倍速度。</p>
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-04-25T15:25:00+08:00"><a href="//joyhuang9473.github.io/2014/04/25/ted-we-the-connected-generation-david-shing-at-tedxathens.html">April 25, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/04/25/ted-we-the-connected-generation-david-shing-at-tedxathens.html" rel="bookmark" title="[TED] We, the connected generation: David Shing at TEDxAthens" itemprop="url">[TED] We, the connected generation: David Shing at TEDxAthens</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>講者口才流利且有精美的簡報</p>
 
 <hr />
-<p>p.s 轉自 鄭@@ 的 fb近況</p>
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+<p>我們，一個連結的世代 (We, the connected generation: David Shing at TEDxAthens)</p>
 
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-04-10T16:37:00+08:00"><a href="//joyhuang9473.github.io/2014/04/10/ted-record.html">April 10, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/04/10/ted-record.html" rel="bookmark" title="[TED] The Value of Music Education" itemprop="url">[TED] The Value of Music Education</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>音樂教育的價值 (TEDxSydney - Richard Gill - The Value of Music Education)</p>
-
-<p><a href="https://www.youtube.com/watch?v=HeRus3NVbwE" title="TEDxSydney - Richard Gill - The Value of Music Education">TEDxSydney - Richard Gill - The Value of Music Education</a></p>
+<p><a href="https://www.youtube.com/watch?v=AQ8cpjEdpmI#t=823" title="We, the connected generation: David Shing at TEDxAthens">We, the connected generation: David Shing at TEDxAthens</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -814,6 +473,18 @@ Send by reference does allow it.</p>
       <li>
         
           <a href="//joyhuang9473.github.io/page36">36</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page37">37</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page38">38</a>
         
       </li>
     

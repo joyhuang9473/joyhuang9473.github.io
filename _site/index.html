@@ -100,6 +100,7 @@
 			<ul class="dl-submenu">
 				<li><a href="//joyhuang9473.github.io/posts/">All Posts</a></li>
 				<li><a href="//joyhuang9473.github.io/tags/">All Tags</a></li>
+				<li><a href="//joyhuang9473.github.io/posts/ctf">CTF</a></li>
 			</ul>
 		</li>
 		<li>
@@ -345,25 +346,63 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-07-09T12:00:00+08:00"><a href="//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x.html">July 09, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web2.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x.html" rel="bookmark" title="Aslan-Rainbow-x" itemprop="url">Aslan-Rainbow-x</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web2.html" rel="bookmark" title="AIS3 2015 Writeup: web2" itemprop="url">AIS3 2015 Writeup: web2</a></h1>
     
   </header>
   <div class="entry-content">
-    <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="//imgur.com/a/dHi9K/embed"></iframe>
+    <h2 id="jsfuck">JSFuck</h2>
 
-<p>2D fighting game, written in C++, Cocos2d-x</p>
+<p>Keynote:</p>
 
-<p>cocos2d-x version: 3.3</p>
+<ul>
+  <li>可以只用 6 個字符 []()!+ 來編寫 JavaScript 程序</li>
+</ul>
 
-<p>Author: YU-KAI HUANG</p>
+<p>Reference:</p>
 
-<p>Character Graphics designed by <a href="http://opengameart.org/users/creek23">creek23</a></p>
+<ul>
+  <li>http://www.jingwentian.com/t-413</li>
+  <li>http://codegolf.stackexchange.com/questions/28714/convert-jsfuck-to-normal-js</li>
+</ul>
 
-<p>Platformer Art Complete Pack by Kenney Vleugels (<a href="www.kenney.nl">www.kenney.nl</a>)</p>
+<p>剛開始看到 code 時覺得是 javascript，試著把它跑起來</p>
+
+<pre><code>&lt;!-- test.html --&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/had&gt;
+&lt;body&gt;
+&lt;script&gt;
+{ web2.txt }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>結果出現了一個 ^_^ ，確定是一個可執行的 javascript</p>
+
+<pre><code>^_^
+</code></pre>
+
+<p>網路上得知 JSFuck，藉由他人所寫的 script ，把 jsfuck 轉換為一般 javaScript</p>
+
+<pre><code>&lt;!- jsfuck-decoder.html -&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/had&gt;
+&lt;body&gt;
+&lt;script&gt;
+alert(/\n(.+)/.exec(eval(prompt().slice(0,-2)))[1]);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>輸出結果</p>
+
+<p><img src="http://i.imgur.com/uGgznIH.png" alt="jsfuck_in-ais3's_web_question" /></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -587,6 +626,18 @@
       <li>
         
           <a href="//joyhuang9473.github.io/page36">36</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page37">37</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page38">38</a>
         
       </li>
     

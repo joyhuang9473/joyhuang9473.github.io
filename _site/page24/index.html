@@ -100,6 +100,7 @@
 			<ul class="dl-submenu">
 				<li><a href="//joyhuang9473.github.io/posts/">All Posts</a></li>
 				<li><a href="//joyhuang9473.github.io/tags/">All Tags</a></li>
+				<li><a href="//joyhuang9473.github.io/posts/ctf">CTF</a></li>
 			</ul>
 		</li>
 		<li>
@@ -137,19 +138,62 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-06-12T07:44:00+08:00"><a href="//joyhuang9473.github.io/2014/06/12/betty-siri-for-linux-terminal.html">June 12, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2014-06-28T05:20:00+08:00"><a href="//joyhuang9473.github.io/2014/06/28/install-docker-on-arch-linux.html">June 28, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/06/12/betty-siri-for-linux-terminal.html" rel="bookmark" title="Betty : Siri for Linux terminal" itemprop="url">Betty : Siri for Linux terminal</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/06/28/install-docker-on-arch-linux.html" rel="bookmark" title="Install docker on Arch Linux" itemprop="url">Install docker on Arch Linux</a></h1>
     
   </header>
   <div class="entry-content">
-    <p><a href="http://ultimate-solution.com.pk/2014/06/betty-siri-for-linux-terminal-command-line/">Betty : Siri for Linux terminal (command line)</a></p>
+    <p>Install docker in Arch
+1. Search image or Create a Base Image</p>
 
-<p>Github : <a href="https://github.com/pickhardt/betty">pickhardt/betty</a></p>
+<p>Note: Base Image https://docs.docker.com/terms/image/#base-image-def</p>
 
-<p><img src="http://ultimate-solution.com.pk/wp-content/uploads/2014/06/betty-terminal-linux-siri1.jpg" alt="" /></p>
+<h1 id="search-image">Search image</h1>
+
+<p>: sudo docker search <image_name></image_name></p>
+
+<p>ex.</p>
+
+<pre><code>sudo docker search arch
+
+sudo docker pull base/arch
+
+sudo docker run base/arch echo "Hello World!"
+</code></pre>
+
+<p>Tip:
+The command docker run takes a minimum of two arguments:
+1) an image name, and
+2) the command you want to execute within that image.</p>
+
+<p>登入 image</p>
+
+<pre><code>sudo docker run -i -t base/arch /bin/bash
+</code></pre>
+
+<p>登出 image</p>
+
+<pre><code># exit
+</code></pre>
+
+<p>Note:
+Unlike VMs, containers don’t need to boot up or shut down the whole OS. Unless you’re running a process in it, your container isn’t taking up any resources apart from some disk space. Once our bash process has finished, your container is closed.</p>
+
+<p>Commit</p>
+
+<pre><code>sudo docker commit 85eed1376ab3 centos:LAMP
+</code></pre>
+
+<h1 id="create-a-base-image">Create a Base Image</h1>
+
+<p><a href="http://docs.docker.com/reference/commandline/cli/">http://docs.docker.com/reference/commandline/cli/</a></p>
+
+<p><a href="http://blog.blackwhite.tw/2013/12/docker.html">http://blog.blackwhite.tw/2013/12/docker.html</a></p>
+
+<p><a href="http://www.slideshare.net/ya790026/docker-33456641">http://www.slideshare.net/ya790026/docker-33456641</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -158,17 +202,25 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-06-11T15:23:00+08:00"><a href="//joyhuang9473.github.io/2014/06/11/review-of-novel-a-clean-well-lighted-place.html">June 11, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2014-06-27T11:02:00+08:00"><a href="//joyhuang9473.github.io/2014/06/27/install-lamp-on-mac.html">June 27, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/06/11/review-of-novel-a-clean-well-lighted-place.html" rel="bookmark" title="Review of Novel "A Clean, Well-Lighted Place"" itemprop="url">Review of Novel "A Clean, Well-Lighted Place"</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/06/27/install-lamp-on-mac.html" rel="bookmark" title="Install LAMP on Mac" itemprop="url">Install LAMP on Mac</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>A Clean, Well-Lighted Place: Do you think young people in Taiwan might feel “nada”? Some factors can help you argue your points: economic, educational, or political situations.</p>
+    <p>個人原本以為安裝 LAMP 是非常簡單的事情，沒想到在 Mac 上卻被陰了好幾次，在此特別記錄簡易的安裝方式。</p>
 
-<p>In this rapidly changing generation, everything is unstable and unpredictable. In Taiwan, junior high school students is facing   the education reform nowadays. But the educational institutions don’t do it well. Many students don’t know how to prepare the tests and how to choose their school, and they will feel “nada”. In political situations, maybe someone would said it is China, which is a dangerous country and often be unfriendly to us, that we will feel “nada” and desperate. But I think there are other bigger factor. For example, on the “Sunflower Movement”, students wants to send Cross-Strait Service Trade Agreement back and wish the government to reconsider the agreement. But we can see that the government faces it in a p assive   attitude and attempts to overwhelm students and social groups. It is disappointing, and it causes “nada”. It’s another season of graduation. Graduates get degrees joyfully,but they feel anxiety at the same. Because of high unemployment, depressed economic, and the weak government, they will feel “nada”. Maybe I am the one of them, who feel “nada” and at a loss for the future. But I know I shall be responsible for myself, and it’s not a good manner to blame someone or something all the time. Just be honest and diligent, I think.</p>
+<h1 id="lamp">LAMP</h1>
+
+<p><a href="http://jason.pureconcepts.net/2012/10/install-apache-php-mysql-mac-os-x/">Installing Apache, PHP, and MySQL on Mac OS X</a></p>
+
+<p>另一個是 php-mcrypt</p>
+
+<h1 id="php-mcrypt">php-mcrypt</h1>
+
+<p><a href="http://jason.pureconcepts.net/2012/10/install-apache-php-mysql-mac-os-x/">How to Install mcrypt for php on Mac OSX 10.9 Mavericks for a Development Server</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -177,17 +229,17 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-06-11T15:22:00+08:00"><a href="//joyhuang9473.github.io/2014/06/11/review-of-novel-the-lottery.html">June 11, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2014-06-26T18:00:00+08:00"><a href="//joyhuang9473.github.io/2014/06/26/iris-hsu-google-taiwan-anita-borg-scholarship.html">June 26, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/06/11/review-of-novel-the-lottery.html" rel="bookmark" title="Review of Novel "The Lottery"" itemprop="url">Review of Novel "The Lottery"</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/06/26/iris-hsu-google-taiwan-anita-borg-scholarship.html" rel="bookmark" title="Iris Hsu : Google Taiwan Anita Borg Scholarship " itemprop="url">Iris Hsu : Google Taiwan Anita Borg Scholarship </a></h1>
     
   </header>
   <div class="entry-content">
-    <p>The Lottery: How can a ritual like the lottery continue to be held year after year? Why does no one move to end it? Is it only about harvest of crops or might any other reasons be involved?</p>
+    <p><a href="http://irishsu2013.blogspot.tw/2014/06/google-taiwan-anita-borg-scholarship.html">Iris Hsu : [準備心得] Google Taiwan Anita Borg Scholarship</a></p>
 
-<p>I think this is because there are indifference and selfishness between people. In the story, Mrs. Adams once said “Some places have already quit lotteries.” This means that she has felt confused about the meaning of the lottery and suspected the justification of the ritual. But she still threw stones to Mrs. Hutchinson instead of telling other people that something wrong. Some people may feel strange that why she does it even if she knows that it is wrong and cruel. Maybe we can say that it all comes from human’s selfishness and people don’t want to be different from others. Because once someone doubts something which is accepted by most of people, people will blame him and don’t keep in touch with him. So most of people will comply with the “rules” silently even if they don’t agree about those. Just for avoiding feeling left out from the group or community. As a result, people become indifferent and just watch some injustice happen. Maybe they would say “It’s not my business.” “This is not what I do.” They don’t care about the person but only care about their future. That means everyone live in the dark, and no one has enough courage to fight fear. That is main reason I think that the lottery continue to be held year after year.</p>
+<p>這是關於一位朋友在 <a href="http://www.google.com.tw/anitaborg/">Google Taiwan Anita Borg Scholarship</a> 的準備心得，覺得是非常寶貴的經歷過程和經驗分享，而事實上她也是個大名人囉，RockResume 部落格也曾在 <a href="http://blog.rockresume.com/2014/04/iris-hsu-ncu-csie.html">學業與專業成績都非常優異的 Iris Hsu, NCU CSIE</a> 談論過她，特別在此記錄。</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -196,19 +248,15 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-06-11T09:19:00+08:00"><a href="//joyhuang9473.github.io/2014/06/11/runs-close-the-table-builder-groundgame-scheduler.html">June 11, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2014-06-26T17:56:00+08:00"><a href="//joyhuang9473.github.io/2014/06/26/bittersweet-about-30-game-system-installation-man-machine-interface-human-software-and-hardware-gateway-to-dramatically-reduce.html">June 26, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/06/11/runs-close-the-table-builder-groundgame-scheduler.html" rel="bookmark" title="跑關表生成器 GroundGame-scheduler" itemprop="url">跑關表生成器 GroundGame-scheduler</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/06/26/bittersweet-about-30-game-system-installation-man-machine-interface-human-software-and-hardware-gateway-to-dramatically-reduce.html" rel="bookmark" title="遊戲系統30年甘苦談：安裝方式、人機介面人性化，軟硬體門檻大幅降低" itemprop="url">遊戲系統30年甘苦談：安裝方式、人機介面人性化，軟硬體門檻大幅降低</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>意外發現的小工具，感覺挺有趣的，記錄一下囉</p>
-
-<p>Github : <a href="https://github.com/ensky/GroundGame-scheduler">ensky/GroundGame-scheduler</a></p>
-
-<p>Demo : <a href="http://ensky.tw/GroundGame/">http://ensky.tw/GroundGame/</a></p>
+    <p>轉錄：電腦王 <a href="http://www.techbang.com/posts/18078">遊戲系統30年甘苦談：安裝方式、人機介面人性化，軟硬體門檻大幅降低</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -217,18 +265,22 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-06-09T14:33:00+08:00"><a href="//joyhuang9473.github.io/2014/06/09/the-computer-for-the-first-time-passed-the-turing-test.html">June 09, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2014-06-14T02:58:00+08:00"><a href="//joyhuang9473.github.io/2014/06/14/the-unofficial-world-cup-api.html">June 14, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/06/09/the-computer-for-the-first-time-passed-the-turing-test.html" rel="bookmark" title="電腦首度通過圖靈測試?" itemprop="url">電腦首度通過圖靈測試?</a></h1>
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/06/14/the-unofficial-world-cup-api.html" rel="bookmark" title="The (un)official World Cup API" itemprop="url">The (un)official World Cup API</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>2014-06-10 修 :
-<a href="http://www.inside.com.tw/2014/06/10/did-eugene-goostman-really-pass-the-turing-test">Eugene Goostman 程式真的通過了圖靈測試嗎？</a></p>
+    <p>配合 2014 年 FIFA 世界盃足球賽，來點相關的內容 XD</p>
 
-<p>Inside : <a href="http://share.inside.com.tw/posts/5079?ref=sidebar">電腦首度通過圖靈測試</a></p>
+<p><a href="http://www.kimonolabs.com/worldcup/explorer">The (un)official World Cup API</a></p>
+
+<blockquote>
+  <p>Structured data gives you the power to ask interesting questions. Quick want to find out <strong>which team has scored the most goals</strong>? Or <strong>which player</strong>? Wondering who are the <strong>youngest players</strong> participating in the cup? What about the <strong>nicknames of the entire Brazilian team</strong>? We also have historical data for each player so you can look up who’s coming in with the <strong>most regular season goals</strong> or alternatively, the <strong>most red cards</strong>. What questions do you have?</p>
+</blockquote>
+
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -454,6 +506,18 @@
       <li>
         
           <a href="//joyhuang9473.github.io/page36">36</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page37">37</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page38">38</a>
         
       </li>
     
