@@ -140,6 +140,23 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2013-12-12T15:20:00+08:00"><a href="//joyhuang9473.github.io/2013/12/12/media-stream-server.html">December 12, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2013/12/12/media-stream-server.html" rel="bookmark" title="Media Stream Server" itemprop="url">Media Stream Server</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p><a href="https://github.com/arut/nginx-rtmp-module">https://github.com/arut/nginx-rtmp-module</a></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2013-12-09T07:02:00+08:00"><a href="//joyhuang9473.github.io/2013/12/09/backdoor.html">December 09, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -661,184 +678,6 @@ Do not forget writing the names and student IDs of all members in your team.</li
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-10-27T13:31:00+08:00"><a href="//joyhuang9473.github.io/2013/10/27/algorithm-algorithms-program-job-1.html">October 27, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2013/10/27/algorithm-algorithms-program-job-1.html" rel="bookmark" title="演算法 Algorithms : 程式作業1" itemprop="url">演算法 Algorithms : 程式作業1</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>For two points p and q in the plane, we say that p dominates q if both x and y coordinates of p are greater than that of q respectively. Given a set S of n points, the rank of a point p in S is the number of points in S dominated by p. We want to find the rank of every point in S. A naïve algorithm needs O(n^2) time. Design a faster algorithm for this problem.</p>
-
-<p>Input</p>
-
-<p>The first line of input contains a single positive integer ( &lt; 20 ), the number of test cases. Each test case starts with a line containing a single integer n, the number of points in the plane. This line is followed by n lines, indicates the x and y coordinates for each points, p1, p2… pn. No integer in the input is greater than 224 or less than 0.</p>
-
-<p>Output</p>
-
-<p>The output of each cases contain n lines, the rank of p1, p2… pn. Cases are separated by a single blank line.</p>
-
-<p>Sample input:</p>
-
-<p>1</p>
-
-<p>3</p>
-
-<p>1 1</p>
-
-<p>2 2</p>
-
-<p>3 3</p>
-
-<p>Sample output: </p>
-
-<p>0</p>
-
-<p>1</p>
-
-<p>2</p>
-
-<p>Code：</p>
-
-<pre><code>#include &lt;iostream&gt;
-#include &lt;stdlib.h&gt;
-
-using namespace std;
-
-struct Points {
-    int x;
-    int y;
-    int rank;
-};
-
-struct Cases {
-    int point_nums;
-    Points* pointInfo;
-    int* sortedArray;
-};
-
-int getPointX(Points* pointInfo, int index) { return pointInfo[index].x; }
-int getPointY(Points* pointInfo, int index) { return pointInfo[index].y; }
-
-void mergeX(Points* pointInfo, int size1, int size2, int* sortedArray) {
-    int size = size1 + size2;
-    int* temp = (int*)malloc(size * sizeof(int));
-    int ptr1=0, ptr2=0;
-
-    // sort x : min to max
-    while ( (ptr1+ptr2) &lt; size ) {
-        if ( (ptr1 &lt; size1 &amp;&amp; ptr2 &gt;= size2) || (ptr1 &lt; size1 &amp;&amp; getPointX(pointInfo, sortedArray[ptr1]) &lt; getPointX(pointInfo, sortedArray[size1+ptr2])) ) {
-            temp[ptr1+ptr2] = sortedArray[ptr1++];
-        } else if ( (ptr2 &lt; size2 &amp;&amp; ptr1 &gt;= size1) || (ptr2 &lt; size2 &amp;&amp; getPointX(pointInfo, sortedArray[size1+ptr2]) &lt; getPointX(pointInfo, sortedArray[ptr1])) ) {
-            temp[ptr1+ptr2] = sortedArray[size1 + ptr2++];
-        } else if ( getPointX(pointInfo, sortedArray[ptr1]) == getPointX(pointInfo, sortedArray[size1+ptr2]) ) {
-            if ( getPointY(pointInfo, sortedArray[ptr1]) &lt; getPointY(pointInfo, sortedArray[size1+ptr2]) ) {
-                temp[ptr1+ptr2] = sortedArray[size1 + ptr2++];
-            } else {
-                temp[ptr1+ptr2] = sortedArray[ptr1++];
-            }
-        }
-    }
-    
-    for ( int i = 0 ; i &lt; size1+size2 ; i++ ) sortedArray[i] = temp[i];
-
-    free(temp);
-}
-
-void mergeYandSetRank(Points* pointInfo, int size1, int size2, int* sortedArray) {
-    int size = size1 + size2;
-    int* temp = (int*)malloc(size * sizeof(int));
-    int ptr1=0, ptr2=0;
-
-    // [Merge sort] sort y : max to min
-    while ( ptr1+ptr2 &lt; size1+size2 ) {
-        if ( (ptr1 &lt; size1 &amp;&amp; ptr2 &gt;= size2) || (ptr1 &lt; size1 &amp;&amp; getPointY(pointInfo, sortedArray[ptr1]) &gt;= getPointY(pointInfo, sortedArray[size1+ptr2])) ) {
-            temp[ptr1+ptr2] = sortedArray[ptr1++];
-        }else if ( (ptr2 &lt; size2 &amp;&amp; ptr1 &gt;= size1) || (ptr2 &lt; size2 &amp;&amp; getPointY(pointInfo, sortedArray[size1+ptr2]) &gt; getPointY(pointInfo, sortedArray[ptr1])) ) {
-            // set rank
-            if ( ptr1+ptr2 &lt; size1+ptr2 ) pointInfo[sortedArray[size1+ptr2]].rank += (size1+ptr2) - (ptr1+ptr2);
-
-            temp[ptr1+ptr2] = sortedArray[size1 + ptr2++];
-        }
-    }
-
-    for ( int i = 0 ; i &lt; size1+size2; i++ ) sortedArray[i] = temp[i];
-
-    free(temp);
-}
-
-void mergeSortX(Points* pointInfo, int* sortedArray, int size) {
-    if ( size == 1 ) return;  
-
-    int size1 = size / 2, size2 = size - size1;
-
-    mergeSortX(pointInfo, sortedArray, size1);
-    mergeSortX(pointInfo, sortedArray+size1, size2);
-    mergeX(pointInfo, size1, size2, sortedArray);
-}
-
-void mergeSortYandSetRank(Points* pointInfo, int* sortedArray, int size) {
-    if ( size == 1 ) return;  
-
-    int size1 = size / 2, size2 = size - size1;
-
-    mergeSortYandSetRank(pointInfo, sortedArray, size1);
-    mergeSortYandSetRank(pointInfo, sortedArray+size1, size2);
-    mergeYandSetRank(pointInfo, size1, size2, sortedArray);
-}
-
-void printRank(Points* pointInfo, int size) {
-    for ( int i = 0 ; i &lt; size ; i++ ) cout &lt;&lt; pointInfo[i].rank &lt;&lt; endl;
-}
-
-int main() {
-    int testCase;
-    Cases* cases;
-
-    cin &gt;&gt; testCase;
-
-    cases = (Cases*)malloc(testCase * sizeof(Cases));
-
-    for ( int i = 0 ; i &lt; testCase ; i++ ) {
-        cin &gt;&gt; cases[i].point_nums;
-
-        cases[i].pointInfo = (Points*)malloc(cases[i].point_nums * sizeof(Points));
-        cases[i].sortedArray = (int*)malloc(cases[i].point_nums * sizeof(int));
-
-        for ( int j = 0 ; j &lt; cases[i].point_nums ; j++ ) {
-            cin &gt;&gt; cases[i].pointInfo[j].x &gt;&gt; cases[i].pointInfo[j].y;
-            cases[i].pointInfo[j].rank = 0;
-            cases[i].sortedArray[j] = j;
-        }
-    }
-
-    for ( int i = 0 ; i &lt; testCase ; i++ ) {
-        mergeSortX(cases[i].pointInfo, cases[i].sortedArray, cases[i].point_nums);
-        mergeSortYandSetRank(cases[i].pointInfo, cases[i].sortedArray, cases[i].point_nums);
-
-        printRank(cases[i].pointInfo, cases[i].point_nums);
-        if ( i != testCase-1 ) {
-            cout &lt;&lt; endl;
-        }
-        free(cases[i].sortedArray);
-        free(cases[i].pointInfo);
-    }
-
-    free(cases);
-
-    system("pause");
-    return 0;
-}
-</code></pre>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
 
 <div class="pagination">
   
@@ -1072,6 +911,12 @@ int main() {
       <li>
         
           <a href="//joyhuang9473.github.io/page38">38</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page39">39</a>
         
       </li>
     
