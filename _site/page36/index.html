@@ -140,6 +140,79 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-03-13T16:27:00+08:00"><a href="//joyhuang9473.github.io/2014/03/13/apache-upgrading-from-22-to-24.html">March 13, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/03/13/apache-upgrading-from-22-to-24.html" rel="bookmark" title="Apache Upgrading from 2.2 to 2.4" itemprop="url">Apache Upgrading from 2.2 to 2.4</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>2014-03-14</p>
+
+<p>今天剛更新完 apache ，啟動時出現錯誤訊息：</p>
+
+<blockquote>
+  <p>Apache is running a threaded MPM, but your PHP Module is not compiled to be threadsafe.  You need to recompile PHP.</p>
+</blockquote>
+
+<p>後來發現原來是</p>
+
+<blockquote>
+  <p>libphp5.so included with php-apache does not work with mod_mpm_event</p>
+</blockquote>
+
+<p>解決辦法：</p>
+
+<p>replace</p>
+
+<pre><code>LoadModule mpm_event_module modules/mod_mpm_event.so
+</code></pre>
+
+<p>to</p>
+
+<pre><code>LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
+</code></pre>
+
+<p>而且 Access rule 也有些修改</p>
+
+<p>2.2 configuration:</p>
+
+<pre><code>Order deny,allow
+Deny from all
+</code></pre>
+
+<p>2.4 configuration:</p>
+
+<pre><code>Require all denied
+</code></pre>
+
+<p>2.2 configuration:</p>
+
+<pre><code>Order allow,deny
+Allow from all
+</code></pre>
+
+<p>2.4 configuration:</p>
+
+<pre><code>Require all granted
+</code></pre>
+
+<p>參考資料：</p>
+
+<p><a href="http://httpd.apache.org/docs/2.4/upgrading.html">http://httpd.apache.org/docs/2.4/upgrading.html</a></p>
+
+<p><a href="https://wiki.archlinux.org/index.php/LAMP#PHP">https://wiki.archlinux.org/index.php/LAMP#PHP</a></p>
+
+<p><a href="https://bbs.archlinux.org/viewtopic.php?id=178124&amp;p=1">https://bbs.archlinux.org/viewtopic.php?id=178124&amp;p=1</a></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2014-03-11T12:54:00+08:00"><a href="//joyhuang9473.github.io/2014/03/11/botnet.html">March 11, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -289,70 +362,6 @@
 <p>How to Create News Feed like Facebook with PHP and jQuery</p>
 
 <p>http://www.techknowlogists.com/how-to-create-facebook-like-news-feed-with-php-and-jquery/</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-02-02T01:13:00+08:00"><a href="//joyhuang9473.github.io/2014/02/02/10-common-cracking-tools.html">February 02, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/02/02/10-common-cracking-tools.html" rel="bookmark" title="10款常見的破解密碼工具" itemprop="url">10款常見的破解密碼工具</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>主題：10款常見的破解密碼工具</p>
-
-<p>說明：
-這應該不用解釋吧！</p>
-
-<ol>
-  <li>
-    <p>Brutus</p>
-  </li>
-  <li>
-    <p>RainbowCrack
-http://project-rainbowcrack.com/</p>
-  </li>
-  <li>
-    <p>Wfuzz
-http://www.edge-security.com/wfuzz.php</p>
-  </li>
-  <li>
-    <p>Cain and Abel
-http://www.oxid.it/ca_um/</p>
-  </li>
-  <li>
-    <p>John the Ripper
-http://www.openwall.com/john/</p>
-  </li>
-  <li>
-    <p>THC Hydra
-https://www.thc.org/thc-hydra/</p>
-  </li>
-  <li>
-    <p>Medusa
-http://www.foofus.net/jmk/tools/medusa-2.1.1.tar.gz</p>
-  </li>
-  <li>
-    <p>OphCrack
-http://ophcrack.sourceforge.net/</p>
-  </li>
-  <li>
-    <p>L0phtCrack
-http://www.l0phtcrack.com/download.html</p>
-  </li>
-  <li>
-    <p>Aircrack-NG
-http://www.aircrack-ng.org/</p>
-  </li>
-</ol>
-
-<p>http://resources.infosecinstitute.com/10-popular-password-cracking-tools/</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->

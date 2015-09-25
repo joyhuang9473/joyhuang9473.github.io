@@ -140,6 +140,71 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web2.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web2.html" rel="bookmark" title="AIS3 2015 Writeup: web2" itemprop="url">AIS3 2015 Writeup: web2</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <h2 id="jsfuck">JSFuck</h2>
+
+<p>Keynote:</p>
+
+<ul>
+  <li>可以只用 6 個字符 []()!+ 來編寫 JavaScript 程序</li>
+</ul>
+
+<p>Reference:</p>
+
+<ul>
+  <li>http://www.jingwentian.com/t-413</li>
+  <li>http://codegolf.stackexchange.com/questions/28714/convert-jsfuck-to-normal-js</li>
+</ul>
+
+<p>剛開始看到 code 時覺得是 javascript，試著把它跑起來</p>
+
+<pre><code>&lt;!-- test.html --&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/had&gt;
+&lt;body&gt;
+&lt;script&gt;
+{ web2.txt }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>結果出現了一個 ^_^ ，確定是一個可執行的 javascript</p>
+
+<pre><code>^_^
+</code></pre>
+
+<p>網路上得知 JSFuck，藉由他人所寫的 script ，把 jsfuck 轉換為一般 javaScript</p>
+
+<pre><code>&lt;!- jsfuck-decoder.html -&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/had&gt;
+&lt;body&gt;
+&lt;script&gt;
+alert(/\n(.+)/.exec(eval(prompt().slice(0,-2)))[1]);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>輸出結果</p>
+
+<p><img src="http://i.imgur.com/uGgznIH.png" alt="jsfuck_in-ais3's_web_question" /></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web1.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -425,98 +490,6 @@ Archive:  plaintext.zip
 <p>pkcrack -C facebook.zip -c “p960x960/851556_443281069111871_602278786_n.png” -P plaintext.zip -p “p960x960/851556_443281069111871_602278786_n.png” -d decrypted.zip -a</p>
 
 <p>解壓縮 decrypted.zip，裡面的 key.txt 就放著 flag</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-crypto2.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-crypto2.html" rel="bookmark" title="AIS3 2015 Writeup: crypto2" itemprop="url">AIS3 2015 Writeup: crypto2</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <h2 id="rsa-cracking">RSA Cracking</h2>
-
-<p>Keynote:</p>
-
-<ul>
-  <li>a 768 bit RSA crack when all you have is the file you want to decrypt, and the public key</li>
-</ul>
-
-<p>Reference:</p>
-
-<ul>
-  <li>http://m0x39.blogspot.tw/2012/12/0x00-introduction-this-post-is-going-to.html</li>
-  <li>http://blog.orange.tw/2014/10/hack-in-box-2014-ctf-writeup-keygenme.html</li>
-</ul>
-
-<p>Tools:</p>
-
-<ul>
-  <li>rsatool.py: https://github.com/ius/rsatool.git</li>
-  <li>Factordb: http://www.factordb.com</li>
-  <li>rsacrack.py:</li>
-</ul>
-
-<table>
-  <tbody>
-    <tr>
-      <td>usage: cat file</td>
-      <td>python rsacrack.py -d [private key exponent] [public key modulus]</td>
-    </tr>
-  </tbody>
-</table>
-
-<script src="https://gist.github.com/joyhuang9473/d77f9428d3c507989714.js"></script>
-
-<ul>
-  <li>p = randomly chosen prime</li>
-  <li>q = randomly chosen prime</li>
-  <li>n = modulus for public and private keys(n=pq)</li>
-  <li>f(n)=(p-1)(q-1) :: f(n) counts the number of positive integers less than or equal to n that are relatively prime to n</li>
-  <li>e = exponent (chosen as 1 &lt; e &lt; f(n) &amp;&amp; greatest common divisor of (e, f(n)) = 1… so e and f(n) are coprime) this is the public key exponent</li>
-  <li>d = e^-1(mod f(n)) or (de) = 1 mod f(n)  — this is the private key exponent</li>
-</ul>
-
-<p>在 rsa.py 裡已經有 public key 的 n, e ，藉由 <a href="http://www.factordb.com" title="Factordb">Factordb</a> 找出 p,q 兩個大質數</p>
-
-<p>使用 rsatool.py 找出 private key 的 n, d</p>
-
-<pre><code>$ python rsatool.py -p 800644567978575682363895000391634967 -q 83024947846700869393771322159348359271173 -n 66473473500165594946611690873482355823120606837537154371392262259669981906291 -e 65537
-Using (p, q) to initialise RSA instance
-
-n =
-92f6a717a4ca87fbb4e008b2ba036d8fc5ca22c8bb61060fef170ce6792ec573
-
-e = 65537 (0x10001)
-
-d =
-480c35d4888c65e8073f81e424ff42c28879294c3c4954a295bf3880decf0659
-
-p = 800644567978575682363895000391634967 (0x9a32d32db1c5be9aeac5de0daa5017)
-
-q =
-f3fd0751a4697130a74c96ce57bad29305
-</code></pre>
-
-<p>p.s 83024947846700869393771322159348359271173 (0xf3fd0751a4697130a74c96ce57bad29305)</p>
-
-<p>使用 rsacrack.py</p>
-
-<pre><code>$ cat flag.enc | python rsacrack.py -d 480c35d4888c65e8073f81e424ff42c28879294c3c4954a295bf3880decf0659 92f6a717a4ca87fbb4e008b2ba036d8fc5ca22c8bb61060fef170ce6792ec573 | strings
-AIS3{rsaaaaaaaaA_orz}
-</code></pre>
-
-<p>p.s</p>
-
-<p>n = 0x92f6a717a4ca87fbb4e008b2ba036d8fc5ca22c8bb61060fef170ce6792ec573
-= 66473473500165594946611690873482355823120606837537154371392262259669981906291</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->

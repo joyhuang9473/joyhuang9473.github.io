@@ -140,6 +140,56 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-04-13T13:53:00+08:00"><a href="//joyhuang9473.github.io/2014/04/13/miscellaneous-engineers-to-coexist.html">April 13, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/04/13/miscellaneous-engineers-to-coexist.html" rel="bookmark" title="[思語]與工程師相處指南" itemprop="url">[思語]與工程師相處指南</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>此來自某人的心情近況，有幾點我覺得跟我現在公司老闆的狀況還蠻像的，因此特別記錄下來。</p>
+
+<h3 id="section">1. 不要把工程師當「得來速」，隨便點餐。</h3>
+
+<p>工程師正確的用法要這樣用：</p>
+
+<p>今天如果你有一個問題，你就直接跟他講你有什麼問題，有沒有辦法設計一個方案解決。工程師強的不是你以為的寫程式能力（這個另外討論）。而是他比你強的「工程角度」解決問題的能力。</p>
+
+<p>你跟他講你有什麼問題，有一定能力以上的人可以很快就幫你想想出正確的 workround。甚至還親手幫你做好。</p>
+
+<p>切忌逼他寫你心目中想要的程式，他只會覺得你智障然後繼續回去打 diablo。</p>
+
+<h3 id="section-1">2. 不要沒把解決手段想清楚就把問題扔給他</h3>
+
+<p>有的時候，那個問題不是純工程角度 workround 可以解的。而是必須從實體角度去切入，程式去輔助自動化。你必須先想清楚，實體你打算怎麼做。</p>
+
+<p>「我想上網開店賺大錢」這種 request 你丟給他。他會直接永久靜音你的 FB 對話。</p>
+
+<p>不要以為他是蠢。工程師在問題出現前 8 個小時前就可以看到問題，三秒鐘就可以判斷到底要不要做。人家聰明的很。後知後覺的是你。</p>
+
+<h3 id="section-2">3. 不要跟他講什麼「應該很簡單」</h3>
+
+<p>「應該很簡單」只有「Senior Developer」才可以跟 「Developer」講的。其他人沒資格講。</p>
+
+<p>你應該要跟 Developer 說，這個問題有一點挑戰，你不知道找誰。</p>
+
+<p>你跟他講應該很簡單，他內心會直接跟你這個人絕交。</p>
+
+<h3 id="section-3">4. 請他吃高級燒肉</h3>
+
+<p>我還沒遇過工程師不喜歡吃燒肉的。吃燒肉友誼點數大概可以灌 3 倍速度。</p>
+
+<hr />
+<p>p.s 轉自 鄭@@ 的 fb近況</p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2014-04-10T16:37:00+08:00"><a href="//joyhuang9473.github.io/2014/04/10/ted-record.html">April 10, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -215,79 +265,6 @@ https://www.youtube.com/watch?v=Jk5Yad598vs</p>
 </blockquote>
 
 <p>[2014/03/16]</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-03-13T16:27:00+08:00"><a href="//joyhuang9473.github.io/2014/03/13/apache-upgrading-from-22-to-24.html">March 13, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/03/13/apache-upgrading-from-22-to-24.html" rel="bookmark" title="Apache Upgrading from 2.2 to 2.4" itemprop="url">Apache Upgrading from 2.2 to 2.4</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>2014-03-14</p>
-
-<p>今天剛更新完 apache ，啟動時出現錯誤訊息：</p>
-
-<blockquote>
-  <p>Apache is running a threaded MPM, but your PHP Module is not compiled to be threadsafe.  You need to recompile PHP.</p>
-</blockquote>
-
-<p>後來發現原來是</p>
-
-<blockquote>
-  <p>libphp5.so included with php-apache does not work with mod_mpm_event</p>
-</blockquote>
-
-<p>解決辦法：</p>
-
-<p>replace</p>
-
-<pre><code>LoadModule mpm_event_module modules/mod_mpm_event.so
-</code></pre>
-
-<p>to</p>
-
-<pre><code>LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
-</code></pre>
-
-<p>而且 Access rule 也有些修改</p>
-
-<p>2.2 configuration:</p>
-
-<pre><code>Order deny,allow
-Deny from all
-</code></pre>
-
-<p>2.4 configuration:</p>
-
-<pre><code>Require all denied
-</code></pre>
-
-<p>2.2 configuration:</p>
-
-<pre><code>Order allow,deny
-Allow from all
-</code></pre>
-
-<p>2.4 configuration:</p>
-
-<pre><code>Require all granted
-</code></pre>
-
-<p>參考資料：</p>
-
-<p><a href="http://httpd.apache.org/docs/2.4/upgrading.html">http://httpd.apache.org/docs/2.4/upgrading.html</a></p>
-
-<p><a href="https://wiki.archlinux.org/index.php/LAMP#PHP">https://wiki.archlinux.org/index.php/LAMP#PHP</a></p>
-
-<p><a href="https://bbs.archlinux.org/viewtopic.php?id=178124&amp;p=1">https://bbs.archlinux.org/viewtopic.php?id=178124&amp;p=1</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->

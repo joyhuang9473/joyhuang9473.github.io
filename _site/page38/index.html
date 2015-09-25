@@ -140,6 +140,85 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2013-11-03T07:44:00+08:00"><a href="//joyhuang9473.github.io/2013/11/03/the-attack-and-defense-of-computers-project1.html">November 03, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2013/11/03/the-attack-and-defense-of-computers-project1.html" rel="bookmark" title="The Attack and Defense of Computers : Project1" itemprop="url">The Attack and Defense of Computers : Project1</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <h3 id="project-1">Project 1</h3>
+
+<p>Description:</p>
+
+<p>Write two programs with the following properties:</p>
+
+<p>On a host, called <strong><em>server host</em></strong> , write a program, called <strong>password_holder.c</strong> , that allows a user to input a character string.
+After obtaining an input string from a user, <strong>password_holder.c</strong> opens a TCP/IP socket and listens on the socket to wait for any incoming request from a host, called client host.
+When an incoming connection is established, <strong>password_holder.c</strong> sends the input string to the the client host as a password.</p>
+
+<p>On a host, called <strong><em>client host</em></strong> , write a program, called <strong>mission_impossible.c</strong> , that connects to the above remote server to retrieve a password.
+The compiled executable file of <strong>mission_impossible.c</strong> is called <strong>mission_impossible.exe</strong> .
+After obtaining a password from the above server, <strong>mission_impossible.c</strong> asks its users to input a password.</p>
+
+<p>If an input password is identical to the passwrod that <strong>mission_impossible.c</strong> retrieved from the above server, the program will execute a piece of code, called Mission Briefing Code (MBC) hereafter, that will display the following message (“ <strong>Ethan Hunt, Run Now!</strong> “) for <strong>2 minutes</strong> and then delete the file <strong>mission_impossible.exe</strong> and terminate itself.</p>
+
+<p>If an erroneous password is input, the program will delete the file mission_impossible.c and terminate itself.</p>
+
+<p>Initially, MBC must be stored in a global array and is encoded with your password. You can use any approach to encode MBC. When the input password is correct, your program will decode MBC and place it in the heap and then transfer your execution flow to the decoded MBC.</p>
+
+<p>Hint:</p>
+
+<ol>
+  <li><a href="http://in1.csie.ncu.edu.tw/~hsufh/COURSES/FALL2013/p1_ref_material.pptx">Grading Criteria and reference meatrial</a></li>
+  <li></li>
+</ol>
+
+<ul>
+  <li>You can write your MBC as a normal program first.</li>
+  <li>Then compile the above program.</li>
+  <li>Then use a tool, such as objdump, to find the corresponding machine code.</li>
+</ul>
+
+<ol>
+  <li>
+    <p>You can use your password to XOR the MBC to encode it.</p>
+  </li>
+  <li>
+    <p>You may need to use the library function printf to display message. Hence, in your MBC you may need to know the address of function printf. To simply the problem, use static link to compile your program so that function printf will be inside your executable file and you can use a tool, such as objdump, to find the address of the function.</p>
+  </li>
+  <li>
+    <p>When calling function printf, do not forget to prepare the stack segment correctly so that function printf can obtain its parameters.</p>
+  </li>
+</ol>
+
+<h2 id="project-submission">Project Submission:</h2>
+
+<ul>
+  <li>The due day of reports submission is <strong>3rd Dec</strong> .</li>
+  <li>The demo will be held on <strong>4th Dec</strong> . and <strong>5th Dec</strong> .</li>
+  <li>Contact the TAs to choose your demo time before <strong>3rd Dec</strong> .</li>
+  <li>On site demo of this project is required.</li>
+  <li>When demonstrating your projects, the TAs will ask you some questions regarding to your projects. Part of your project grade is determined by your answers to the questions.</li>
+  <li>You need to submit both an electronic version and a hard-copy of your project report to the TAs.
+The electronic versions could be sent to the TAs through e-mails.
+Do not forget writing the names and student IDs of all members in your team.</li>
+</ul>
+
+<p>Your report should contain:
+- Your source code
+- the execution results</p>
+
+<p>Late submission will NOT be accepted.</p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2013-10-27T13:31:00+08:00"><a href="//joyhuang9473.github.io/2013/10/27/algorithm-algorithms-program-job-1.html">October 27, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -452,27 +531,6 @@ ex.
 
 <p><a href="http://www.boost.org/">http://www.boost.org/</a></p>
 
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-10-24T14:44:00+08:00"><a href="//joyhuang9473.github.io/2013/10/24/c-note.html">October 24, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2013/10/24/c-note.html" rel="bookmark" title="C++ Note." itemprop="url">C++ Note.</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>friend 函式、friend 類別</p>
-
-<p>在定義類別成員時，私用成員只能被同一個類別定義的成員存取，不可以直接由外界進行存取，然而有些時候，您希望提供私用成員給某些外部函式來存取，這時您 可以設定類別的「好友」，只有好友才可以直接存取自家的私用成員。</p>
-
-<p><a href="http://openhome.cc/Gossip/CppGossip/friendFunctionClass.html">http://openhome.cc/Gossip/CppGossip/friendFunctionClass.html</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
