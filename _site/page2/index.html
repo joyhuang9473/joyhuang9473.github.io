@@ -140,6 +140,33 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-07-31T12:00:00+08:00"><a href="//joyhuang9473.github.io/project-general/project-game/2015/07/31/project-supermario-example.html">July 31, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/project-general/project-game/2015/07/31/project-supermario-example.html" rel="bookmark" title="SuperMario-example" itemprop="url">SuperMario-example</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="//imgur.com/a/7NAMG/embed"></iframe>
+
+<p>2D action game, written in C++, Cocos2d-x</p>
+
+<p>cocos2d-x version: 3.6</p>
+
+<p>Author: YU-KAI HUANG</p>
+
+<p>Character Graphics designed by <a href="http://opengameart.org/users/creek23">creek23</a></p>
+
+<p>Platformer Art Complete Pack by Kenney Vleugels (<a href="www.kenney.nl">www.kenney.nl</a>)</p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-web2.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -403,93 +430,6 @@ c4: PC bitmap, Windows 3.x format, 480 x 240 x 24
 <p>利用 stegsolve.jar 去處理圖片，在 Red plane 2 模式時就可以清楚看到字了</p>
 
 <p><img src="http://imgur.com/ALDem6N.png" alt="c4_solved_bmp_in_ais3's_misc_question" /></p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc2.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc2.html" rel="bookmark" title="AIS3 2015 Writeup: misc2" itemprop="url">AIS3 2015 Writeup: misc2</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <h2 id="known-plaintext-attack">Known-plaintext attack</h2>
-
-<p>Keynote:</p>
-
-<ul>
-  <li>cracking ZIP Files</li>
-  <li>you need to have one of the original files contained in the encrypted archive</li>
-</ul>
-
-<p>Reference:</p>
-
-<ul>
-  <li>https://www.hackthis.co.uk/articles/known-plaintext-attack-cracking-zip-files</li>
-</ul>
-
-<p>Tools:</p>
-
-<ul>
-  <li>pkcrack</li>
-</ul>
-
-<p>一開始先確認 facebook.zip 為 zip 檔</p>
-
-<pre><code>$ file facebook.zip
-
-facebook.zip: Zip archive data, at least v1.0 to extract
-</code></pre>
-
-<p>打開後發現有加密，試著看壓縮檔裡面有什麼檔案</p>
-
-<pre><code>$ unzip -l facebook.zip
-
-Archive:  facebook.zip
-  Length     Date   Time    Name
- --------    ----   ----    ----
-       38  07-15-15 18:15   key.txt
-        0  07-15-15 18:13   p960x960/
-    26664  10-30-13 08:19   p960x960/851556_443281069111871_602278786_n.png
- --------                   -------
-    26702                   3 files
-</code></pre>
-
-<p>藉由網路上的教學</p>
-
-<blockquote>
-  <p>you need to have one of the original files contained in the encrypted archive
-What you are going to do with it is you are going to compress it using the same compression method as the protected file. Remember this, otherwise it won’t work. So after you do that, move both your zip files, the encrypted one and the plaintext zip</p>
-</blockquote>
-
-<p>去 google 找 851556_443281069111871_602278786_n.png</p>
-
-<p><img src="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-prn1/p960x960/851556_443281069111871_602278786_n.png" alt="851556_443281069111871_602278786_n.png" /></p>
-
-<p>壓縮該檔案（包含完整路徑）</p>
-
-<pre><code>$ zip -r plaintext.zip p960x960/851556_443281069111871_602278786_n.png
-$ file plaintext.zip
-
-Archive:  plaintext.zip
-  Length     Date   Time    Name
- --------    ----   ----    ----
-    26664  07-25-15 00:09   p960x960/851556_443281069111871_602278786_n.png
- --------                   -------
-    26664                   1 file
-</code></pre>
-
-<p>執行 pccrack</p>
-
-<p>pkcrack -C facebook.zip -c “p960x960/851556_443281069111871_602278786_n.png” -P plaintext.zip -p “p960x960/851556_443281069111871_602278786_n.png” -d decrypted.zip -a</p>
-
-<p>解壓縮 decrypted.zip，裡面的 key.txt 就放著 flag</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->

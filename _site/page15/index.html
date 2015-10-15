@@ -140,6 +140,56 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-09-08T16:14:00+08:00"><a href="//joyhuang9473.github.io/2014/09/08/upgrade-gitlab-70-to-72.html">September 08, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/09/08/upgrade-gitlab-70-to-72.html" rel="bookmark" title="Upgrade Gitlab 7.0 to 7.2" itemprop="url">Upgrade Gitlab 7.0 to 7.2</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <blockquote>
+  <p>update: 2014-10-08</p>
+</blockquote>
+
+<blockquote>
+  <p>正確的更新方式應該為 先從 7.0 升到 7.1 ，再升到 7.2，且按照官方的文件執行即可</p>
+</blockquote>
+
+<p>-ERROR-</p>
+
+<p>整個升級過程其實還算順利，只不過 7.2 的資料表 <code>projects</code> 增加了一個欄位 <code>star_count</code>，似乎是用來計算有多少人”“star” 這個專案，而 backup restore 的過程中卻會把 7.2 的資料表取代成 7.0 的資料表版本，所以程式會找不到 <code>projects</code>.<code>star_count</code> 這個欄位，一進到 gitlab 的專案列表就會出現 500</p>
+
+<p>查詢 log:</p>
+
+<pre><code>ActionView::Template::Error (Mysql2::Error: Unknown column 'projects.star_count' in 'field list'
+...
+</code></pre>
+
+<p>後來的做法就是手動替該資料表加上 <code>star_count</code> 欄位囉</p>
+
+<pre><code>#SQL
+ALTER TABLE projects ADD star_count int(11) NOT NULL DEFAULT '0';
+CREATE INDEX index_projects_on_star_count USING btree ON projects (star_count);
+</code></pre>
+
+<p>-//ERROR-</p>
+
+<p>reference:</p>
+
+<p><a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/raketasks/backup_restore.md">gitlab: backup</a></p>
+
+<p><a href="http://apidock.com/rails/v4.0.2/ActiveRecord/ConnectionAdapters/SchemaStatements/add_index">ruby on rails: add_index</a></p>
+
+<p><a href="http://dev.mysql.com/doc/refman/5.1/en/alter-table.html">mysql: alter column</a></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2014-09-08T08:48:00+08:00"><a href="//joyhuang9473.github.io/2014/09/08/korea-brand-lotte-dipper.html">September 08, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -234,26 +284,6 @@
 <p>李文琦 - 蒲公英MV</p>
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/FVxD9c58LUo" frameborder="0" allowfullscreen=""></iframe>
-<p><br /></p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-08-31T02:25:00+08:00"><a href="//joyhuang9473.github.io/2014/08/31/tonight-i-celebrate-my-love.html">August 31, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/08/31/tonight-i-celebrate-my-love.html" rel="bookmark" title="Tonight I Celebrate My Love" itemprop="url">Tonight I Celebrate My Love</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>劉明湘 - 鄭俊樹</p>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/kIbf2anMGE0" frameborder="0" allowfullscreen=""></iframe>
 <p><br /></p>
 
   </div><!-- /.entry-content -->
