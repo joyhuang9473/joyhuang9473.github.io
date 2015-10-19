@@ -140,6 +140,45 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-07-27T15:45:00+08:00"><a href="//joyhuang9473.github.io/2014/07/27/words-level.html">July 27, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/27/words-level.html" rel="bookmark" title="關卡與挫折感" itemprop="url">關卡與挫折感</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <blockquote>
+  <p>關卡既然是要讓玩家挑戰，就不見得要「公平」，只要「有解」就好</p>
+</blockquote>
+
+<p>巴哈姆特專欄：<a href="http://gnn.gamer.com.tw/3/100853.html">AI 不見得要聰明《Dungeon Clash》製作人談遊戲關卡設計</a></p>
+
+<blockquote>
+  <p>我們可以比較一下透過「提高AI等級」以及「以不公平的方式」來提高關卡難度，玩家會有怎樣的感受？</p>
+</blockquote>
+
+<blockquote>
+  <p>兩者都可能會讓玩家產生極大的「挫折感」，但後者讓玩家有「推託」的機會（不是我太笨，是電腦太作弊），這種「心理安慰」對提高玩家繼續挑戰的意願有很大的幫助。</p>
+</blockquote>
+
+<blockquote>
+  <p>試想「一對一」及「五對五」的競技類遊戲，玩家在面對失敗時有什麼差別？前者說明玩家自己技不如人，完全沒有托推的空間；但後者可以推給隊友是新手或者路人團默契不足…等因素，產生一種心理安慰，玩家才不會一下子就放棄。</p>
+</blockquote>
+
+<p><a href="https://www.facebook.com/nomads.games/photos/a.437981879602783.105794.312922105442095/742232865844348/?type=1&amp;theater">Nomads 設計心得</a></p>
+
+<p>by 炎羅</p>
+
+<p><a href="http://guild.gamer.com.tw/guild.php?sn=9323">《Dungeon Clash》製作討論區</a></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2014-07-27T02:24:00+08:00"><a href="//joyhuang9473.github.io/2014/07/27/game-of-thrones.html">July 27, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -214,82 +253,6 @@ title : Sculptures that’d be at home at the bottom of the ocean (當塑膠袋�
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/OP7ENrKYA20" frameborder="0" allowfullscreen=""></iframe>
 <p><br /></p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-07-25T09:22:00+08:00"><a href="//joyhuang9473.github.io/2014/07/25/litre-of-mariadb-100-on-occasional-pain.html">July 25, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/07/25/litre-of-mariadb-100-on-occasional-pain.html" rel="bookmark" title="升上 MariaDB 10.0 後，Redmine 又爆了" itemprop="url">升上 MariaDB 10.0 後，Redmine 又爆了</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>上次小弟才剛升級完 MariaDB 10.0 ，原本想說都沒事，網路服務都很正常，沒想到今天一重開機，Redmine 就爆了</p>
-
-<p>又是 Redmine</p>
-
-<p>又是 Redmine</p>
-
-<p>又是 Redmine</p>
-
-<pre><code>require': Incorrect MySQL client library version! This gem was compiled for 5.5.34-MariaDB but the client library is 10.0.10-MariaDB. (RuntimeError) from /usr/local/rvm/gems/ruby-2.1.0/gems/mysql2-0.3.15/lib/mysql2.rb:8:in'
-</code></pre>
-
-<p>類似這樣的訊息</p>
-
-<p>＝＝ 恩，好啦，其實整件事情跟 Redmine 本身是沒關係的</p>
-
-<p>-clear-</p>
-
-<p>那麼網路上查了一下，原來是之前安裝的 mysql2(gem) 適用於 MariaDB 5.5，由於我升到 MariaDB 10.0 ，所以我要再重新</p>
-
-<blockquote>
-  <p>compile mysql2 against MariaDB 10.0.10</p>
-</blockquote>
-
-<p>網路上已經有相關的 issue : <a href="https://github.com/brianmario/mysql2/issues/506">Error while connecting MariaDB v10.0.10</a></p>
-
-<p>那做法上就是移除之前的 mysql2，重新 compile mysql2 並加上 –with-mysql-config 參數</p>
-
-<pre><code># Reinstall mysql2 with Configuration options --with-mysql-config On Arch Linux
-
-[redmine@localhost ~] gem uninstall mysql2
-[redmine@localhost ~] gem install mysql2 -- --with-mysql-config=/usr/bin/mysql_config
-[redmine@localhost ~] cd /path/to/redmine/project
-[redmine@localhost redmine] bundle config build.mysql2 --with-mysql-config=/usr/bin/mysql_config
-[redmine@localhost redmine] bundle update
-</code></pre>
-
-<blockquote>
-  <p>Note:<br />
-bundle config build.mysql2 –with-mysql-config=/usr/bin/mysql_config</p>
-
-  <p>After running this command, every time bundler needs to install the mysql gem, it will pass along the flags you specified.</p>
-</blockquote>
-
-<p>這樣基本上就完成了，接著執行 rake 產生 secret token</p>
-
-<pre><code>[redmine@localhost redmine]$ rake generate_secret_token
-</code></pre>
-
-<p>回到 sudoer 用 systemctl 重新執行 redmine ，我的 redmine 就回來囉～</p>
-
-<pre><code>[sudoer@localhost ~]$ sudo systemctl restart redmine
-</code></pre>
-
-<h3 id="note">Note</h3>
-
-<p><a href="https://github.com/brianmario/mysql2#configuration-options">brianmario/mysql2</a> ：A modern, simple and very fast Mysql library for Ruby - binding to libmysql</p>
-
-<p><a href="https://wincent.com/wiki/Force_re-installing_the_MySQL_gem">Force re-installing the MySQL gem</a></p>
-
-<p><a href="http://bundler.io/v1.3/man/bundle-config.1.html">BUNDLE-CONFIG</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->

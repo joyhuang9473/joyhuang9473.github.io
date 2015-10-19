@@ -5,25 +5,25 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>思語《To The Moon》 &#8211; YU KAI'S BLOG</title>
+<title>Standord Machine Learning Class: Week2 Assignment &#8211; YU KAI'S BLOG</title>
 <meta name="description" content="yu kai's blog">
-<meta name="keywords" content="思語">
+<meta name="keywords" content="machine-learning, Coursera, Stanford">
 
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="思語《To The Moon》">
+<meta property="og:title" content="Standord Machine Learning Class: Week2 Assignment">
 <meta property="og:description" content="yu kai's blog">
-<meta property="og:url" content="//joyhuang9473.github.io/2014/11/17/to-the-moon.html">
+<meta property="og:url" content="//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression.html">
 <meta property="og:site_name" content="YU KAI'S BLOG">
 
 
 
 
 
-<link rel="canonical" href="//joyhuang9473.github.io/2014/11/17/to-the-moon.html">
+<link rel="canonical" href="//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression.html">
 <link href="//joyhuang9473.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="YU KAI'S BLOG Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -126,56 +126,112 @@
     <header class="header-title">
       <div class="header-title-wrap">
         
-          <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/11/17/to-the-moon.html" rel="bookmark" title="思語《To The Moon》">思語《To The Moon》</a></h1>
+          <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression.html" rel="bookmark" title="Standord Machine Learning Class: Week2 Assignment">Standord Machine Learning Class: Week2 Assignment</a></h1>
         
-        <h2><span class="entry-date date published"><time datetime="2014-11-17T14:30:00+08:00">November 17, 2014</time></span></h2>
+        <h2><span class="entry-date date published"><time datetime="2015-10-18T12:00:00+08:00">October 18, 2015</time></span></h2>
         
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
-      <p>很棒的一篇評測和遊戲，改天一定要來體驗一下。</p>
+      <h2 id="ex1m">ex1.m</h2>
 
-<p><a href="http://ggwp.tw/2014/11/16/1411161500/">【評測】《To The Moon》 – 修改記憶，真能讓人們獲得幸福？</a></p>
+<ul>
+  <li>Plot Data</li>
+</ul>
+
+<p><img src="http://i.imgur.com/cGSkGLC.png" alt="ex1_plotting_data.png" /></p>
+
+<ul>
+  <li>Plot the linear fit</li>
+</ul>
+
+<p><img src="http://i.imgur.com/II2aa9J.png" alt="ex1_plot_linear_regression.png" /></p>
+
+<ul>
+  <li>Visualizing J(theta0, theta1) by surf</li>
+</ul>
+
+<p><img src="http://i.imgur.com/0ZXUHFY.png" alt="ex1_visualizing_J_theta0_theta1_by_surf.png" /></p>
+
+<ul>
+  <li>Visualizing J(theta0, theta1) by contour</li>
+</ul>
+
+<p><img src="http://i.imgur.com/0K8xVUV.png" alt="ex1_visualizing_J_theta0_theta1_by_contour.png" /></p>
+
+<h2 id="ex1multim">ex1_multi.m</h2>
+
+<ul>
+  <li>Plot the convergence graph with different learning rates</li>
+</ul>
+
+<p><img src="http://i.imgur.com/6KExXgJ.png" alt="ex1_multi_plot_the_convergence_graph.png" /></p>
+
+<h2 id="troubleshoot">Troubleshoot:</h2>
+
+<p>1 . When you run the submit script, if you are seeing error messages that contain any of these phrases…</p>
 
 <blockquote>
-  <p>《To The Moon》是一款遊戲，由加拿大裔華人 Kan Gao 及 Freebird Games 利用《RPG MAKER XP》所開發製作</p>
+  <p>urlread, curl, urlreadwrite, peer certificate, CA certificate, unsupported protocol, JSONparser</p>
 </blockquote>
 
 <blockquote>
-  <p>新時代的服務，從夢境植入記憶，讓臨終者帶著美好回憶辭世</p>
+  <p>…here are some issues you can check.</p>
 </blockquote>
 
 <blockquote>
-  <p>若記憶的內容可以調整，痛苦是否可以少一些？</p>
+  <p>Are you using Octave 4.0.0? You will need to install <a href="https://drive.google.com/file/d/0B6lXyE7fgSlXZjlqQ3FIRExmTDA/view?usp=sharing">this</a>. Follow the instructions in the readme.txt file. Restart Octave after installing the patch. There is a bug in the printf() function, it will be fixed in Octave 4.0.1. The error “JSONparser:invalidFormat: Outer level structure must be an object or an array” error is caused by this bug.</p>
+</blockquote>
+
+<ul>
+  <li>reference: <a href="https://www.coursera.org/learn/machine-learning/discussions/vgCyrQoMEeWv5yIAC00Eog">https://www.coursera.org/learn/machine-learning/discussions/vgCyrQoMEeWv5yIAC00Eog</a></li>
+</ul>
+
+<p>2 . What is the idea of mean normalization? Is it necessary?</p>
+
+<p>yumi:</p>
+
+<blockquote>
+  <p>I think that feature scaling is to change the contours of the cost function from ellipse to circle to speed up the convergence. But <em>mean normalization will only affect the center of the circle</em>. So I don’t understand why we need to ensure that all the features centered around the same value.</p>
+</blockquote>
+
+<p>Andy Timmons:</p>
+
+<blockquote>
+  <p>Yumi is right, it is in fact unneccesary. However, you get style points for having a well balanced equation.</p>
 </blockquote>
 
 <blockquote>
-  <p>對某些人來說，夢境就是他們的現實</p>
+  <p>What is at issue is that you use the same alpha for all equations. So, if you select alpha, you want it to be equally valid for all equations, hence the same range. As Tom Mosher said, centering your problem around zero is just what you do.</p>
 </blockquote>
 
 <blockquote>
-  <p>是追求幸福，還是逃避現實？</p>
+  <p>Its like taking a picture and putting the object in the middle of the frame. You can get the picture with the object to the left or right, but its just sloppy.</p>
 </blockquote>
 
 <blockquote>
-  <p>美妙的夢境，與殘酷到令人失去生存的勇氣的現實世界，又有什麼人能為當事人做評斷呢？</p>
+  <p>Applying the equation x-u/s for each parameter means that you dont have to think about what to do for each parameter, its a general equation that can be applied to all with out trying to think “how do I normalize and scale this column”, it helps in making a general program that works for all cases.</p>
 </blockquote>
 
-<blockquote>
-  <p>難道你願意和他交換身份以承擔他的苦痛嗎？</p>
-</blockquote>
+<ul>
+  <li>reference: <a href="https://www.coursera.org/learn/machine-learning/module/vW94N/discussions/fDrcz2_uEeWdPxJ-h_8T7w">https://www.coursera.org/learn/machine-learning/module/vW94N/discussions/fDrcz2_uEeWdPxJ-h_8T7w</a></li>
+</ul>
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/sqkJuSV-23U" frameborder="0" allowfullscreen=""></iframe>
-<p><br /></p>
+<p>3 . Predicted price different when I use gradient descent method and normal equations</p>
+
+<p>Because of error price equation. Hint: Normalizing data</p>
+
+<script src="https://gist.github.com/joyhuang9473/70ff08a77597f684988c.js"></script>
+
 
       <footer class="entry-meta">
-        <span class="entry-tags"><a href="//joyhuang9473.github.io/tags/#思語" title="Pages tagged 思語" class="tag"><span class="term">思語</span></a></span>
+        <span class="entry-tags"><a href="//joyhuang9473.github.io/tags/#machine-learning" title="Pages tagged machine-learning" class="tag"><span class="term">machine-learning</span></a><a href="//joyhuang9473.github.io/tags/#Coursera" title="Pages tagged Coursera" class="tag"><span class="term">Coursera</span></a><a href="//joyhuang9473.github.io/tags/#Stanford" title="Pages tagged Stanford" class="tag"><span class="term">Stanford</span></a></span>
         
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
-    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=//joyhuang9473.github.io/2014/11/17/to-the-moon.html" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=//joyhuang9473.github.io/2014/11/17/to-the-moon.html" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-    <li class="googleplus"><a href="https://plus.google.com/share?url=//joyhuang9473.github.io/2014/11/17/to-the-moon.html" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression.html" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression.html" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression.html" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
   </ul>
 </div><!-- /.social-share -->
       </footer>
@@ -184,23 +240,23 @@
     <div class="read-more">
   
     <div class="read-more-header">
-      <a href="//joyhuang9473.github.io/2014/11/11/xia-yuyao.html" class="read-more-btn">Read More</a>
+      <a href="//joyhuang9473.github.io/post-machine-learning/2015/10/14/coursera-stanford-machine-learning-class-tips-for-plotting-data-with-octave-tool.html" class="read-more-btn">Read More</a>
     </div><!-- /.read-more-header -->
     <div class="read-more-content">
-      <h3><a href="//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression.html" title="Standord Machine Learning Class: Week2 Assignment">Standord Machine Learning Class: Week2 Assignment</a></h3>
-      <p>## ex1.m- Plot Data![ex1_plotting_data.png](http://i.imgur.com/cGSkGLC.png)- Plot the linear fit![ex1_plot_linear_regression.png](http://...&hellip; <a href="//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression.html">Continue reading</a></p>
+      <h3><a href="//joyhuang9473.github.io/post-machine-learning/2015/10/14/coursera-stanford-machine-learning-class-tips-for-plotting-data-with-octave-tool.html" title="Tips for plotting data with Octave tool">Tips for plotting data with Octave tool</a></h3>
+      <p>plotsubplotimagescfigureTroubleshoot:  When I print figure on OSX Yosemite, the graph is solid black.Becausethe gnuplot 5 bug:  http://sa...&hellip; <a href="//joyhuang9473.github.io/post-machine-learning/2015/10/14/coursera-stanford-machine-learning-class-tips-for-plotting-data-with-octave-tool.html">Continue reading</a></p>
     </div><!-- /.read-more-content -->
   
   <div class="read-more-list">
     
       <div class="list-item">
-        <h4><a href="//joyhuang9473.github.io/post-machine-learning/2015/10/14/coursera-stanford-machine-learning-class-tips-for-plotting-data-with-octave-tool.html" title="Tips for plotting data with Octave tool">Tips for plotting data with Octave tool</a></h4>
-        <span>Published on October 14, 2015</span>
+        <h4><a href="//joyhuang9473.github.io/post-ted/2015/09/22/ted-MichaelKimmel-why-gender-equality-is-good-for-everyone-men-inclued.html" title="TED: Why gender equality is good for everyone - men inclued">TED: Why gender equality is good for everyone - men inclued</a></h4>
+        <span>Published on September 22, 2015</span>
       </div><!-- /.list-item -->
     
       <div class="list-item">
-        <h4><a href="//joyhuang9473.github.io/post-ted/2015/09/22/ted-MichaelKimmel-why-gender-equality-is-good-for-everyone-men-inclued.html" title="TED: Why gender equality is good for everyone - men inclued">TED: Why gender equality is good for everyone - men inclued</a></h4>
-        <span>Published on September 22, 2015</span>
+        <h4><a href="//joyhuang9473.github.io/2015/09/07/akatsuki-hackathon-2015.html" title="Akatsuki Hackthon 2015 心得">Akatsuki Hackthon 2015 心得</a></h4>
+        <span>Published on September 07, 2015</span>
       </div><!-- /.list-item -->
     
   </div><!-- /.read-more-list -->
@@ -221,7 +277,7 @@
   <footer role="contentinfo">
     <span>&copy; 2015 YU-KAI HUANG. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span>
 
-<p><img src="https://ga-beacon.appspot.com/UA-65353378-3/joyhuang9473.github.io/思語《To The Moon》" alt="Analytics"></p>
+<p><img src="https://ga-beacon.appspot.com/UA-65353378-3/joyhuang9473.github.io/Standord Machine Learning Class: Week2 Assignment" alt="Analytics"></p>
 
   </footer>
 </div><!-- /.footer-wrapper -->

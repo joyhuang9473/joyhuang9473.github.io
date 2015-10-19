@@ -140,6 +140,80 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc3.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc3.html" rel="bookmark" title="AIS3 2015 Writeup: misc3" itemprop="url">AIS3 2015 Writeup: misc3</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <h2 id="file-extension">File extension</h2>
+
+<p>Keynote:</p>
+
+<ul>
+  <li>gzip, tar, bmp</li>
+</ul>
+
+<p>Tools:</p>
+
+<ul>
+  <li>stegsolve.jar: A steganographic image analyzer, solver and data extractor for challanges.</li>
+</ul>
+
+<p>查看 c4 檔案類型</p>
+
+<pre><code>$ file c4
+
+c4: gzip compressed data, from Unix
+</code></pre>
+
+<p>重新命名 c4 為 c4.gz</p>
+
+<pre><code>$ gzip -d c4
+
+gzip: c4: unknown suffix -- ignored
+
+$ mv c4 c4.gz
+$ gzip -d c4.gz
+</code></pre>
+
+<p>解壓出一個 tar archive 的 c4，且 c4 裡面又包了 c4 ，為避免 overwrite ，改名再解壓</p>
+
+<pre><code>$ tar -zxvf c4
+
+x c4: Refusing to overwrite archive
+tar: Error exit delayed from previous errors.
+
+$ tar -tvf c4
+-rw-rw-r--  0 orange orange 345654 Jul 21 18:02 c4
+
+$ mv c4 c4.tar
+$ tar -zxvf c4.tar
+
+x c4
+
+$ file c4
+
+c4: PC bitmap, Windows 3.x format, 480 x 240 x 24
+</code></pre>
+
+<p>此時 c4 為 bmp 圖片檔，隱約可以看到有字位於左下角</p>
+
+<p><img src="http://imgur.com/LDlMjBq.png" alt="c4_bmp_in_ais3's_misc_question" /></p>
+
+<p>利用 stegsolve.jar 去處理圖片，在 Red plane 2 模式時就可以清楚看到字了</p>
+
+<p><img src="http://imgur.com/ALDem6N.png" alt="c4_solved_bmp_in_ais3's_misc_question" /></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-misc2.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -422,77 +496,6 @@ AIS3{rsaaaaaaaaA_orz}
 
 <p>flag: AIS3{dementia}</p>
 
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html" rel="bookmark" title="AIS3 2015 Writeup: binary2" itemprop="url">AIS3 2015 Writeup: binary2</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <h2 id="shellcode-to-bin">Shellcode to bin</h2>
-
-<p>Keynote:</p>
-
-<ul>
-  <li>shellcode</li>
-  <li>xor</li>
-</ul>
-
-<p>Reference:</p>
-
-<ul>
-  <li>http://theloshackers.blogspot.tw/2013/08/convert-hex-shellcode-to-binary-mode.html</li>
-</ul>
-
-<p>Tools:</p>
-
-<ul>
-  <li>ida64</li>
-  <li>XOR Calculator online https://xor.pw/</li>
-  <li>Hex to ASCII text converter http://www.rapidtables.com/convert/number/hex-to-ascii.htm</li>
-</ul>
-
-<p>將 shellcode 輸出成 bin</p>
-
-<pre><code>$ echo -ne "{ shellcode }" &gt; sc.bin
-</code></pre>
-
-<p>再丟到 ida 找到這個片段</p>
-
-<p><img src="http://i.imgur.com/0WraX3i.png" alt="sc_shellcode_to_bin_in_ais3's_binary_question" /></p>
-
-<p>總共有 40 個字元在堆疊中，藉由 [rsi+rdx] 逐一讀取 stack 中的字元並與 0CCh 做 xor，直到 dl 為 37 (25h)，也就是第 37 個字元為止</p>
-
-<pre><code># origin
-
-414141C6B1B9A3B5
-93BEA3AA93A8A0BC
-A1A5BF93BFA593A9
-A8A3AFA0A0A9A4BF
-93A7A3B7FF9F858D
-
-# after xor
-#[] : ignored
-
-[    ]0a7d756f79
-5f726f665f646c70
-6d69735f73695f65
-646f636c6c656873
-5f6b6f7b33534941
-</code></pre>
-
-<p>Little Endian 系統，反向讀取並將 hex 轉為 ascii 就可以看到 flag</p>
-
-<p><img src="http://i.imgur.com/ohf0t1o.png" alt="sc_converted_hex_to_ascii_in_ais3's_binary_question" /></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->

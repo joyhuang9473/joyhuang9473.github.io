@@ -140,6 +140,107 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-12-28T14:05:00+08:00"><a href="//joyhuang9473.github.io/2014/12/28/a-preliminary-study-on-meanjs-a.html">December 28, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/28/a-preliminary-study-on-meanjs-a.html" rel="bookmark" title="初探 MEAN stack (一)" itemprop="url">初探 MEAN stack (一)</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>最近看到 <a href="https://www.youtube.com/playlist?list=PL6rhBJX0L3TWYrwrQIi1_MzQDvVhkUVPI">Bossable.com: 30 day MEAN STACK Honolulu CHALLENGE</a> 教學視頻，想說就來了解一下什麼是 MEAN stack 吧，將來也會配合這視頻，記錄一下學習的歷程，希望能真的在 30 天以內學好 MEAN.js :)</p>
+
+<p>首先先推這篇文章，寫得簡單易懂！</p>
+
+<p><a href="http://adon988.logdown.com/posts/247366-mean-stack-engineers-clean-title">擁抱Javascript全端開發 - MEAN stack 工程師，你跟上了沒~</a></p>
+
+<p><strong>MEAN</strong></p>
+
+<pre><code>- MongoDB
+- Express
+- AngularJS
+- Node.js
+</code></pre>
+
+<p><strong>Full stack</strong></p>
+
+<blockquote>
+  <p>對於Javascript前後端通吃的特性，可以稱做 “Javascript全端能力(full stack JavaScript)”或者”純Javascript解決方案(pure JavaScript solutions)”
+Full stack工程師</p>
+</blockquote>
+
+<p>MEAN.JS: http://meanjs.org/docs.html
+bossable.com: http://www.bossable.com/</p>
+
+<p>– clear –</p>
+
+<p><strong>Getting started with the MEAN stack</strong></p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>nodejs</li>
+  <li>mongoDB</li>
+  <li>bower</li>
+  <li>grunt</li>
+</ul>
+
+<p>(nodejs的安裝不敘述了，而 mongoDB 的部分採用線上免費的 <a href="https://mongolab.com">mongolab</a> ，大概有 500MB 空間可用)</p>
+
+<pre><code>$ npm install -g bower
+
+$ npm install -g grunt-cli
+</code></pre>
+
+<h2 id="install-the-meanjs-generator">Install the MEAN.JS generator</h2>
+
+<p>另外還安裝了 Yo Generator ，將來會用它來取得最新的 MEAN.JS</p>
+
+<blockquote>
+  <p>The recommended way would be to use the official Yo Generator which will generate the latest stable copy of the MEAN.JS boilerplate and supply multiple sub-generators to ease your daily development cycles.</p>
+</blockquote>
+
+<pre><code>$ npm install -g yo
+
+$ npm install -g generator-meanjs
+</code></pre>
+
+<h2 id="create-your-mean-app">Create your MEAN App</h2>
+
+<pre><code>cd /path/to/project
+yo meanjs
+</code></pre>
+
+<h2 id="set-up-database">set up database</h2>
+
+<p>這裡我改用 mongolab ，以下文中有簡單的使用教學：</p>
+
+<p><a href="http://www.codedata.com.tw/database/mongodb-tutorial-1-setting-up-cloud-env/">MongoDB Tutorial（1）雲端時代的 MongoDB 環境建置</a></p>
+
+<pre><code># edit /path/to/project/config/env/development.js
+'use strict';
+
+module.exports = {
+    db: 'mongodb://&lt;dbuser&gt;:&lt;dbpassword&gt;@something.mongolab.com:49130/mydatabase',
+    app: {
+            title: 'blog - Development Environment'
+    },
+</code></pre>
+
+<h1 id="start">start</h1>
+
+<pre><code>$ grunt
+</code></pre>
+
+<p>這樣就可以看到簡單的範例網頁了</p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2014-12-28T09:40:00+08:00"><a href="//joyhuang9473.github.io/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html">December 28, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -269,25 +370,6 @@ port=5910 #原本的值為 -1
 <iframe width="560" height="315" src="//www.youtube.com/embed/CdW8pmM1Ji8" frameborder="0" allowfullscreen=""></iframe>
 <p><br /></p>
 
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-12-12T15:58:00+08:00"><a href="//joyhuang9473.github.io/2014/12/12/words.html">December 12, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/12/words.html" rel="bookmark" title="呢喃" itemprop="url">呢喃</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>不懂得如何表現溫柔的我，
-<br />
-風雨中，心碎了才懂。</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->

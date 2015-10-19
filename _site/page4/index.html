@@ -140,6 +140,77 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html" rel="bookmark" title="AIS3 2015 Writeup: binary2" itemprop="url">AIS3 2015 Writeup: binary2</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <h2 id="shellcode-to-bin">Shellcode to bin</h2>
+
+<p>Keynote:</p>
+
+<ul>
+  <li>shellcode</li>
+  <li>xor</li>
+</ul>
+
+<p>Reference:</p>
+
+<ul>
+  <li>http://theloshackers.blogspot.tw/2013/08/convert-hex-shellcode-to-binary-mode.html</li>
+</ul>
+
+<p>Tools:</p>
+
+<ul>
+  <li>ida64</li>
+  <li>XOR Calculator online https://xor.pw/</li>
+  <li>Hex to ASCII text converter http://www.rapidtables.com/convert/number/hex-to-ascii.htm</li>
+</ul>
+
+<p>將 shellcode 輸出成 bin</p>
+
+<pre><code>$ echo -ne "{ shellcode }" &gt; sc.bin
+</code></pre>
+
+<p>再丟到 ida 找到這個片段</p>
+
+<p><img src="http://i.imgur.com/0WraX3i.png" alt="sc_shellcode_to_bin_in_ais3's_binary_question" /></p>
+
+<p>總共有 40 個字元在堆疊中，藉由 [rsi+rdx] 逐一讀取 stack 中的字元並與 0CCh 做 xor，直到 dl 為 37 (25h)，也就是第 37 個字元為止</p>
+
+<pre><code># origin
+
+414141C6B1B9A3B5
+93BEA3AA93A8A0BC
+A1A5BF93BFA593A9
+A8A3AFA0A0A9A4BF
+93A7A3B7FF9F858D
+
+# after xor
+#[] : ignored
+
+[    ]0a7d756f79
+5f726f665f646c70
+6d69735f73695f65
+646f636c6c656873
+5f6b6f7b33534941
+</code></pre>
+
+<p>Little Endian 系統，反向讀取並將 hex 轉為 ascii 就可以看到 flag</p>
+
+<p><img src="http://i.imgur.com/ohf0t1o.png" alt="sc_converted_hex_to_ascii_in_ais3's_binary_question" /></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2015-07-27T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary1.html">July 27, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -251,29 +322,6 @@
 <p>Sunchi Dance Club official website, written in LAMP.</p>
 
 <p>Author: YU-KAI HUANG</p>
-
-<p>Design: <a href="http://templated.co/">TEMPLATED</a></p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-02-23T12:00:00+08:00"><a href="//joyhuang9473.github.io/project-general/project-web/2015/02/23/project-ffdesign-website.html">February 23, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/project-general/project-web/2015/02/23/project-ffdesign-website.html" rel="bookmark" title="FFdesign Website" itemprop="url">FFdesign Website</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="//imgur.com/a/9Gzqq/embed"></iframe>
-
-<p>FFdesign, written in LAMP.</p>
-
-<p>Author: YU-KAI HUANG, YA-TING HSU</p>
 
 <p>Design: <a href="http://templated.co/">TEMPLATED</a></p>
 
