@@ -9,6 +9,8 @@ categories: [post-machine-learning]
 
 ## ex1.m
 
+> implement linear regression and get to see it work on data.
+
 - Plot Data
 
 ![ex1_plotting_data.png](http://i.imgur.com/cGSkGLC.png)

@@ -1,0 +1,274 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Standord Machine Learning Class: Week4 Assignment &#8211; YU KAI'S BLOG</title>
+<meta name="description" content="yu kai's blog">
+<meta name="keywords" content="machine-learning, Coursera, Stanford">
+
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Standord Machine Learning Class: Week4 Assignment">
+<meta property="og:description" content="yu kai's blog">
+<meta property="og:url" content="//joyhuang9473.github.io/post-machine-learning/2015/11/01/coursera-stanford-machine-learning-class-week4-assignment.html">
+<meta property="og:site_name" content="YU KAI'S BLOG">
+
+
+
+
+
+<link rel="canonical" href="//joyhuang9473.github.io/post-machine-learning/2015/11/01/coursera-stanford-machine-learning-class-week4-assignment.html">
+<link href="//joyhuang9473.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="YU KAI'S BLOG Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="//joyhuang9473.github.io/assets/css/main.css">
+<link rel="stylesheet" href="//joyhuang9473.github.io/assets/css/icard_resume.css">
+
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="//joyhuang9473.github.io/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="//joyhuang9473.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="//joyhuang9473.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="//joyhuang9473.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//joyhuang9473.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//joyhuang9473.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="//joyhuang9473.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+</head>
+
+<body id="post" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="//joyhuang9473.github.io/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="http://i.imgur.com/IM68HzY.jpg" alt="YU-KAI HUANG photo" class="author-photo">
+					<h4>YU-KAI HUANG</h4>
+					<p>Hi! I'm a coder, interested in web, machine leaning, computer security and games.</p>
+				</li>
+				<li><a href="//joyhuang9473.github.io/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				<li>
+					<a href="mailto:joyhuang@ags.tw"><i class="fa fa-fw fa-envelope"></i> Email</a>
+				</li>
+				
+				
+				
+				
+				<li>
+					<a href="http://github.com/joyhuang9473"><i class="fa fa-fw fa-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="//joyhuang9473.github.io/posts/">All Posts</a></li>
+				<li><a href="//joyhuang9473.github.io/tags/">All Tags</a></li>
+				<li><a href="//joyhuang9473.github.io/posts/ctf">CTF</a></li>
+				<li><a href="//joyhuang9473.github.io/posts/ted">TED</a></li>
+				<li><a href="//joyhuang9473.github.io/posts/gw2">GW2</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Projects</a>
+			<ul class="dl-submenu">
+				<li><a href="//joyhuang9473.github.io/projects/">All Projects</a></li>
+				<li><a href="//joyhuang9473.github.io/projects/game">Game</a></li>
+				<li><a href="//joyhuang9473.github.io/projects/web">Web</a></li>
+			</ul>
+		</li>
+
+		
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        
+          <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-machine-learning/2015/11/01/coursera-stanford-machine-learning-class-week4-assignment.html" rel="bookmark" title="Standord Machine Learning Class: Week4 Assignment">Standord Machine Learning Class: Week4 Assignment</a></h1>
+        
+        <h2><span class="entry-date date published"><time datetime="2015-11-01T12:00:00+08:00">November 01, 2015</time></span></h2>
+        
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content">
+      <h2 id="ex3m">ex3.m</h2>
+
+<blockquote>
+  <p>implement one-vs-all logistic regression and neural networks to recognize hand-written digits.</p>
+</blockquote>
+
+<ul>
+  <li>Plot Data (in ex3data1.mat)</li>
+</ul>
+
+<p><img src="http://imgur.com/huVH9AS.png" alt="ex3_plotting_data.png" /></p>
+
+<ul>
+  <li>Training One-vs-All Logistic Regression</li>
+</ul>
+
+<p>hypothesis function: 1./(1+e.^(-1<em>(X</em>theta)))</p>
+
+<p>K = 10 (0 to 9)</p>
+
+<p>Iteration: 50</p>
+
+<script src="https://gist.github.com/joyhuang9473/0ca0a82a0b2616759a7e.js"></script>
+
+<ul>
+  <li>Predict for One-Vs-All</li>
+</ul>
+
+<script src="https://gist.github.com/joyhuang9473/8a964d894e25dc3aa1c4.js"></script>
+
+<h2 id="ex3nnm">ex3_nn.m</h2>
+
+<blockquote>
+  <p>implement a neural network to recognize handwritten digits using the same training set as before.</p>
+</blockquote>
+
+<blockquote>
+  <p>provided with a set of network parameters (Θ(1),Θ(2)) already trained (in ex3weights.mat)</p>
+</blockquote>
+
+<ul>
+  <li>Feedforward Propagation and Prediction</li>
+</ul>
+
+<p>Loading Saved Neural Network Parameters in ex3weights.mat</p>
+
+<script src="https://gist.github.com/joyhuang9473/bc9786e6cb0ed377dc1f.js"></script>
+
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="//joyhuang9473.github.io/tags/#machine-learning" title="Pages tagged machine-learning" class="tag"><span class="term">machine-learning</span></a><a href="//joyhuang9473.github.io/tags/#Coursera" title="Pages tagged Coursera" class="tag"><span class="term">Coursera</span></a><a href="//joyhuang9473.github.io/tags/#Stanford" title="Pages tagged Stanford" class="tag"><span class="term">Stanford</span></a></span>
+        
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=//joyhuang9473.github.io/post-machine-learning/2015/11/01/coursera-stanford-machine-learning-class-week4-assignment.html" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=//joyhuang9473.github.io/post-machine-learning/2015/11/01/coursera-stanford-machine-learning-class-week4-assignment.html" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=//joyhuang9473.github.io/post-machine-learning/2015/11/01/coursera-stanford-machine-learning-class-week4-assignment.html" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    <div class="read-more">
+  
+    <div class="read-more-header">
+      <a href="//joyhuang9473.github.io/post-machine-learning/2015/10/25/coursera-stanford-machine-learning-class-week3-assignment.html" class="read-more-btn">Read More</a>
+    </div><!-- /.read-more-header -->
+    <div class="read-more-content">
+      <h3><a href="//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week6-assignment.html" title="Standord Machine Learning Class: Week6 Assignment">Standord Machine Learning Class: Week6 Assignment</a></h3>
+      <p>## ex5.m> implement regularized linear regression and use it to study models with different bias-variance properties.- Plot Data (in ex5d...&hellip; <a href="//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week6-assignment.html">Continue reading</a></p>
+    </div><!-- /.read-more-content -->
+  
+  <div class="read-more-list">
+    
+      <div class="list-item">
+        <h4><a href="//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week5-assignment.html" title="Standord Machine Learning Class: Week5 Assignment">Standord Machine Learning Class: Week5 Assignment</a></h4>
+        <span>Published on November 08, 2015</span>
+      </div><!-- /.list-item -->
+    
+      <div class="list-item">
+        <h4><a href="//joyhuang9473.github.io/post-machine-learning/2015/10/25/coursera-stanford-machine-learning-class-week3-assignment.html" title="Standord Machine Learning Class: Week3 Assignment">Standord Machine Learning Class: Week3 Assignment</a></h4>
+        <span>Published on October 25, 2015</span>
+      </div><!-- /.list-item -->
+    
+  </div><!-- /.read-more-list -->
+</div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<div style="margin-top:0px;padding:0px;background:none;box-shadow:none" class="entry-content">
+<!-- general advertisement -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4665795394568321"
+     data-ad-slot="2959368090"
+     data-ad-format="auto"></ins>
+</div>
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2015 YU-KAI HUANG. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span>
+
+<p><img src="https://ga-beacon.appspot.com/UA-65353378-3/joyhuang9473.github.io/Standord Machine Learning Class: Week4 Assignment" alt="Analytics"></p>
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="//joyhuang9473.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="//joyhuang9473.github.io/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+
+
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    // Required: on line below, replace text in quotes with your forum shortname
+    var disqus_shortname = 'joyhuang9473';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+<!-- Google Adsense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>	        
+
+</body>
+</html>

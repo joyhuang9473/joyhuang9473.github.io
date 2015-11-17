@@ -140,6 +140,143 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-12-28T09:40:00+08:00"><a href="//joyhuang9473.github.io/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html">December 28, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/28/mo-wa-horizontal-exploration-puzzle-game.html" rel="bookmark" title="墨華：橫軸探索解謎遊戲" itemprop="url">墨華：橫軸探索解謎遊戲</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>偶然在網路上看到，聽說是大學生的畢業專題，感覺蠻精緻的，看到他人有如此的傑作，小弟心生慚愧啊</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/7YG59JPY-l4" frameborder="0" allowfullscreen=""></iframe>
+<p><br /></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-12-27T03:18:00+08:00"><a href="//joyhuang9473.github.io/2014/12/27/remote-desktop-for-ubuntu-1404.html">December 27, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/27/remote-desktop-for-ubuntu-1404.html" rel="bookmark" title="遠端 Ubuntu 14.04 桌面" itemprop="url">遠端 Ubuntu 14.04 桌面</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>最近因為期末專題的關係，選用了 Ubuntu 14.04 作為系統環境，而由於在下做的是跟影像辨識有關的題目，考量之後要秀出影像結果等需要，就來處理一下遠端桌面的功能，好讓我能帶著 MBP 去 demo :)</p>
+
+<p>原本想說 ubuntu 這麼多人用，應該只要稍微設定一下就能用遠端桌面了吧，沒想到弄起來還是挺麻煩的 ==</p>
+
+<p>首先還是先介紹可以正常運作的教學：</p>
+
+<p><a href="http://c-nergy.be/blog/?p=5305">Ubuntu 14.04 – How to install xrdp in Ubuntu 14.04</a></p>
+
+<p>其實主要精神就是 <strong>安裝 xrdp ，改用 Xfce4</strong> 作為桌面環境（desktop environment）</p>
+
+<p>另外還有可能碰到的問題是，每當關閉遠端連線後，下次再遠端桌面登入卻是不同的 session ，就是重新遠端後看到的卻不是上一次遠端的桌面，那解決方法就是：</p>
+
+<p><a href="http://askubuntu.com/questions/133343/how-do-i-set-up-xrdp-session-that-reuses-an-existing-session">How do I set up xrdp session that reuses an existing session?</a></p>
+
+<p>Note:</p>
+
+<blockquote>
+  <p>that only works if there’s already an existing session though. The first time in, there’s no session so it fails to connect to port 5912.</p>
+</blockquote>
+
+<p>似乎還不是一個很好的辦法，之後再找找囉。</p>
+
+<p>– clear –</p>
+
+<p>修改 /etc/xrdp/xrdp.ini</p>
+
+<pre><code>[xrdp1]
+name=sesman-vnc
+lib=libvnc.so
+username=ask
+password=ask
+ip=127.0.0.1
+port=5910 #原本的值為 -1
+</code></pre>
+
+<p>至於為甚麼不能用 ubuntu 本身的 Unity 作為桌面環境，雖然還不確定原因，但感覺是 Unity, Gnome 對 xrdp 的支援程度有關，總之試過 gnome-session 的寫法，遠端後的結果都不樂觀，都會是 <strong>灰底畫面，還可以顯示的 ‘X’ 游標</strong></p>
+
+<p>（以下寫法都不能正常運作遠端桌面功能）</p>
+
+<p>~/.xsession file :</p>
+
+<pre><code># Uncomment one of list items below, if you really want to try and test
+
+#gnome-session --session=gnome-classic
+#gnome-session --session=gnome-fallback
+#gnome-session –-session=ubuntu-2d
+</code></pre>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-12-24T16:40:00+08:00"><a href="//joyhuang9473.github.io/2014/12/24/caffe-first-experience.html">December 24, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/24/caffe-first-experience.html" rel="bookmark" title="Install Caffe and ImageNet model " itemprop="url">Install Caffe and ImageNet model </a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>原本想安裝在 Windows，不過過程實在是太不順利了，最後還是依照網路上的一篇教學文，安裝在 Ubuntu 14.04 上，只差在它是用虛擬機，我是用實機安裝。</p>
+
+<p>教學文如下，
+<a href="https://github.com/BVLC/caffe/wiki/Ubuntu-14.04-VirtualBox-VM">BVLC/caffe Ubuntu 14.04 VirtualBox VM</a></p>
+
+<blockquote>
+  <p>This is a guide to setting up Caffe in a 14.04 virtual machine with CUDA 6.5 and the system Python for getting started with examples and PyCaffe.</p>
+</blockquote>
+
+<p>過程中還蠻順利的，除了</p>
+
+<ul>
+  <li>Modify python/classify.py to add the –print_results option</li>
+</ul>
+
+<p>這一步需要自己稍微修改一下 code ，那麼我就分享在 gist 上囉
+[custom classify.py in BVLC/caffe: <path_to_caffe>/python/classify.py](https://gist.github.com/Kai-Yu-Huang/6ae7ac4c496c6c4c18f9)</path_to_caffe></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-12-23T07:40:00+08:00"><a href="//joyhuang9473.github.io/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html">December 23, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/23/someone-already-recreated-notchs-insane-new-mansion-in-minecraft.html" rel="bookmark" title="Someone already recreated Notch's insane new mansion in Minecraft" itemprop="url">Someone already recreated Notch's insane new mansion in Minecraft</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>http://www.dailydot.com/geek/notch-new-mansion-minecraft-style/?fb=dd</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/CdW8pmM1Ji8" frameborder="0" allowfullscreen=""></iframe>
+<p><br /></p>
+
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2014-12-12T15:58:00+08:00"><a href="//joyhuang9473.github.io/2014/12/12/words.html">December 12, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -151,95 +288,6 @@
     <p>不懂得如何表現溫柔的我，
 <br />
 風雨中，心碎了才懂。</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-12-10T15:24:00+08:00"><a href="//joyhuang9473.github.io/2014/12/10/magic-crystal-ball-hoop-hu-qizhi-teacher-limit-stunt-show.html">December 10, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/10/magic-crystal-ball-hoop-hu-qizhi-teacher-limit-stunt-show.html" rel="bookmark" title="胡啟志老師 魔幻水晶球鐵環特技極限秀" itemprop="url">胡啟志老師 魔幻水晶球鐵環特技極限秀</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <iframe width="560" height="315" src="//www.youtube.com/embed/giS6KZ7WdQ4" frameborder="0" allowfullscreen=""></iframe>
-<p><br /></p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-12-08T10:21:00+08:00"><a href="//joyhuang9473.github.io/2014/12/08/gss-layouts-not-possible-with-tomorrows-css.html">December 08, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/08/gss-layouts-not-possible-with-tomorrows-css.html" rel="bookmark" title="GSS - Layouts Not Possible with Tomorrow's CSS" itemprop="url">GSS - Layouts Not Possible with Tomorrow's CSS</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <iframe src="//player.vimeo.com/video/91393694?title=0&amp;byline=0" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-<p><a href="http://vimeo.com/91393694">GSS - Layouts Not Possible with Tomorrow's CSS // O'Reilly Fluent 2014</a> from <a href="http://vimeo.com/d4tocchini">Dan Tocchini</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-12-04T11:11:00+08:00"><a href="//joyhuang9473.github.io/2014/12/04/brother-are-selling-merchandise.html">December 04, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/04/brother-are-selling-merchandise.html" rel="bookmark" title="哥賣的是商品" itemprop="url">哥賣的是商品</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>每次的協商，不是沒有結果，就是在討價還價，對我來說，這不僅沒意義，更是一種人格上的污辱</p>
-
-<p>我不曉得妳有什麼資格反悔，約是妳要簽的，功能、價格、時程我們都確認過了</p>
-
-<p>功能，我答應妳的都做了，而其他妳答應我們的，妳做到了嗎？</p>
-
-<p>我認為今天的問題不是金錢上的問題，也不是身份上妳是大人我們是學生的問題</p>
-
-<p>而是人與人之間最基本的互信原則</p>
-
-<p>既然妳做到這種地步，那我也不想廢話了，妳要我的商品，就請付足夠的錢</p>
-
-<p>如果不行，不好意思，我的商品不是跟菜市場一樣可以討價還價的</p>
-
-<p>但現在妳就算願意付錢，妳也沒資格跟我做生意了</p>
-
-<p>我只賣商品，不賣尊嚴 :)</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-12-02T07:42:00+08:00"><a href="//joyhuang9473.github.io/2014/12/02/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty.html">December 02, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/12/02/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty.html" rel="bookmark" title="Sony's e-paper watch is a thing of minimalist beauty" itemprop="url">Sony's e-paper watch is a thing of minimalist beauty</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>http://www.theverge.com/2014/11/28/7301573/sonys-e-paper-watch-is-a-thing-of-minimalist-beauty</p>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/omvve2pVPH0" frameborder="0" allowfullscreen=""></iframe>
-<p><br /></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -483,6 +531,12 @@
       <li>
         
           <a href="//joyhuang9473.github.io/page39">39</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page40">40</a>
         
       </li>
     

@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="//joyhuang9473.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="//joyhuang9473.github.io" />
-<updated>2015-10-19T11:35:23+08:00</updated>
+<updated>2015-11-17T15:48:41+08:00</updated>
 <id>//joyhuang9473.github.io/</id>
 <author>
   <name>YU-KAI HUANG</name>
@@ -14,9 +14,411 @@
 
 
 <entry>
+  <title type="html"><![CDATA[Standord Machine Learning Class: Week6 Assignment]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week6-assignment.html" />
+  <id>//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week6-assignment</id>
+  <published>2015-11-08T12:00:00+08:00</published>
+  <updated>2015-11-08T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;ex5m&quot;&gt;ex5.m&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;implement regularized linear regression and use it to study models with different bias-variance properties.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Data (in ex5data1.mat)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/93Cp93w.png&quot; alt=&quot;ex5_plotting_data.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Compute Regularized Linear Regression Cost&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;lambda: 1, theta: [1 ; 1]&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/49e4ec6b0893ea82a274.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Compute Regularized linear regression gradient&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;lambda: 1, theta: [1 ; 1]&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/3494fcd5fde3f80b5728.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Train linear regression and plot fit over the data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;lambda: 0&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/YtBL0Fk.png&quot; alt=&quot;ex5_trained_linear_regression.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Comput train error and cross validation error for linear regression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;lambda: 0&lt;/p&gt;
+
+&lt;p&gt;training error: evaluate the training error on the first i training examples (i.e., X(1:i, :) and y(1:i))&lt;/p&gt;
+
+&lt;p&gt;cross-validation error: evaluate on the &lt;em&gt;entire&lt;/em&gt; cross validation set (Xval and yval).&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/5540eaa4359125e88e5c.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot learning curve for linear regression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Since the model is underfitting the data, we expect to see a graph with “high bias”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/KWK4kUN.png&quot; alt=&quot;ex5_learning_curve_for_linear_regression.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Map X onto Polynomial Features and Normalize&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;X_poly(i, :) = [X(i) X(i).^2 X(i).^3 …  X(i).^p]&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/04f16509b897ed2ab102.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Train Polynomial regression and plot fit over the data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/w8bsAlv.png&quot; alt=&quot;ex5_trained_polynomial_regression.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Comput train error and cross validation error for polynomial regression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;lambda: 0&lt;/p&gt;
+
+&lt;p&gt;training error: evaluate the training error on the first i training examples (i.e., X(1:i, :) and y(1:i))&lt;/p&gt;
+
+&lt;p&gt;cross-validation error: evaluate on the &lt;em&gt;entire&lt;/em&gt; cross validation set (Xval and yval).&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/1cbf0c9df2da3b667c8e.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot learning curve for polynomial regression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Since the model is overfitting the data, we expect to see a graph with “high variance”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/WsiFwAP.png&quot; alt=&quot;ex5_learning_curve_for_polynomial_regression.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Test various values of lambda and compute error&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/4a642b25bd987c77a444.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot validation curve&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;use validation curve to select the “best” lambda value&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;the best value of lambda is around 3&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/887VVKb.png&quot; alt=&quot;ex5_validation_curve_for_polynomial_regression.png&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week6-assignment.html&quot;&gt;Standord Machine Learning Class: Week6 Assignment&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on November 08, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Standord Machine Learning Class: Week5 Assignment]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week5-assignment.html" />
+  <id>//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week5-assignment</id>
+  <published>2015-11-08T12:00:00+08:00</published>
+  <updated>2015-11-08T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;ex4m&quot;&gt;ex4.m&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;implement the backpropagation algorithm for neural networks and apply it to the task of hand-written digit recognition.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Data (in ex4data1.mat)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/tY8bXI9.png&quot; alt=&quot;ex4_plotting_data.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Feedforward Using Neural Network and Compute Cost at parameters (loaded from ex4weights)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/790352737fe959821453.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cost function with regularization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;lambda: 1&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/540e0b501c927f583a3f.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Random initialization weights&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;symmetry breaking: initialize weights&lt;/p&gt;
+
+&lt;p&gt;Theta(j, i) = RABD_NUM*(2*INIT_EPSILON) - INIT_EPSILON&lt;/p&gt;
+
+&lt;p&gt;RABD_NUM: between 0 to 1&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Complete backpropagation and check Neural Network Gradients&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;generate some ‘random’ test data and test&lt;/p&gt;
+
+&lt;p&gt;input_layer_size: 3&lt;/p&gt;
+
+&lt;p&gt;hidden_layer_size: 5&lt;/p&gt;
+
+&lt;p&gt;num_labels: 3&lt;/p&gt;
+
+&lt;p&gt;m: 5&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/3fc1b204488622e9c307.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Regularized Neural Networks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;lambda: 3&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/d86452cbac7ee04a5380.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Training Neural Network&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;lambda: 1&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/235a373f8de7658789a0.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Visualizing Weights&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;displaying the hidden units to see what features they are capturing in the data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;displaying images of Theta1&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/gLJ5kVf.png&quot; alt=&quot;ex4_visualizing_nn.png&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week5-assignment.html&quot;&gt;Standord Machine Learning Class: Week5 Assignment&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on November 08, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Standord Machine Learning Class: Week4 Assignment]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-machine-learning/2015/11/01/coursera-stanford-machine-learning-class-week4-assignment.html" />
+  <id>//joyhuang9473.github.io/post-machine-learning/2015/11/01/coursera-stanford-machine-learning-class-week4-assignment</id>
+  <published>2015-11-01T12:00:00+08:00</published>
+  <updated>2015-11-01T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;ex3m&quot;&gt;ex3.m&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;implement one-vs-all logistic regression and neural networks to recognize hand-written digits.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Data (in ex3data1.mat)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/huVH9AS.png&quot; alt=&quot;ex3_plotting_data.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Training One-vs-All Logistic Regression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;hypothesis function: 1./(1+e.^(-1&lt;em&gt;(X&lt;/em&gt;theta)))&lt;/p&gt;
+
+&lt;p&gt;K = 10 (0 to 9)&lt;/p&gt;
+
+&lt;p&gt;Iteration: 50&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/0ca0a82a0b2616759a7e.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Predict for One-Vs-All&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/8a964d894e25dc3aa1c4.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;ex3nnm&quot;&gt;ex3_nn.m&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;implement a neural network to recognize handwritten digits using the same training set as before.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;provided with a set of network parameters (Θ(1),Θ(2)) already trained (in ex3weights.mat)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Feedforward Propagation and Prediction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Loading Saved Neural Network Parameters in ex3weights.mat&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/bc9786e6cb0ed377dc1f.js&quot;&gt;&lt;/script&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-machine-learning/2015/11/01/coursera-stanford-machine-learning-class-week4-assignment.html&quot;&gt;Standord Machine Learning Class: Week4 Assignment&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on November 01, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Standord Machine Learning Class: Week3 Assignment]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-machine-learning/2015/10/25/coursera-stanford-machine-learning-class-week3-assignment.html" />
+  <id>//joyhuang9473.github.io/post-machine-learning/2015/10/25/coursera-stanford-machine-learning-class-week3-assignment</id>
+  <published>2015-10-25T12:00:00+08:00</published>
+  <updated>2015-10-25T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;ex2m&quot;&gt;ex2.m&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;implement logistic regression and apply it to two different datasets (ex2data1.txt, ex2data2.txt)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Data (in ex2data1.txt)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/RXDSOwp.png&quot; alt=&quot;ex2_plotting_data.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Compute Cost and Gradient&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;hypothesis function: 1./(1+e.^(-1&lt;em&gt;(X&lt;/em&gt;theta)))&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/8b2d74f94c2c072b413e.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Learning parameters using fminunc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;initial theta: zeros, iteration: 400&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/635f38f09e0d5236fafe.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Decision Boundary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/OtGyVq8.png&quot; alt=&quot;ex2_plotting_decisionBoundary.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Predict and Accuracies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;use the logistic regression model to predict the probability that a student with score 45 on exam 1 and score 85 on exam 2 will be admitted.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/3a36b3c1b4284f43f422.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;ex2regm&quot;&gt;ex2_reg.m&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The axes are the two test scores, and the positive (y = 1, accepted) and negative (y = 0, rejected) examples are shown with different markers.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Data (in ex2data2.txt)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/paDbfw1.png&quot; alt=&quot;ex2_reg_plotting_data.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add Polynomial Features and Compute Cost&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;original X: [X1 X2]&lt;/p&gt;
+
+&lt;p&gt;mapFeatured X: [X1 X2 (X1.^2) (X2.^2) (X1&lt;em&gt;X2) (X1&lt;/em&gt;X2.^2) …]&lt;/p&gt;
+
+&lt;p&gt;hypothesis function: 1./(1+e.^(-1&lt;em&gt;(X&lt;/em&gt;theta)))&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/ad85e427bdafc28dda0a.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Decision Boundary with lambda 0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/fi7SjLI.png&quot; alt=&quot;ex2_reg_plotting_decisionBoundary_with_lambda_0.png&quot; /&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/0b2386d4fd000c142537.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Decision Boundary with lambda 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/zCFrSK8.png&quot; alt=&quot;ex2_reg_plotting_decisionBoundary_with_lambda_1&quot; /&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/d2a03915e1d5b7b3d7be.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Decision Boundary with lambda 100&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/mBxdkwR.png&quot; alt=&quot;ex2_reg_plotting_decisionBoundary_with_lambda_100&quot; /&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/da48d195b70e123cb43d.js&quot;&gt;&lt;/script&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-machine-learning/2015/10/25/coursera-stanford-machine-learning-class-week3-assignment.html&quot;&gt;Standord Machine Learning Class: Week3 Assignment&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on October 25, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[Standord Machine Learning Class: Week2 Assignment]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression.html" />
-  <id>//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression</id>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-week2-assignment.html" />
+  <id>//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-week2-assignment</id>
   <published>2015-10-18T12:00:00+08:00</published>
   <updated>2015-10-18T12:00:00+08:00</updated>
   <author>
@@ -26,6 +428,10 @@
   </author>
   <content type="html">
     &lt;h2 id=&quot;ex1m&quot;&gt;ex1.m&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;implement linear regression and get to see it work on data.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Plot Data&lt;/li&gt;
@@ -116,7 +522,7 @@
 &lt;script src=&quot;https://gist.github.com/joyhuang9473/70ff08a77597f684988c.js&quot;&gt;&lt;/script&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-assignment-linear-regression.html&quot;&gt;Standord Machine Learning Class: Week2 Assignment&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on October 18, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-week2-assignment.html&quot;&gt;Standord Machine Learning Class: Week2 Assignment&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on October 18, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1209,135 +1615,6 @@ A8A3AFA0A0A9A4BF
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ohf0t1o.png&quot; alt=&quot;sc_converted_hex_to_ascii_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html&quot;&gt;AIS3 2015 Writeup: binary2&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[AIS3 2015 Writeup: binary1]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary1.html" />
-  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary1</id>
-  <published>2015-07-27T12:00:00+08:00</published>
-  <updated>2015-07-27T12:00:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;strings&quot;&gt;Strings&lt;/h2&gt;
-
-&lt;p&gt;Keynote:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;動態分析&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Tools:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ollyDbg201h&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;把 bin1.exe 丟到 ollydbg ，搜尋 string ‘AIS3’ 就可以找到 flag&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/nnfBQ1S.png&quot; alt=&quot;bin1_exe_strings_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;有稍微的漏字，但就依照 flag 上的語義自己填補了&lt;/p&gt;
-
-&lt;p&gt;p.s&lt;/p&gt;
-
-&lt;p&gt;ollyDbg110 的 strings 比 ollyDbg201h 較不完整&lt;/p&gt;
-
-&lt;p&gt;ollyDbg201h 的 strings 仍然會漏字，仍不清楚原因&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary1.html&quot;&gt;AIS3 2015 Writeup: binary1&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Aslan-Rainbow-x]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x.html" />
-  <id>//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x</id>
-  <published>2015-07-09T12:00:00+08:00</published>
-  <updated>2015-07-09T12:00:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;//imgur.com/a/dHi9K/embed&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;2D fighting game, written in C++, Cocos2d-x&lt;/p&gt;
-
-&lt;p&gt;cocos2d-x version: 3.3&lt;/p&gt;
-
-&lt;p&gt;Author: YU-KAI HUANG&lt;/p&gt;
-
-&lt;p&gt;Character Graphics designed by &lt;a href=&quot;http://opengameart.org/users/creek23&quot;&gt;creek23&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Platformer Art Complete Pack by Kenney Vleugels (&lt;a href=&quot;www.kenney.nl&quot;&gt;www.kenney.nl&lt;/a&gt;)&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/project-general/project-game/2015/07/09/project-aslan-rainbow-x.html&quot;&gt;Aslan-Rainbow-x&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 09, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[TED: 從一次赤腳運動中學到的]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/2015/04/17/ted-learned-from-a-barefoot-movement.html" />
-  <id>//joyhuang9473.github.io/2015/04/17/ted-learned-from-a-barefoot-movement</id>
-  <published>2015-04-17T15:35:00+08:00</published>
-  <updated>2015-04-17T15:35:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;blockquote&gt;
-  &lt;p&gt;夜校考慮到孩子們的需求，而不是老師們的需求&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;他們一開始忽略你，然後嘲笑你，然後和你鬥爭，最後的贏家是你 - 聖雄甘地&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;TED: http://www.ted.com/talks/bunker_roy/transcript?language=zh-tw#t-338065&lt;/p&gt;
-
-&lt;iframe src=&quot;https://embed-ssl.ted.com/talks/bunker_roy.html&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/2015/04/17/ted-learned-from-a-barefoot-movement.html&quot;&gt;TED: 從一次赤腳運動中學到的&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on April 17, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Sunchi Website]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/project-general/project-web/2015/03/09/project-sunchi-website.html" />
-  <id>//joyhuang9473.github.io/project-general/project-web/2015/03/09/project-sunchi-website</id>
-  <published>2015-03-09T12:00:00+08:00</published>
-  <updated>2015-03-09T12:00:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;iframe class=&quot;imgur-album&quot; width=&quot;100%&quot; height=&quot;550&quot; frameborder=&quot;0&quot; src=&quot;//imgur.com/a/jHXIW/embed&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;URL: &lt;a href=&quot;http://www.sunchi.co/&quot;&gt;http://www.sunchi.co/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Sunchi Dance Club official website, written in LAMP.&lt;/p&gt;
-
-&lt;p&gt;Author: YU-KAI HUANG&lt;/p&gt;
-
-&lt;p&gt;Design: &lt;a href=&quot;http://templated.co/&quot;&gt;TEMPLATED&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/project-general/project-web/2015/03/09/project-sunchi-website.html&quot;&gt;Sunchi Website&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on March 09, 2015.&lt;/p&gt;
   </content>
 </entry>
 

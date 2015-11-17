@@ -140,6 +140,117 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-09-08T16:14:00+08:00"><a href="//joyhuang9473.github.io/2014/09/08/upgrade-gitlab-70-to-72.html">September 08, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/09/08/upgrade-gitlab-70-to-72.html" rel="bookmark" title="Upgrade Gitlab 7.0 to 7.2" itemprop="url">Upgrade Gitlab 7.0 to 7.2</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <blockquote>
+  <p>update: 2014-10-08</p>
+</blockquote>
+
+<blockquote>
+  <p>正確的更新方式應該為 先從 7.0 升到 7.1 ，再升到 7.2，且按照官方的文件執行即可</p>
+</blockquote>
+
+<p>-ERROR-</p>
+
+<p>整個升級過程其實還算順利，只不過 7.2 的資料表 <code>projects</code> 增加了一個欄位 <code>star_count</code>，似乎是用來計算有多少人”“star” 這個專案，而 backup restore 的過程中卻會把 7.2 的資料表取代成 7.0 的資料表版本，所以程式會找不到 <code>projects</code>.<code>star_count</code> 這個欄位，一進到 gitlab 的專案列表就會出現 500</p>
+
+<p>查詢 log:</p>
+
+<pre><code>ActionView::Template::Error (Mysql2::Error: Unknown column 'projects.star_count' in 'field list'
+...
+</code></pre>
+
+<p>後來的做法就是手動替該資料表加上 <code>star_count</code> 欄位囉</p>
+
+<pre><code>#SQL
+ALTER TABLE projects ADD star_count int(11) NOT NULL DEFAULT '0';
+CREATE INDEX index_projects_on_star_count USING btree ON projects (star_count);
+</code></pre>
+
+<p>-//ERROR-</p>
+
+<p>reference:</p>
+
+<p><a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/raketasks/backup_restore.md">gitlab: backup</a></p>
+
+<p><a href="http://apidock.com/rails/v4.0.2/ActiveRecord/ConnectionAdapters/SchemaStatements/add_index">ruby on rails: add_index</a></p>
+
+<p><a href="http://dev.mysql.com/doc/refman/5.1/en/alter-table.html">mysql: alter column</a></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-09-08T08:48:00+08:00"><a href="//joyhuang9473.github.io/2014/09/08/korea-brand-lotte-dipper.html">September 08, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/09/08/korea-brand-lotte-dipper.html" rel="bookmark" title="韓國飲料品牌: 樂天七星" itemprop="url">韓國飲料品牌: 樂天七星</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <blockquote>
+  <p>飲料自動販賣機是個通往“夢想”的開關。韓國飲料品牌樂天七星在車站中設立只有“Free”按鈕的販賣機，路人按下後，暗門就會旋轉打開進入到天花板掛滿飲料瓶的“跳跳床樂園”，只要在30秒內跳上取下飲料瓶，就有機會讓樂天七星協助完成夢想</p>
+</blockquote>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/vCjEIfyhCfU" frameborder="0" allowfullscreen=""></iframe>
+
+<p>引自：Mr.6 <a href="http://mr6.cc/?p=12951">http://mr6.cc/?p=12951</a></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-09-05T13:14:00+08:00"><a href="//joyhuang9473.github.io/2014/09/05/noke.html">September 05, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/09/05/noke.html" rel="bookmark" title="Noke" itemprop="url">Noke</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>https://www.kickstarter.com/projects/fuzdesigns/noke-the-worlds-first-bluetooth-padlock</p>
+
+<iframe width="480" height="360" src="https://www.kickstarter.com/projects/fuzdesigns/noke-the-worlds-first-bluetooth-padlock/widget/video.html" frameborder="0" scrolling="no"></iframe>
+<p><br /></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2014-09-05T11:40:00+08:00"><a href="//joyhuang9473.github.io/2014/09/05/desperate-efforts-to.html">September 05, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/09/05/desperate-efforts-to.html" rel="bookmark" title="不顧一切的努力" itemprop="url">不顧一切的努力</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <iframe width="560" height="315" src="//www.youtube.com/embed/9SyRoLcvwVs" frameborder="0" allowfullscreen=""></iframe>
+<p><br /></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2014-09-03T08:09:00+08:00"><a href="//joyhuang9473.github.io/2014/09/03/is-that-kind-of-shift-li-wenqi.html">September 03, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -174,89 +285,6 @@
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/FVxD9c58LUo" frameborder="0" allowfullscreen=""></iframe>
 <p><br /></p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-08-31T02:25:00+08:00"><a href="//joyhuang9473.github.io/2014/08/31/tonight-i-celebrate-my-love.html">August 31, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/08/31/tonight-i-celebrate-my-love.html" rel="bookmark" title="Tonight I Celebrate My Love" itemprop="url">Tonight I Celebrate My Love</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>劉明湘 - 鄭俊樹</p>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/kIbf2anMGE0" frameborder="0" allowfullscreen=""></iframe>
-<p><br /></p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-08-30T16:32:00+08:00"><a href="//joyhuang9473.github.io/2014/08/30/loving-you.html">August 30, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/08/30/loving-you.html" rel="bookmark" title="一路上有你" itemprop="url">一路上有你</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>張碧晨 - 魏雪漫</p>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/0OIGkM1S-tQ" frameborder="0" allowfullscreen=""></iframe>
-<p><br /></p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-08-30T16:09:00+08:00"><a href="//joyhuang9473.github.io/2014/08/30/lake-baikal.html">August 30, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/08/30/lake-baikal.html" rel="bookmark" title="貝加爾湖畔" itemprop="url">貝加爾湖畔</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>李維 - 周深</p>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/axJC4-zXeL0" frameborder="0" allowfullscreen=""></iframe>
-<p><br /></p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2014-08-30T15:16:00+08:00"><a href="//joyhuang9473.github.io/2014/08/30/an-impulse.html">August 30, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/2014/08/30/an-impulse.html" rel="bookmark" title="一個衝動" itemprop="url">一個衝動</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>或許今天的我真的是太衝動了，明明只要溝通好，重新思考對方的需求就能圓滿達成目標。我竟然對未來可能的老闆嗆聲，質疑他給予我的任務，仔細回想起來，一方面自己太自大了，另一方面，沒有考慮到所謂的成本與真正需求的問題，使自己處於一個尷尬的處境。</p>
-
-<p>果然在人際相處上，對我來說還是非常需要加強的，我的直言與不輕易退讓的個性，在與人相處上，確實造成了一些障礙。</p>
-
-<p>我並不排斥團隊合作，事實上我非常嚮往團隊合作，從前總是怪沒有機會，現在是明白了，原來自己這樣的個性，都還沒開始合作就已經把人嚇跑了。</p>
-
-<p><a href="http://www.managertoday.com.tw/?p=44166">別當白目實習生！小心9種學生心態，讓你的實習白走一趟</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -500,6 +528,12 @@
       <li>
         
           <a href="//joyhuang9473.github.io/page39">39</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="//joyhuang9473.github.io/page40">40</a>
         
       </li>
     
