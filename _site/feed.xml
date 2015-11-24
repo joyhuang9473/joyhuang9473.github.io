@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="//joyhuang9473.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="//joyhuang9473.github.io" />
-<updated>2015-11-17T15:48:41+08:00</updated>
+<updated>2015-11-24T09:27:27+08:00</updated>
 <id>//joyhuang9473.github.io/</id>
 <author>
   <name>YU-KAI HUANG</name>
@@ -14,11 +14,168 @@
 
 
 <entry>
+  <title type="html"><![CDATA[Standord Machine Learning Class: Week7 Assignment]]></title>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-machine-learning/2015/11/22/coursera-stanford-machine-learning-class-week7-assignment.html" />
+  <id>//joyhuang9473.github.io/post-machine-learning/2015/11/22/coursera-stanford-machine-learning-class-week7-assignment</id>
+  <published>2015-11-22T12:00:00+08:00</published>
+  <updated>2015-11-22T12:00:00+08:00</updated>
+  <author>
+    <name>YU-KAI HUANG</name>
+    <uri>//joyhuang9473.github.io</uri>
+    <email>joyhuang@ags.tw</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;ex6m&quot;&gt;ex6.m&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;you will be using support vector machines (SVMs) with various example 2D datasets.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Data (in ex6data1.mat)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/RDBi7t4.png&quot; alt=&quot;ex6_plotting_ex6data1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plott decision boundary (ex6data1.mat)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;SVM with Linear Kernel&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;try using different values of the C parameter with SVMs. Informally, the C parameter is a positive value that controls the penalty for misclassified training examples.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/wyWKeEQ.png&quot; alt=&quot;ex6_plotting_decision_boundary_with_C_1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/eaTHemS.png&quot; alt=&quot;ex6_plotting_decision_boundary_with_C_100.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Data (in ex6data2.mat)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/3dM01Ya.png&quot; alt=&quot;ex6_plotting_ex6data2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Train SVM with RBF Kernel and plot decision boundary (in ex6data2.mat)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;C: 1, sigma: 0.1&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;ex6_plotting_decision_boundary_with_rbf_kernel.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plot Data (in ex6data3.mat)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/UWTOjjx.png&quot; alt=&quot;ex6_plotting_ex6data3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Try different SVM Parameters to train SVM with RBF Kernel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Automatically choose optimal C and sigma based on a cross-validation set.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;C list: [0.01 0.03 0.1 0.3 1 3 10 30]&lt;/p&gt;
+
+&lt;p&gt;sigma list: [0.01 0.03 0.1 0.3 1 3 10 30]&lt;/p&gt;
+
+&lt;p&gt;=&amp;gt; optimal C = 1 and sigma = 0.1&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/073c860c60c72c235b24.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://imgur.com/VrmJdJU.png&quot; alt=&quot;ex6_plotting_decision_boundary_with_optimal_svm_parameters.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ex6spamm&quot;&gt;ex6_spam.m&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;you will be using support vector machines to build a spam classifier.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For the purpose of this exercise, you will only be using the body of the email (excluding the email headers).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Preprocess sample email (in emailSample1.txt, vocab.txt)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;convert each email into a vector of features&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Given the vocabulary list, we can now map each word in the preprocessed emails into a list of word indices that contains the index of the word in the vocabulary list.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lower-casing, Stripping HTML, Normalizing URLs, Normalizing Email Addresses, Normalizing Numbers, Normalizing Dollars, Word Stemming, Removal of non-words&lt;/p&gt;
+
+&lt;p&gt;vocabulary list: a list of 1899 words&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/2e5a31ab1507978cc391.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Extracte Features from Emails (in emailSample1.txt)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;the feature xi ∈ {0, 1} for an email corresponds to whether the i-th word in the dictionary occurs in the email. That is, xi = 1 if the i-th word is in the email and xi = 0 if the i-th word is not present in the email.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/e8b8e53cdb221f4833de.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Train Linear SVM for Spam Classification (in spamTrain.mat, spamTest.mat)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;train a SVM to classify between spam (y = 1) and non-spam (y = 0) emails.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;spamTrain.mat: 4000 training examples of spam and non-spam email&lt;/p&gt;
+
+&lt;p&gt;spamTest.mat: 1000 test examples&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/9f26dadcca367c6b2643.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;trouble-shooting&quot;&gt;Trouble shooting:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;error on plotting the decision boundary of SVM with RBF Kernel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&quot;https://gist.github.com/joyhuang9473/3c6f97b25b70c1059425.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Solution:&lt;/p&gt;
+
+&lt;p&gt;rewrite visualizeBoundary.m line 21:&lt;/p&gt;
+
+&lt;p&gt;=&amp;gt; contour(X1, X2, vals, [1 1], ‘LineColor’, ‘b’);&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.coursera.org/learn/machine-learning/programming/e4hZk/support-vector-machines/discussions/WCwK_XwqEeWb4g4qCdqdUQ&quot;&gt;related discussions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://wenku.baidu.com/view/99b86f70650e52ea54189862.html###&quot;&gt;黄海广: 斯坦福大学机器学习课程个人笔记完整版&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.zhihu.com/question/24627666&quot;&gt;知乎: 机器学习有很多关于核函数的说法，核函数的定义和作用是什么？&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.quora.com/What-are-Kernels-in-Machine-Learning-and-SVM&quot;&gt;Quora: What are Kernels in Machine Learning and SVM?&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-machine-learning/2015/11/22/coursera-stanford-machine-learning-class-week7-assignment.html&quot;&gt;Standord Machine Learning Class: Week7 Assignment&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on November 22, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[Standord Machine Learning Class: Week6 Assignment]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week6-assignment.html" />
-  <id>//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week6-assignment</id>
-  <published>2015-11-08T12:00:00+08:00</published>
-  <updated>2015-11-08T12:00:00+08:00</updated>
+ <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-machine-learning/2015/11/15/coursera-stanford-machine-learning-class-week6-assignment.html" />
+  <id>//joyhuang9473.github.io/post-machine-learning/2015/11/15/coursera-stanford-machine-learning-class-week6-assignment</id>
+  <published>2015-11-15T12:00:00+08:00</published>
+  <updated>2015-11-15T12:00:00+08:00</updated>
   <author>
     <name>YU-KAI HUANG</name>
     <uri>//joyhuang9473.github.io</uri>
@@ -137,7 +294,7 @@
 
 &lt;p&gt;&lt;img src=&quot;http://imgur.com/887VVKb.png&quot; alt=&quot;ex5_validation_curve_for_polynomial_regression.png&quot; /&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-machine-learning/2015/11/08/coursera-stanford-machine-learning-class-week6-assignment.html&quot;&gt;Standord Machine Learning Class: Week6 Assignment&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on November 08, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-machine-learning/2015/11/15/coursera-stanford-machine-learning-class-week6-assignment.html&quot;&gt;Standord Machine Learning Class: Week6 Assignment&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on November 15, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1542,79 +1699,6 @@ AIS3{rsaaaaaaaaA_orz}
 
 
     &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary3.html&quot;&gt;AIS3 2015 Writeup: binary3&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[AIS3 2015 Writeup: binary2]]></title>
- <link rel="alternate" type="text/html" href="//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html" />
-  <id>//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2</id>
-  <published>2015-07-27T12:00:00+08:00</published>
-  <updated>2015-07-27T12:00:00+08:00</updated>
-  <author>
-    <name>YU-KAI HUANG</name>
-    <uri>//joyhuang9473.github.io</uri>
-    <email>joyhuang@ags.tw</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;shellcode-to-bin&quot;&gt;Shellcode to bin&lt;/h2&gt;
-
-&lt;p&gt;Keynote:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;shellcode&lt;/li&gt;
-  &lt;li&gt;xor&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Reference:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;http://theloshackers.blogspot.tw/2013/08/convert-hex-shellcode-to-binary-mode.html&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Tools:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ida64&lt;/li&gt;
-  &lt;li&gt;XOR Calculator online https://xor.pw/&lt;/li&gt;
-  &lt;li&gt;Hex to ASCII text converter http://www.rapidtables.com/convert/number/hex-to-ascii.htm&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;將 shellcode 輸出成 bin&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ echo -ne &quot;{ shellcode }&quot; &amp;gt; sc.bin
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;再丟到 ida 找到這個片段&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/0WraX3i.png&quot; alt=&quot;sc_shellcode_to_bin_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;總共有 40 個字元在堆疊中，藉由 [rsi+rdx] 逐一讀取 stack 中的字元並與 0CCh 做 xor，直到 dl 為 37 (25h)，也就是第 37 個字元為止&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# origin
-
-414141C6B1B9A3B5
-93BEA3AA93A8A0BC
-A1A5BF93BFA593A9
-A8A3AFA0A0A9A4BF
-93A7A3B7FF9F858D
-
-# after xor
-#[] : ignored
-
-[    ]0a7d756f79
-5f726f665f646c70
-6d69735f73695f65
-646f636c6c656873
-5f6b6f7b33534941
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Little Endian 系統，反向讀取並將 hex 轉為 ascii 就可以看到 flag&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ohf0t1o.png&quot; alt=&quot;sc_converted_hex_to_ascii_in_ais3&#39;s_binary_question&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;//joyhuang9473.github.io/post-ctf/2015/07/27/ais3-writeup-binary2.html&quot;&gt;AIS3 2015 Writeup: binary2&lt;/a&gt; was originally published by YU-KAI HUANG at &lt;a href=&quot;//joyhuang9473.github.io&quot;&gt;YU KAI'S BLOG&lt;/a&gt; on July 27, 2015.&lt;/p&gt;
   </content>
 </entry>
 

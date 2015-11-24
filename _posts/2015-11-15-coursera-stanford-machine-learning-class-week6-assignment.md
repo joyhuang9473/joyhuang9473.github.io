@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Standord Machine Learning Class: Week6 Assignment'
-date: 2015-11-08 12:00
+date: 2015-11-15 12:00
 comments: true
 tags: [machine-learning, Coursera, Stanford]
 categories: [post-machine-learning]

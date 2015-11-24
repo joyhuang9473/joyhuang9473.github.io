@@ -140,6 +140,116 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2015-10-18T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-week2-assignment.html">October 18, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="//joyhuang9473.github.io/post-machine-learning/2015/10/18/coursera-stanford-machine-learning-class-week2-assignment.html" rel="bookmark" title="Standord Machine Learning Class: Week2 Assignment" itemprop="url">Standord Machine Learning Class: Week2 Assignment</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <h2 id="ex1m">ex1.m</h2>
+
+<blockquote>
+  <p>implement linear regression and get to see it work on data.</p>
+</blockquote>
+
+<ul>
+  <li>Plot Data</li>
+</ul>
+
+<p><img src="http://i.imgur.com/cGSkGLC.png" alt="ex1_plotting_data.png" /></p>
+
+<ul>
+  <li>Plot the linear fit</li>
+</ul>
+
+<p><img src="http://i.imgur.com/II2aa9J.png" alt="ex1_plot_linear_regression.png" /></p>
+
+<ul>
+  <li>Visualizing J(theta0, theta1) by surf</li>
+</ul>
+
+<p><img src="http://i.imgur.com/0ZXUHFY.png" alt="ex1_visualizing_J_theta0_theta1_by_surf.png" /></p>
+
+<ul>
+  <li>Visualizing J(theta0, theta1) by contour</li>
+</ul>
+
+<p><img src="http://i.imgur.com/0K8xVUV.png" alt="ex1_visualizing_J_theta0_theta1_by_contour.png" /></p>
+
+<h2 id="ex1multim">ex1_multi.m</h2>
+
+<ul>
+  <li>Plot the convergence graph with different learning rates</li>
+</ul>
+
+<p><img src="http://i.imgur.com/6KExXgJ.png" alt="ex1_multi_plot_the_convergence_graph.png" /></p>
+
+<h2 id="troubleshoot">Troubleshoot:</h2>
+
+<p>1 . When you run the submit script, if you are seeing error messages that contain any of these phrases…</p>
+
+<blockquote>
+  <p>urlread, curl, urlreadwrite, peer certificate, CA certificate, unsupported protocol, JSONparser</p>
+</blockquote>
+
+<blockquote>
+  <p>…here are some issues you can check.</p>
+</blockquote>
+
+<blockquote>
+  <p>Are you using Octave 4.0.0? You will need to install <a href="https://drive.google.com/file/d/0B6lXyE7fgSlXZjlqQ3FIRExmTDA/view?usp=sharing">this</a>. Follow the instructions in the readme.txt file. Restart Octave after installing the patch. There is a bug in the printf() function, it will be fixed in Octave 4.0.1. The error “JSONparser:invalidFormat: Outer level structure must be an object or an array” error is caused by this bug.</p>
+</blockquote>
+
+<ul>
+  <li>reference: <a href="https://www.coursera.org/learn/machine-learning/discussions/vgCyrQoMEeWv5yIAC00Eog">https://www.coursera.org/learn/machine-learning/discussions/vgCyrQoMEeWv5yIAC00Eog</a></li>
+</ul>
+
+<p>2 . What is the idea of mean normalization? Is it necessary?</p>
+
+<p>yumi:</p>
+
+<blockquote>
+  <p>I think that feature scaling is to change the contours of the cost function from ellipse to circle to speed up the convergence. But <em>mean normalization will only affect the center of the circle</em>. So I don’t understand why we need to ensure that all the features centered around the same value.</p>
+</blockquote>
+
+<p>Andy Timmons:</p>
+
+<blockquote>
+  <p>Yumi is right, it is in fact unneccesary. However, you get style points for having a well balanced equation.</p>
+</blockquote>
+
+<blockquote>
+  <p>What is at issue is that you use the same alpha for all equations. So, if you select alpha, you want it to be equally valid for all equations, hence the same range. As Tom Mosher said, centering your problem around zero is just what you do.</p>
+</blockquote>
+
+<blockquote>
+  <p>Its like taking a picture and putting the object in the middle of the frame. You can get the picture with the object to the left or right, but its just sloppy.</p>
+</blockquote>
+
+<blockquote>
+  <p>Applying the equation x-u/s for each parameter means that you dont have to think about what to do for each parameter, its a general equation that can be applied to all with out trying to think “how do I normalize and scale this column”, it helps in making a general program that works for all cases.</p>
+</blockquote>
+
+<ul>
+  <li>reference: <a href="https://www.coursera.org/learn/machine-learning/module/vW94N/discussions/fDrcz2_uEeWdPxJ-h_8T7w">https://www.coursera.org/learn/machine-learning/module/vW94N/discussions/fDrcz2_uEeWdPxJ-h_8T7w</a></li>
+</ul>
+
+<p>3 . Predicted price different when I use gradient descent method and normal equations</p>
+
+<p>Because of error price equation. Hint: Normalizing data</p>
+
+<script src="https://gist.github.com/joyhuang9473/70ff08a77597f684988c.js"></script>
+
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2015-10-14T12:00:00+08:00"><a href="//joyhuang9473.github.io/post-machine-learning/2015/10/14/coursera-stanford-machine-learning-class-tips-for-plotting-data-with-octave-tool.html">October 14, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
       
     </div><!-- /.entry-meta -->
@@ -510,31 +620,6 @@ And I’m going to propose something a little bit more <strong>radical</strong>,
 <p>cocos2d-x version: 3.6</p>
 
 <p>Author: YU-KAI HUANG, 簡嘉慶, 陳映亦, 鄭鈞輿, 傅之謙</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-08-02T12:00:00+08:00"><a href="//joyhuang9473.github.io/project-general/project-game/2015/08/02/project-flipping-maze.html">August 02, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//joyhuang9473.github.io/about/" title="About YU-KAI HUANG">YU-KAI HUANG</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//joyhuang9473.github.io/project-general/project-game/2015/08/02/project-flipping-maze.html" rel="bookmark" title="Flipping Maze" itemprop="url">Flipping Maze</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="//imgur.com/a/ueeYL/embed"></iframe>
-
-<p>Tower defense game, written in C++, Cocos2d-x</p>
-
-<p>cocos2d-x version: 3.6</p>
-
-<p>Author: YU-KAI HUANG</p>
-
-<p>Character Graphics designed by <a href="http://opengameart.org/users/creek23">creek23</a></p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
