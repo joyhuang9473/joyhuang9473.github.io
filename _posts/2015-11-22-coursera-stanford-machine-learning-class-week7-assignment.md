@@ -15,31 +15,29 @@ categories: [post-machine-learning]
 
 ![ex6_plotting_ex6data1.png](http://imgur.com/RDBi7t4.png)
 
-- Plott decision boundary (ex6data1.mat)
-
-SVM with Linear Kernel
+### SVM with Linear Kernel
 
 > try using different values of the C parameter with SVMs. Informally, the C parameter is a positive value that controls the penalty for misclassified training examples.
+
+- Plott decision boundary (ex6data1.mat)
 
 ![ex6_plotting_decision_boundary_with_C_1.png](http://imgur.com/wyWKeEQ.png)
 
 ![ex6_plotting_decision_boundary_with_C_100.png](http://imgur.com/eaTHemS.png)
 
+### Train SVM with RBF Kernel
+
 - Plot Data (in ex6data2.mat)
 
 ![ex6_plotting_ex6data2.png](http://imgur.com/3dM01Ya.png)
 
-- Train SVM with RBF Kernel and plot decision boundary (in ex6data2.mat)
-
 C: 1, sigma: 0.1
 
-![ex6_plotting_decision_boundary_with_rbf_kernel.png]()
+- Plot decision boundary (in ex6data2.mat)
 
-- Plot Data (in ex6data3.mat)
+![ex6_plotting_decision_boundary_with_rbf_kernel.png](http://imgur.com/UWTOjjx.png)
 
-![ex6_plotting_ex6data3.png](http://imgur.com/UWTOjjx.png)
-
-- Try different SVM Parameters to train SVM with RBF Kernel
+### Try different SVM Parameters to train SVM with RBF Kernel
 
 > Automatically choose optimal C and sigma based on a cross-validation set.
 
@@ -50,6 +48,12 @@ sigma list: [0.01 0.03 0.1 0.3 1 3 10 30]
 => optimal C = 1 and sigma = 0.1
 
 <script src="https://gist.github.com/joyhuang9473/073c860c60c72c235b24.js"></script>
+
+- Plot Data (in ex6data3.mat)
+
+![ex6_plotting_ex6data3.png](http://imgur.com/z2gXGA9.png)
+
+- Plot decision boundary with optimal svm parameters (in ex6data3.mat)
 
 ![ex6_plotting_decision_boundary_with_optimal_svm_parameters.png](http://imgur.com/VrmJdJU.png)
 
